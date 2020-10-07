@@ -1,0 +1,25 @@
+.category {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 2em;
+}
+
+.view-more {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.view-more .view-btn {
+  border: solid 1px #8bc34a;
+  background: #ffffff;
+  padding: 12px 25px;
+  color: #8bc34a;
+  border-radius: 3px;
+  outline: none;
+}
+/*# sourceMappingURL=index.css.map */

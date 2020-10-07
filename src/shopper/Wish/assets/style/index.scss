@@ -1,0 +1,30 @@
+.wishlist-header {
+    padding: 1.5em 0;
+
+    .wish {
+        display: flex;
+        align-items: center;
+        .header {
+            padding: 5px 15px;
+            border-radius: 50px;
+        }
+
+        .available {
+            background-color: #8bc34a;
+            color: #ffffff;
+        }
+
+        .stock {
+            color: #878786;
+        }
+    }
+}
+
+.wish {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: 2em;
+
+
+}

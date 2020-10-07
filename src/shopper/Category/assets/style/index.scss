@@ -1,0 +1,22 @@
+.category {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: 2em;
+
+    
+}
+
+.view-more {
+    text-align: center;
+    padding: 20px 0;
+
+    .view-btn {
+        border: solid 1px #8bc34a;
+        background: #ffffff;
+        padding: 12px 25px;
+        color: #8bc34a;
+        border-radius: 3px;
+        outline: none;
+    }
+}

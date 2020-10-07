@@ -1,0 +1,100 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+header .form .text {
+  width: 300px;
+  border: solid 1px #c6c6c5;
+  height: 40px;
+  border-radius: 3px 0 0 3px;
+  padding: 0 0 0 12px;
+  font-family: 'Fira Code', monospace;
+  outline: none;
+}
+
+header .form .submit {
+  width: 80px;
+  height: 40px;
+  background-color: #8bc34a;
+  color: #ffffff;
+  border: solid 1px #8bc34a;
+  border-radius: 0 3px 3px 0;
+  font-family: 'Fira Code', monospace;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul .prof {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 12px;
+}
+
+header nav ul li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #1e234b;
+  text-decoration: none;
+}
+
+header nav ul li a .tag {
+  position: absolute;
+  background-color: #8bc34a;
+  bottom: 57%;
+  padding: 1px;
+  left: 84%;
+  color: #ffffff;
+  border-radius: 50px;
+}
+
+header nav ul li a button {
+  border: solid 1px #757575;
+  padding: 10px;
+  color: #757575;
+  border-radius: 3px;
+  background-color: #ffffff;
+  font-family: 'Fira Code', monospace;
+}
+
+header nav ul li a img {
+  width: 100%;
+}
+
+header nav ul li a .profile {
+  border-radius: 50px;
+}
+
+header nav ul li .arrow {
+  padding-left: 10px;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,32 @@
+.become-seller {
+    display: flex;
+    justify-content: flex-end;
+    // justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 0;
+
+
+
+    .seller-text {
+        margin-left: 30px;
+        h1 {
+            color: #8bc34a;
+        }
+
+        p {
+            padding: 1em 0;
+            color: #757575;
+        }
+    }
+    button {
+        width: 150px;
+        height: 40px;
+        background: #8bc34a;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+    }
+
+}

@@ -1,0 +1,123 @@
+.login {
+    background-color: #ffffff;
+    box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
+    box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 1em 1em 0 1em;
+
+    .cancel-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        padding: 12px 0;
+    }
+
+    .form-section {
+        // padding: 0 2em;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+        .form {
+            label {
+                display: block;
+                text-align: center;
+                padding: 12px 0;
+
+                input {
+                    width: 100%;
+                    padding: 0 10px;
+                    height: 43px;
+                    border-radius: 3px;
+                    border: solid 1px #c6c6c5;
+                    font-size: 14.004px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    font-family: 'Fira Code',
+                    monospace;
+
+                    &:focus {
+                        border: none;
+                    }
+                    &::placeholder {
+                        font-family: 'Fira Code',
+                        monospace;
+                    }
+                }
+
+            }
+
+            .form-btn {
+                // width: 129.03px;
+                // height: 19px;
+                width: 152px;
+                height: 42px;
+                background: #8bc34a;
+                border: none;
+                border-radius: 5px;
+                color: #ffffff;
+                font-size: 14.01454px;
+                font-weight: 400;
+                margin: 5px 0;
+            }
+        }
+
+        // i will have to google this 
+        .or {
+            padding: 10px 0;
+            // &::before {
+            //     content: "";
+            //     width: 40px;
+            //     height: 1em;
+            //     color: black;
+            //     position: absolute;
+            // }
+            // &::after {
+            //     content: "";
+            //     width: 40px;
+            //     color: black;
+            // }
+        }
+
+        .sign-up {
+            padding: 8px 0;
+            p {
+                padding: 10px 0;
+            }
+
+            .social-logo {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: center;
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+
+        .sign-up-footer {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            padding: 15px 0;
+
+            button {
+                width: 100.12px;
+                height: 40px;
+                border: solid 1px #8bc34a;
+                border-radius: 5px;
+                background: #ffffff;
+            }
+
+        }
+    }
+
+}

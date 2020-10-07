@@ -1,0 +1,32 @@
+.category-item .product {
+  position: relative;
+  border: solid 1px #c6c6c5;
+  border-radius: 5px;
+}
+
+.category-item .product figure .img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.category-item .product .love {
+  position: absolute;
+  left: 85%;
+  bottom: 90%;
+}
+
+.category-item .product .details {
+  border-top: 1px solid #c6c6c5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+}
+/*# sourceMappingURL=index.css.map */

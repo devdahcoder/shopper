@@ -1,0 +1,61 @@
+.total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'Fira Code', monospace;
+}
+
+.total .text {
+  width: 228px;
+  height: 40px;
+  border: solid 1px #e0e0e0;
+  color: #cbcbcb;
+  font-family: 'Fira Code', monospace;
+  border-radius: 5px;
+  padding: 0 0 0 5px;
+}
+
+.total .submit {
+  width: 100px;
+  height: 40px;
+  background-color: #878786;
+  border: 1px solid #878786;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.total .amount {
+  -webkit-box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
+          box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
+          box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
+  background-color: #ffffff;
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
+.total .amount .amount-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.total .amount button {
+  color: #ffffff;
+  background-color: #8bc34a;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  padding: 10px 15px;
+}
+/*# sourceMappingURL=index.css.map */

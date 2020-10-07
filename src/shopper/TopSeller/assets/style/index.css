@@ -1,0 +1,37 @@
+.top-seller-section {
+  margin-top: 15em;
+}
+
+.top-seller-section .header {
+  padding: 15px 0;
+}
+
+.top-seller-section .header h1 {
+  color: #8bc34a;
+}
+
+.top-seller-section .topseller {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 2em;
+}
+
+.top-seller-section .btn {
+  text-align: center;
+  padding: 1.6em 0;
+}
+
+.top-seller-section .btn button {
+  width: 150px;
+  height: 40px;
+  background-color: #8bc34a;
+  border: 1px solid #8bc34a;
+  border-radius: 5px;
+  color: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */

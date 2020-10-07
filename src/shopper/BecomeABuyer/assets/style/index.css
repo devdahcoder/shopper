@@ -1,0 +1,34 @@
+.become-buyer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.become-buyer .buyer-text {
+  margin-right: 30px;
+}
+
+.become-buyer .buyer-text h1 {
+  color: #bad699;
+}
+
+.become-buyer .buyer-text p {
+  padding: 1em 0;
+  color: #757575;
+}
+
+.become-buyer button {
+  width: 150px;
+  height: 40px;
+  background: #8bc34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=index.css.map */

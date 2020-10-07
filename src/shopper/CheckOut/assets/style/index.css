@@ -1,0 +1,30 @@
+.checkout .congrats {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10em 0;
+}
+
+.checkout .congrats .cong h1 {
+  color: #8bc34a;
+  margin-bottom: 1em;
+}
+
+.checkout .congrats .cong button {
+  width: 180px;
+  height: 40px;
+  background: #8bc34a;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: #ffffff;
+  margin-top: 2em;
+}
+/*# sourceMappingURL=index.css.map */

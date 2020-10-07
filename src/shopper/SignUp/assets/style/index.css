@@ -1,0 +1,135 @@
+.login {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
+          box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
+          box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 1em 1em 0 1em;
+}
+
+.login .cancel-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.login .logo {
+  padding: 12px 0;
+}
+
+.login .form-section {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login .form-section .form label {
+  display: block;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.login .form-section .form label input {
+  width: 100%;
+  padding: 0 10px;
+  height: 43px;
+  border-radius: 3px;
+  border: solid 1px #c6c6c5;
+  font-size: 14.004px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: 'Fira Code', monospace;
+}
+
+.login .form-section .form label input:focus {
+  border: none;
+}
+
+.login .form-section .form label input::-webkit-input-placeholder {
+  font-family: 'Fira Code', monospace;
+}
+
+.login .form-section .form label input:-ms-input-placeholder {
+  font-family: 'Fira Code', monospace;
+}
+
+.login .form-section .form label input::-ms-input-placeholder {
+  font-family: 'Fira Code', monospace;
+}
+
+.login .form-section .form label input::placeholder {
+  font-family: 'Fira Code', monospace;
+}
+
+.login .form-section .form .form-btn {
+  width: 152px;
+  height: 42px;
+  background: #8bc34a;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14.01454px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.login .form-section .or {
+  padding: 10px 0;
+}
+
+.login .form-section .sign-up {
+  padding: 8px 0;
+}
+
+.login .form-section .sign-up p {
+  padding: 10px 0;
+}
+
+.login .form-section .sign-up .social-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.login .form-section .sign-up-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.login .form-section .sign-up-footer button {
+  width: 100.12px;
+  height: 40px;
+  border: solid 1px #8bc34a;
+  border-radius: 5px;
+  background: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,96 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    position: relative;
+
+
+    .logo {
+        cursor: pointer;
+    }
+
+
+    .form {
+        .text {
+            width: 300px;
+            border: solid 1px #c6c6c5;
+            height: 40px;
+            border-radius: 3px 0 0 3px;
+            padding: 0 0 0 12px;
+            font-family: 'Fira Code', monospace;
+            outline: none;
+        }
+
+        .submit {
+            width: 80px;
+            height: 40px;
+            background-color: #8bc34a;
+            color: #ffffff;
+            border: solid 1px #8bc34a;
+            border-radius: 0 3px 3px 0;
+            font-family: 'Fira Code', monospace;
+        }
+    }
+
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            .prof {
+                display: flex;
+                align-items: center;
+            }
+
+            li {
+                display: inline-block;
+                padding: 0 12px;
+
+                a {
+                    transition: all 0.3s ease 0s;
+                    color: #1e234b;
+                    text-decoration: none;
+
+                    .tag {
+                        position: absolute;
+                        background-color: #8bc34a;
+                        bottom: 57%;
+                        padding: 1px;
+                        left: 84%;
+                        color: #ffffff;
+                        border-radius: 50px;
+                        // color: #ffffff;
+                    }
+
+                    button {
+                        border: solid 1px #757575;
+                        padding: 10px;
+                        // width: 100px;
+                        // height: 40px;
+                        color: #757575;
+                        border-radius: 3px;
+                        background-color: #ffffff;
+                        font-family: 'Fira Code',
+                            monospace;
+
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .profile {
+                        border-radius: 50px;
+                    }
+                }
+
+                .arrow {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
