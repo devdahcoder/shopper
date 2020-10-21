@@ -1,0 +1,62 @@
+.company-profile {
+    border: solid 1px #c6c6c5;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 2em 1em;
+
+    .business-name, .company-select-input {
+        margin-bottom: 2em;
+    }
+
+
+    .company-label {
+        font-size: 14.004px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    .company-input {
+        width: 100%;
+        padding: 10px 15px;
+        outline: none;
+    }
+
+    .company-select-input {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2em;
+    }
+
+    .business-licence {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2em;
+        margin-bottom: 10em;
+    }
+
+    .company-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .btn {
+            width: 100px;
+            height: 39.99px;
+            font-size: 14.004px;
+            font-weight: 400;
+            border-radius: 3px;
+        }
+
+        .back-btn {
+            border: solid 1px #757575;
+            background: rgba(0,0,0,0);
+            color: #757575;
+        }
+        .next-btn {
+            background-color: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #ffffff;
+        }
+    }
+}

@@ -4,7 +4,7 @@ import "./assets/style/index.css";
 const HeaderTag = () => {
     return (
       <section className="header-bg">
-        <div>
+        <div className="container">
           <nav>
             <ul>
               <li>

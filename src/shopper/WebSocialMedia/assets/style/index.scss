@@ -1,0 +1,17 @@
+.social-account-form {
+    border: solid 1px #c6c6c5;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 2em 1em;
+
+    form {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 1em;
+
+        input {
+            width: 100%;
+            padding: 10px 15px;
+        }
+    }
+}

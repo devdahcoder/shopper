@@ -11,16 +11,6 @@ function App() {
   return (
     <div className="main">
       <Home />
-      {/* <Header />
-      <Banner />
-      <Features />
-      <OurServices />
-      <News />
-      <Event />
-      <Country />
-      <Testimony />
-      <Chase />
-      <Footer /> */}
     </div>
   );
 };

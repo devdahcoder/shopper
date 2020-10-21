@@ -1,0 +1,22 @@
+.profile-header-image {
+    background-color: #fafafa;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
+    // width: 80px;
+    // height: 80px;
+
+    .profile-header {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        // font: inherit;
+        vertical-align: baseline;
+        height: auto;
+        width: 100%;
+        // object-fit: cover;
+    }
+}

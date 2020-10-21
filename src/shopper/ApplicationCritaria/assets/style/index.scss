@@ -1,0 +1,105 @@
+.application-critaria-container {
+    border: solid 1px #c6c6c5;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 2em 1em;
+
+    .critaria-copyright {
+        color: #1c1c1b;
+        font-size: 14.083433px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.28008px;
+        width: 80%;
+        margin-bottom: 1em;
+
+        .guideline {
+            color: #8bc34a;
+            text-decoration: none;
+            line-height: 50.113443px;
+
+        }
+    }
+
+    form {
+        .application-form-display {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 50px;
+            width: 80%;
+            .seller-form {
+                display: block;
+
+                .label {
+                    width: 100%;
+                    border-bottom: 1px solid #c6c6c5;
+                    padding: 1em 0;
+                    // opacity: 0.5;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 1.5em;
+                }
+
+                .seller-form-image {
+                    display: flex;
+                    align-items: center;
+
+                    .file {
+                        margin-left: 1.5em;
+                    }
+                }
+
+                .select, .email {
+                    width: 100%;
+                    padding: 10px 5px;
+                }
+
+                .email-container {
+                    margin: 2em 0;
+
+                    .email-label {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+
+                    .seller-log-out {
+                        color: red;
+                        padding: 1em 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 4em;
+                    }
+                }
+            }
+        }
+    }
+
+    .seller-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .btn {
+            width: 100px;
+            height: 39.99px;
+            outline: none;
+            border-radius: 3px;
+            font-size: 14.004px;
+            font-weight: 500;
+            margin-top: 7em;
+        }
+
+        .btn-back {
+            border: solid 1px #757575;
+            background-color: rgba(0,0,0,0);
+            color: #757575;
+        }
+
+        .btn-next {
+            background-color: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #ffffff;
+        }
+    }
+}

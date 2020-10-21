@@ -9,7 +9,7 @@ import HeaderTag from "../HeaderTag/HeaderTag"
 const Header = () => {
     return (
       <section>
-        <header>
+        <header className="container">
           <img className="logo" src={Logo} alt="" />
 
           <form action="" className="form">

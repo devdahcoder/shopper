@@ -1,0 +1,26 @@
+.seller-application-header {
+    padding: 1em 0;
+    text-align: center;
+    .seller-nav {
+        .seller-ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                padding: 0 20px;
+                cursor: pointer;
+
+                a {
+                    transition: all 0.3s ease 0s;
+                    text-decoration: none;
+                    color: #878786;
+                    
+
+                    &:active {
+                        color: #8bc34a;
+                    }
+                }
+            }
+        }
+    }
+}

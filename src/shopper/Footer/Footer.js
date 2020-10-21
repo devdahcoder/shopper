@@ -116,10 +116,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr />
+        <div className="container">
+          <hr />
 
-        <div className="copyright">
-          <p>© 2016 Uimint.com Terms & Conditions Privacy</p>
+          <div className="copyright">
+            <p>© 2016 Uimint.com Terms & Conditions Privacy</p>
+          </div>
         </div>
       </section>
     );

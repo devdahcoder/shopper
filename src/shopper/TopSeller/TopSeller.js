@@ -31,7 +31,7 @@ const TopSeller = () => {
 
 
     return (
-      <section className="top-seller-section">
+      <section className="container top-seller-section">
 
       <div className="header">
           <h1>Top Seller</h1>

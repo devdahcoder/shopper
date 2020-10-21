@@ -4,7 +4,7 @@ import Seller from "./asset/images/seller.svg"
 const BecomeASeller = () => {
     return (
       <section>
-        <div className="become-seller">
+        <div className="container become-seller">
           <div>
             <img src={Seller} alt="" />
           </div>

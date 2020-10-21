@@ -8,7 +8,7 @@ const HomeProductItems = ({cloth}) => {
         <div>
           <div className="product">
             <figure>
-              <img src={Pix} alt="" />
+              <img style={{display: "block"}} src={Pix} alt="" />
             </figure>
 
             <div className="details">

@@ -5,7 +5,7 @@ import Buyer from "./assets/images/buyer.svg"
 const BecomeABuyer = () => {
     return (
       <section>
-        <div className="become-buyer">
+        <div className="container become-buyer">
           <div className="buyer-text">
             <h1>Why Become a Buyer?</h1>
 

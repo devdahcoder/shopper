@@ -1,0 +1,73 @@
+.company-profile {
+  border: solid 1px #c6c6c5;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 2em 1em;
+}
+
+.company-profile .business-name, .company-profile .company-select-input {
+  margin-bottom: 2em;
+}
+
+.company-profile .company-label {
+  font-size: 14.004px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.company-profile .company-input {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.company-profile .company-select-input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+}
+
+.company-profile .business-licence {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2em;
+  margin-bottom: 10em;
+}
+
+.company-profile .company-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.company-profile .company-btn-container .btn {
+  width: 100px;
+  height: 39.99px;
+  font-size: 14.004px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+.company-profile .company-btn-container .back-btn {
+  border: solid 1px #757575;
+  background: rgba(0, 0, 0, 0);
+  color: #757575;
+}
+
+.company-profile .company-btn-container .next-btn {
+  background-color: #8bc34a;
+  border: 1px solid #8bc34a;
+  color: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */
