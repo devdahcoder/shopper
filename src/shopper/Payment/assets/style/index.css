@@ -1,0 +1,62 @@
+.payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.payment .payment-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-right: 1px solid green;
+}
+
+.payment .card {
+  width: 500px;
+  padding: 0 50px;
+}
+
+.payment .payment-form .payment-input {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.payment .payment-form label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.payment .payment-form .payment-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 1em;
+  margin-bottom: 2em;
+}
+
+.payment .payment-form .payment-card .payment-code {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+}
+
+.payment .rounded-checkbox {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.payment .rounded-checkbox:checked {
+  background-color: grey;
+}
+/*# sourceMappingURL=index.css.map */

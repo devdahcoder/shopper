@@ -1,190 +1,106 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.signup {
-  background-color: #ffffff;
-  -webkit-box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
-          box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
-          box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
-  width: 35%;
-  margin: 0 auto;
+.contact-info {
+  border: solid 1px #c6c6c5;
+  background: #ffffff;
   border-radius: 5px;
-  padding: 1em 1em 0 1em;
+  padding: 2em 1em;
 }
 
-.signup .cancel-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.signup .logo {
-  padding: 12px 0;
-}
-
-.signup .form-section {
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.signup .form-section .form label {
-  display: block;
-  text-align: center;
-  padding: 12px 0;
-}
-
-.signup .form-section .form label input {
+.contact-info form .contact-input {
   width: 100%;
-  padding: 0 10px;
-  height: 43px;
+  padding: 10px 15px;
+  outline: none;
   border-radius: 3px;
   border: solid 1px #c6c6c5;
+}
+
+.contact-info form .contact-label {
+  color: #878786;
   font-size: 14.004px;
   font-weight: 400;
-  line-height: 19px;
-  font-family: 'Fira Code', monospace;
+  line-height: 40px;
 }
 
-.signup .form-section .form label input:focus {
-  border: none;
+.contact-info form .contact-name-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1em;
 }
 
-.signup .form-section .form label input::-webkit-input-placeholder {
-  font-family: 'Fira Code', monospace;
+.contact-info form .contact-title-form {
+  margin: 2em 0;
 }
 
-.signup .form-section .form label input:-ms-input-placeholder {
-  font-family: 'Fira Code', monospace;
-}
-
-.signup .form-section .form label input::-ms-input-placeholder {
-  font-family: 'Fira Code', monospace;
-}
-
-.signup .form-section .form label input::placeholder {
-  font-family: 'Fira Code', monospace;
-}
-
-.signup .form-section .form .forget-password {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.contact-info form .contact-mail-header {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #8bc34a;
+  border-bottom: solid 1px #c6c6c5;
   padding: 10px 0;
 }
 
-.signup .form-section .form .forget-password .logged {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.contact-info form .contact-address {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1em;
+  margin: 1.5em 0;
 }
 
-.signup .form-section .form .forget-password .logged p {
-  margin-left: 10px;
-}
-
-.signup .form-section .form .btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 70%;
-  margin: 0 auto;
+.contact-info form .contact-notification {
   padding: 10px 0;
 }
 
-.signup .form-section .form .btns .btn {
-  border-radius: 5px;
+.contact-info form .contact-notification p {
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.signup .form-section .form .btns .log-in {
-  width: 100.12px;
-  height: 40px;
+.contact-info .contact-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+
+.contact-info .contact-btn-container .btn-link {
+  color: #1c1c1b;
+  font-size: 14.004px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.28008px;
+}
+
+.contact-info .contact-btn-container .btn-link a {
+  color: #8bc34a;
+}
+
+.contact-info .contact-btn-container .btn {
+  padding: 10px 15px;
+  font-size: 14.004px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+.contact-info .contact-btn-container .back-btn {
+  border: solid 1px #757575;
+  background: rgba(0, 0, 0, 0);
+  color: #757575;
+}
+
+.contact-info .contact-btn-container .next-btn {
   background-color: #8bc34a;
+  border: 1px solid #8bc34a;
   color: #ffffff;
-  border: none;
-}
-
-.signup .form-section .form .btns .log-in-guest {
-  width: 140px;
-  height: 40px;
-  border: solid 1px #c8c8c8;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.signup .form-section .or {
-  padding: 10px 0;
-}
-
-.signup .form-section .sign-up {
-  padding: 8px 0;
-}
-
-.signup .form-section .sign-up p {
-  padding: 10px 0;
-}
-
-.signup .form-section .sign-up .social-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.signup .form-section .sign-up-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
-  padding: 15px 0;
-}
-
-.signup .form-section .sign-up-footer button {
-  width: 100.12px;
-  height: 40px;
-  border: solid 1px #8bc34a;
-  border-radius: 5px;
-  background: #ffffff;
 }
 /*# sourceMappingURL=index.css.map */

@@ -11,17 +11,23 @@ const WebSocialMedia = () => {
       <div className="social-account-form">
         <form action="">
           <div>
-            <label htmlFor="">
+            <label className="web-label" htmlFor="">
               <span>
                 <img src={Facebook} alt="" />
               </span>{" "}
               Facebook
             </label>
 
-            <input className="web-" type="text" name="" id="" placeholder="paste url here" />
+            <input
+              className="web-"
+              type="text"
+              name=""
+              id=""
+              placeholder="paste url here"
+            />
           </div>
           <div>
-            <label htmlFor="">
+            <label className="web-label" htmlFor="">
               <span>
                 <img src={Pinterest} alt="" />
               </span>{" "}
@@ -31,7 +37,7 @@ const WebSocialMedia = () => {
             <input type="text" name="" id="" placeholder="paste url here" />
           </div>
           <div>
-            <label htmlFor="">
+            <label className="web-label" htmlFor="">
               <span>
                 <img src={Twitter} alt="" />
               </span>{" "}
@@ -41,7 +47,7 @@ const WebSocialMedia = () => {
             <input type="text" name="" id="" placeholder="paste url here" />
           </div>
           <div>
-            <label htmlFor="">
+            <label className="web-label" htmlFor="">
               <span>
                 <img src={Instagram} alt="" />
               </span>{" "}
@@ -51,6 +57,15 @@ const WebSocialMedia = () => {
             <input type="text" name="" id="" placeholder="paste url here" />
           </div>
         </form>
+
+        <div className="web-notification">
+          <p>Note: Provide at least one social account</p>
+        </div>
+
+        <div className="web-btn-container">
+          <button className="btn back-btn">Go Back</button>
+          <button className="btn next-btn">Next</button>
+        </div>
       </div>
     );
 }

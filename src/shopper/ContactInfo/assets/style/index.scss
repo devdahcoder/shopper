@@ -1,174 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.signup {
-    background-color: #ffffff;
-    box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
-    box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
-    width: 35%;
-    margin: 0 auto;
+.contact-info {
+    border: solid 1px #c6c6c5;
+    background: #ffffff;
     border-radius: 5px;
-    padding: 1em 1em 0 1em;
+    padding: 2em 1em;
 
-    .cancel-btn {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
 
-    .logo {
-        padding: 12px 0;
-    }
+    form {
 
-    .form-section {
-        // padding: 0 2em;
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;
-
-        .form {
-            label {
-                display: block;
-                text-align: center;
-                padding: 12px 0;
-
-                input {
-                    width: 100%;
-                    padding: 0 10px;
-                    height: 43px;
-                    border-radius: 3px;
-                    border: solid 1px #c6c6c5;
-                    font-size: 14.004px;
-                    font-weight: 400;
-                    line-height: 19px;
-                    font-family: 'Fira Code',
-                        monospace;
-
-                    &:focus {
-                        border: none;
-                    }
-
-                    &::placeholder {
-                        font-family: 'Fira Code',
-                            monospace;
-                    }
-                }
-
-            }
-
-            .forget-password {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px 0;
-
-                .logged {
-                    display: flex;
-                    align-items: center;
-
-                    p {
-                        margin-left: 10px;
-                    }
-                }
-            }
-
-            .btns {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 70%;
-                margin: 0 auto;
-                padding: 10px 0;
-
-                .btn {
-                    border-radius: 5px;
-                }
-
-                .log-in {
-                    width: 100.12px;
-                    height: 40px;
-                    background-color: #8bc34a;
-                    color: #ffffff;
-                    border: none;
-                }
-
-                .log-in-guest {
-                    width: 140px;
-                    height: 40px;
-                    border: solid 1px #c8c8c8;
-                    background-color: rgba(0, 0, 0, 0);
-                }
-            }
-
-            // .form-btn {
-            //     // width: 129.03px;
-            //     // height: 19px;
-            //     width: 152px;
-            //     height: 42px;
-            //     background: #8bc34a;
-            //     border: none;
-            //     border-radius: 5px;
-            //     color: #ffffff;
-            //     font-size: 14.01454px;
-            //     font-weight: 400;
-            //     margin: 5px 0;
-            // }
+        .contact-input {
+            width: 100%;
+            padding: 10px 15px;
+            outline: none;
+            border-radius: 3px;
+            border: solid 1px #c6c6c5;
+        }
+        .contact-label {
+            color: #878786;
+            font-size: 14.004px;
+            font-weight: 400;
+            line-height: 40px;
         }
 
-        // i will have to google this 
-        .or {
+        .contact-name-form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 1em;
+            // align-items: center;
+        }
+
+        .contact-title-form {
+            margin: 2em 0;
+        }
+
+        .contact-mail-header {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #8bc34a;
+            border-bottom: solid 1px #c6c6c5;
             padding: 10px 0;
-            // &::before {
-            //     content: "";
-            //     width: 40px;
-            //     height: 1em;
-            //     color: black;
-            //     position: absolute;
-            // }
-            // &::after {
-            //     content: "";
-            //     width: 40px;
-            //     color: black;
-            // }
         }
 
-        .sign-up {
-            padding: 8px 0;
+        .contact-address {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1em;
+            margin: 1.5em 0;
+        }
 
+        .contact-notification {
+            padding: 10px 0;
             p {
-                padding: 10px 0;
+                font-size: 14px;
+                font-weight: 400;
+                // line-height: 30px;
             }
+        }
+    }
 
-            .social-logo {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                text-align: center;
-                width: 50%;
-                margin: 0 auto;
+    .contact-btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2em;
+
+        .btn-link {
+            color: #1c1c1b;
+            font-size: 14.004px;
+            font-weight: 400;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.28008px;
+
+            a {
+                color: #8bc34a;
             }
         }
 
-        .sign-up-footer {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: space-between;
-            width: 80%;
-            margin: 0 auto;
-            padding: 15px 0;
+        .btn {
+            padding: 10px 15px;
+            font-size: 14.004px;
+            font-weight: 400;
+            border-radius: 3px;
+        }
 
-            button {
-                width: 100.12px;
-                height: 40px;
-                border: solid 1px #8bc34a;
-                border-radius: 5px;
-                background: #ffffff;
-            }
-
+        .back-btn {
+            border: solid 1px #757575;
+            background: rgba(0,0,0,0);
+            color: #757575;
+        }
+        .next-btn {
+            background-color: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #ffffff;
+            // width: 149px;
+            // height: 41px;
         }
     }
 }

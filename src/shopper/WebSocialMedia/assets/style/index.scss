@@ -7,11 +7,55 @@
     form {
         display: grid;
         grid-template-rows: repeat(4, 1fr);
-        grid-gap: 1em;
+        grid-gap: 2em;
+
+        .web-label {
+            color: #878786;
+            font-size: 14.004px;
+            font-weight: 400;
+            line-height: 40px;
+        }
 
         input {
             width: 100%;
             padding: 10px 15px;
         }
     }
+
+    .web-notification {
+        color: #878786;
+        font-size: 14.004px;
+        font-weight: 400;
+        letter-spacing: 0.28008px;
+        margin: 3em 0;
+
+    }
+
+    .web-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .btn {
+            width: 100px;
+            height: 39.99px;
+            font-size: 14.004px;
+            font-weight: 400;
+            border-radius: 3px;
+        }
+
+        .back-btn {
+            border: solid 1px #757575;
+            background: rgba(0,0,0,0);
+            color: #757575;
+        }
+        .next-btn {
+            background-color: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #ffffff;
+        }
+    }
+
+    
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import "./assets/style/index.css"
 import SellerApplicationNav from "../SellerApplicationNav/SellerApplicationNav"
-import ApplicationCritaria from "../ApplicationCritaria/ApplicationCritaria"
-import CompanyProfile from "../CompanyProfile/CompanyProfile"
-import WebSocialMedia from "../WebSocialMedia/WebSocialMedia"
-
-
+// import ApplicationCritaria from "../ApplicationCritaria/ApplicationCritaria"
+// import CompanyProfile from "../CompanyProfile/CompanyProfile"
+// import WebSocialMedia from "../WebSocialMedia/WebSocialMedia"
+// import ContactInfo from "../ContactInfo/ContactInfo"
+// import ConfirmAccount from "../ConfirmAccount/ConfirmAccount"
+import Payment from "../Payment/Payment"
 
 const SellerApplication = () => {
     return (
@@ -19,7 +20,10 @@ const SellerApplication = () => {
 
           {/* <ApplicationCritaria /> */}
           {/* <CompanyProfile /> */}
-          <WebSocialMedia />
+          {/* <WebSocialMedia /> */}
+          {/* <ContactInfo /> */}
+          {/* <ConfirmAccount /> */}
+          <Payment />
 
 
         </div>

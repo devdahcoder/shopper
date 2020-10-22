@@ -10,11 +10,59 @@
   display: grid;
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
-  grid-gap: 1em;
+  grid-gap: 2em;
+}
+
+.social-account-form form .web-label {
+  color: #878786;
+  font-size: 14.004px;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .social-account-form form input {
   width: 100%;
   padding: 10px 15px;
+}
+
+.social-account-form .web-notification {
+  color: #878786;
+  font-size: 14.004px;
+  font-weight: 400;
+  letter-spacing: 0.28008px;
+  margin: 3em 0;
+}
+
+.social-account-form .web-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.social-account-form .web-btn-container .btn {
+  width: 100px;
+  height: 39.99px;
+  font-size: 14.004px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+.social-account-form .web-btn-container .back-btn {
+  border: solid 1px #757575;
+  background: rgba(0, 0, 0, 0);
+  color: #757575;
+}
+
+.social-account-form .web-btn-container .next-btn {
+  background-color: #8bc34a;
+  border: 1px solid #8bc34a;
+  color: #ffffff;
 }
 /*# sourceMappingURL=index.css.map */
