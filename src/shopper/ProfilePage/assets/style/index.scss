@@ -1,0 +1,73 @@
+.profile-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .profile-category {
+        max-width: 280px;
+        margin-right: 2em;
+
+        .profile-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            // width: 80%;
+            // margin: 0 auto;
+            padding: 10px 20px;
+            border: solid 1px #c6c6c5;
+            border-radius: 3px;
+
+            .profile-details-child {
+                margin-top: 10px;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 22.022844px;
+            }
+
+            .profile-name {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+
+            .profile-address {
+                color: #878786;
+                font-size: 14.014537px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+            
+            .profile-detail-btn {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                
+
+                .btn {
+                    border-radius: 3px;
+                    border: 1px solid #8bc34a;
+                    width: 101px;
+                    height: 40px;
+                    outline: none;
+                }
+
+                .contact-btn {
+                    background-color: #8bc34a;
+                    color: #ffffff;
+                }
+
+                .follow-btn {
+                    background-color: #ffffff;
+                    color: #8bc34a;
+                }
+            }
+        }
+    }
+
+    .profile-list {
+        border: 1px solid grey;
+        flex-grow: 1;
+    }
+}

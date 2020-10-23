@@ -1,0 +1,17 @@
+.profile-event {
+    border: solid 1px #c6c6c5;
+    padding: 1em;
+    border-radius: 3px;
+
+    .profile-event-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .event-header-text {
+            color: #878786;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

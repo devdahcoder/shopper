@@ -1,33 +1,33 @@
-.payment {
+.payment .payment-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.payment .payment-item {
+.payment .payment-container .payment-item {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   border-right: 1px solid green;
 }
 
-.payment .card {
+.payment .payment-container .card {
   width: 500px;
   padding: 0 50px;
 }
 
-.payment .payment-form .payment-input {
+.payment .payment-container .payment-form .payment-input {
   width: 100%;
   padding: 10px 15px;
 }
 
-.payment .payment-form label {
+.payment .payment-container .payment-form label {
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
 }
 
-.payment .payment-form .payment-card {
+.payment .payment-container .payment-form .payment-card {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[3];
@@ -36,7 +36,7 @@
   margin-bottom: 2em;
 }
 
-.payment .payment-form .payment-card .payment-code {
+.payment .payment-container .payment-form .payment-card .payment-code {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -44,7 +44,7 @@
   grid-column-gap: 1em;
 }
 
-.payment .rounded-checkbox {
+.payment .payment-container .rounded-checkbox {
   width: 1.3em;
   height: 1.3em;
   background-color: white;
@@ -56,7 +56,20 @@
   cursor: pointer;
 }
 
-.payment .rounded-checkbox:checked {
+.payment .payment-container .rounded-checkbox:checked {
   background-color: grey;
+}
+
+.payment .payment-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 4em 0 .5em 0;
 }
 /*# sourceMappingURL=index.css.map */

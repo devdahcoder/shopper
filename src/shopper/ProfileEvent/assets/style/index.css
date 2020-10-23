@@ -1,0 +1,22 @@
+.profile-event {
+  border: solid 1px #c6c6c5;
+  padding: 1em;
+  border-radius: 3px;
+}
+
+.profile-event .profile-event-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.profile-event .profile-event-header .event-header-text {
+  color: #878786;
+  font-size: 14px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=index.css.map */

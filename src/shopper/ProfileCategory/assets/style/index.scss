@@ -1,0 +1,21 @@
+.profile-category-container {
+    border: solid 1px #c6c6c5;
+    padding: 1em;
+    border-radius: 3px;
+    height: 300px;
+    overflow: hidden;
+
+    .profile-category-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid #c6c6c5;
+
+        .category-header-text {
+            color: #878786;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

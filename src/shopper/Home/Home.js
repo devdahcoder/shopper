@@ -8,7 +8,8 @@ import "./assets/style/index.css"
 // import HomeProduct from "../HomeProduct/HomeProduct"
 // import Banner from "../Banner/Banner"
 import Footer from "../Footer/Footer"
-import SellerApplication from "../SellerApplication/SellerApplication"
+// import SellerApplication from "../SellerApplication/SellerApplication"
+import ProfilePage from "../ProfilePage/ProfilePage"
 
 const Home = () => {
     return (
@@ -20,7 +21,8 @@ const Home = () => {
         <BecomeABuyer />
         <BecomeASeller />
         <HomeProduct /> */}
-        <SellerApplication />
+        {/* <SellerApplication /> */}
+        <ProfilePage />
         <Footer />
       </div>
     );
