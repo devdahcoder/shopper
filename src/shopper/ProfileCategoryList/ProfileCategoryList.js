@@ -1,10 +1,15 @@
 import React from 'react'
+import "./assets/style/index.css"
+
+
 
 const ProfileCategoryList = ({category}) => {
     return (
-        <div>
-            <li>{category.category}</li>
-        </div>
+        <a href="" className="profile-category-list">
+            <div>
+                <li>{category.category}</li>
+            </div>
+        </a>
     )
 }
 

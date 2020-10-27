@@ -1,0 +1,80 @@
+.shipping-address-form {
+    border: solid 1px #c6c6c5;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 2em 1em;
+
+    .shipping-form {
+        .shipping-input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 3px;
+            border: solid 1px #c8c8c8;
+            background: rgba(0,0,0,0);
+        }
+
+        label {
+            color: #878786;
+            font-size: 14.004px;
+            font-weight: 400;
+            letter-spacing: 0.28008px;
+            line-height: 30px;
+        }
+
+        .shipping-form-name {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+        }
+
+        .shipping-email-form {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 1em;
+            margin: 2em 0;
+        }
+
+        .shipping-number-form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .shipping-checkbox-display {
+            display: flex;
+            align-items: center;
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .shipping-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 9em;
+
+        .btn {
+            width: 100px;
+            height: 39.99px;
+            font-size: 14.004px;
+            font-weight: 400;
+            border-radius: 3px;
+        }
+
+        .back-btn {
+            border: solid 1px #757575;
+            background: rgba(0,0,0,0);
+            color: #757575;
+        }
+        .next-btn {
+            background-color: #8bc34a;
+            border: 1px solid #8bc34a;
+            color: #ffffff;
+        }
+    }
+
+
+}

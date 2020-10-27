@@ -1,0 +1,21 @@
+.material-container {
+  margin: 14px 0;
+  height: 145px;
+  overflow-y: hidden;
+}
+
+.material-container .material-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.material-container .material-header .material-header-text {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=index.css.map */

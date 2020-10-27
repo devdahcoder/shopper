@@ -2,8 +2,10 @@
     border: solid 1px #c6c6c5;
     padding: 1em;
     border-radius: 3px;
-    height: 300px;
-    overflow: hidden;
+    height: 350px;
+    overflow-y: hidden;
+    margin-bottom: 2em;
+    
 
     .profile-category-header {
         display: flex;

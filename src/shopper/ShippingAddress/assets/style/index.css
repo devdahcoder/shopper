@@ -1,0 +1,99 @@
+.shipping-address-form {
+  border: solid 1px #c6c6c5;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 2em 1em;
+}
+
+.shipping-address-form .shipping-form .shipping-input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: solid 1px #c8c8c8;
+  background: rgba(0, 0, 0, 0);
+}
+
+.shipping-address-form .shipping-form label {
+  color: #878786;
+  font-size: 14.004px;
+  font-weight: 400;
+  letter-spacing: 0.28008px;
+  line-height: 30px;
+}
+
+.shipping-address-form .shipping-form .shipping-form-name {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.shipping-address-form .shipping-form .shipping-email-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+  margin: 2em 0;
+}
+
+.shipping-address-form .shipping-form .shipping-number-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shipping-address-form .shipping-form .shipping-checkbox-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shipping-address-form .shipping-form .shipping-checkbox-display input {
+  margin-right: 10px;
+}
+
+.shipping-address-form .shipping-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 9em;
+}
+
+.shipping-address-form .shipping-btn-container .btn {
+  width: 100px;
+  height: 39.99px;
+  font-size: 14.004px;
+  font-weight: 400;
+  border-radius: 3px;
+}
+
+.shipping-address-form .shipping-btn-container .back-btn {
+  border: solid 1px #757575;
+  background: rgba(0, 0, 0, 0);
+  color: #757575;
+}
+
+.shipping-address-form .shipping-btn-container .next-btn {
+  background-color: #8bc34a;
+  border: 1px solid #8bc34a;
+  color: #ffffff;
+}
+/*# sourceMappingURL=index.css.map */

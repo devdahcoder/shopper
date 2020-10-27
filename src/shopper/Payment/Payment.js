@@ -78,8 +78,12 @@ const Payment = () => {
         </div>
 
         <div className="payment-btn">
-          <button className="btn back-btn">Go Back</button>
-          <button className="btn pay-btn">Pay $128.89</button>
+          <div className="back-btn-container">
+            <button className="btn back-btn">Go Back</button>
+          </div>
+          <div className="pay-btn-container">
+            <button className="btn pay-btn">Pay $128.89</button>
+          </div>
         </div>
       </div>
     );

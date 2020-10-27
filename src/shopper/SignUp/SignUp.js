@@ -1,70 +1,110 @@
 import React from 'react'
+import "./assets/style/index.css";
+import { useFormik } from "formik"
 import cancelLogo from "./assets/images/cancel.svg";
 import Logo from "./assets/images/logo.svg";
-import "./assets/style/index.css";
 import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 
-const SignUp = ({setFalse}) => {
-    return (
-      <section>
-        <div className="login">
-          <div className="cancel-btn">
-            <img onClick={setFalse} src={cancelLogo} alt="" />
+const SignUp = ({ cancelLogin }) => {
+
+
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      fullname: "",
+      email: "",
+      password: "",
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+
+
+  return (
+    <section>
+      <div className="login">
+        <div className="cancel-btn">
+          <img onClick={cancelLogin} src={cancelLogo} alt="" />
+        </div>
+
+        <div className="form-section">
+          <div className="logo">
+            <img src={Logo} alt="" />
           </div>
 
-          <div className="form-section">
-            <div className="logo">
-              <img src={Logo} alt="" />
-            </div>
-
-            <form action="" className="form">
-              <label htmlFor="">
-                <input type="text" placeholder="Username" />
-              </label>
-              <label htmlFor="">
-                <input type="text" placeholder="Full Name" />
-              </label>
-              <label htmlFor="">
-                <input type="email" placeholder="Email Address" />
-              </label>
-              <label htmlFor="">
-                <input type="password" placeholder="Password" />
-              </label>
-
+          <form action="" onSubmit={formik.handleSubmit} className="form">
+            <label htmlFor="username">
               <input
-                className="form-btn"
-                type="submit"
-                value="Create Account"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
+                onChange={formik.handleChange}
+                value={formik.values.username}
               />
-            </form>
+            </label>
+            <label htmlFor="fullname">
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                placeholder="Full Name"
+                onChange={formik.handleChange}
+                value={formik.values.fullname}
+              />
+            </label>
+            <label htmlFor="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+              />
+            </label>
+            <label htmlFor="password">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+              />
+            </label>
 
-            <div>
-              <p className="or">or</p>
+            <input className="form-btn" type="submit" value="Create Account" />
+          </form>
+
+          <div>
+            <p className="or">or</p>
+          </div>
+
+          <div className="sign-up">
+            <p>Sign-Up With</p>
+
+            <div className="social-logo">
+              <img src={FacebookLogo} alt="" />
+              <img src={GoogleLogo} alt="" />
+              <img src={PinterestLogo} alt="" />
             </div>
+          </div>
 
-            <div className="sign-up">
-              <p>Sign-Up With</p>
+          <hr />
 
-              <div className="social-logo">
-                <img src={FacebookLogo} alt="" />
-                <img src={GoogleLogo} alt="" />
-                <img src={PinterestLogo} alt="" />
-              </div>
-            </div>
+          <div className="sign-up-footer">
+            <p>Already have an Account?</p>
 
-            <hr />
-
-            <div className="sign-up-footer">
-              <p>Already have an Account?</p>
-
-              <button>Login in</button>
-            </div>
+            <button>Login in</button>
           </div>
         </div>
-      </section>
-    );
-}
+      </div>
+    </section>
+  );
+};
 
 export default SignUp;

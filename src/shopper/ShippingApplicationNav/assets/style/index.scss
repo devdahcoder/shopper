@@ -1,0 +1,26 @@
+.shipping-application-header {
+    padding: 1em 0;
+    text-align: center;
+    .shipping-nav {
+        .shipping-ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                padding: 0 50px;
+                cursor: pointer;
+
+                a {
+                    transition: all 0.3s ease 0s;
+                    text-decoration: none;
+                    color: #878786;
+                    
+
+                    &:active {
+                        color: #8bc34a;
+                    }
+                }
+            }
+        }
+    }
+}

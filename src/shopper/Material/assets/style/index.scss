@@ -1,0 +1,19 @@
+.material-container {
+    // border: solid 1px #c6c6c5;
+    // padding: 1em;
+    // border-radius: 3px;
+    margin: 14px 0;
+    height: 145px;
+    overflow-y: hidden;
+
+    .material-header {
+        display: flex;
+        justify-content: space-between;
+
+        .material-header-text {
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}

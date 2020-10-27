@@ -1,0 +1,87 @@
+.profile-filter {
+    border: solid 1px #c6c6c5;
+    padding: 1em;
+    border-radius: 3px;
+
+    .product-filter-header {
+        color: #878786;
+        font-size: 13.91px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 10px 0;
+        border-bottom: 1px solid #878786;
+    }
+
+    .available-filter {
+        margin: 14px 0;
+
+        .available-header-text {
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 10px 0;
+        }
+
+        .available-input {
+
+            label {
+                color: #1c1c1b;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    
+    .colors-container {
+        .color-header-text {
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+            
+        }
+
+        .colors-display {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            
+
+            .colors {
+                width: 20px;
+                height: 20px;
+                border-radius: 3px;
+            }
+
+            .color-1 {
+                background-color: #1c1c1b;
+                border: 1px solid #1c1c1b;
+            }
+            .color-2 {
+                border: solid 1px #c6c6c5;
+                background-color: #ffffff;
+            }
+            .color-3 {
+                background-color: #e43a20;
+                border: 1px solid #e43a20;
+            }
+            .color-4 {
+                background-color: #1e56aa;
+                border: 1px solid #1e56aa;
+            }
+            .color-5 {
+                background-color: #efde20;
+                border: 1px solid #efde20;
+            }
+            .color-6 {
+                background-color: #8bc34a;
+                border: 1px solid #8bc34a;
+            }
+            .color-7 {
+                background-color: #9b9b9a;
+                border: 1px solid #9b9b9a;
+            }
+        }
+    }
+    
+}

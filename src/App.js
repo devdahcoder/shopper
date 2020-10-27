@@ -7,11 +7,13 @@ import Home from "./shopper/Home/Home"
 
 function App() {
 
-  
   return (
+
     <div className="main">
       <Home />
     </div>
+
+
   );
 };
 

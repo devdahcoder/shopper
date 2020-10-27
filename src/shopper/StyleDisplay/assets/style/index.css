@@ -1,0 +1,28 @@
+.style-display {
+  overflow-y: scroll;
+  margin: .5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 240px;
+}
+
+.style-display::-webkit-scrollbar {
+  width: .5em;
+}
+
+.style-display::-webkit-scrollbar-track {
+  opacity: 0.2;
+  background-color: #c8c8c8;
+  border-radius: 50px;
+}
+
+.style-display::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: grey;
+}
+/*# sourceMappingURL=index.css.map */

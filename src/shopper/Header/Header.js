@@ -6,7 +6,7 @@ import "./assets/style/index.css"
 import HeaderTag from "../HeaderTag/HeaderTag"
 
 
-const Header = () => {
+const Header = ({showLogin}) => {
     return (
       <section>
         <header className="container">
@@ -27,12 +27,12 @@ const Header = () => {
             <ul>
               <li>
                 <a href="#">
-                  <button>Log in</button>
+                  <button onClick={showLogin}>Log in</button>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <button>Sign up</button>
+                  <button onClick={showLogin}>Sign up</button>
                 </a>
               </li>
               <li>

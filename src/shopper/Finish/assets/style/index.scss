@@ -1,0 +1,16 @@
+.finish-container {
+    margin: 14px 0;
+    height: 145px;
+    overflow-y: hidden;
+
+    .finish-header {
+        display: flex;
+        justify-content: space-between;
+
+        .finish-header-text {
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+}

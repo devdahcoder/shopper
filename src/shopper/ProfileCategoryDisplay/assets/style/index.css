@@ -8,5 +8,21 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 250px;
+}
+
+.profile-category-display::-webkit-scrollbar {
+  width: .5em;
+}
+
+.profile-category-display::-webkit-scrollbar-track {
+  opacity: 0.2;
+  background-color: #c8c8c8;
+  border-radius: 50px;
+}
+
+.profile-category-display::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: grey;
 }
 /*# sourceMappingURL=index.css.map */

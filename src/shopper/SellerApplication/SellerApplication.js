@@ -6,7 +6,6 @@ import SellerApplicationNav from "../SellerApplicationNav/SellerApplicationNav"
 // import WebSocialMedia from "../WebSocialMedia/WebSocialMedia"
 // import ContactInfo from "../ContactInfo/ContactInfo"
 // import ConfirmAccount from "../ConfirmAccount/ConfirmAccount"
-import Payment from "../Payment/Payment"
 
 const SellerApplication = () => {
     return (
@@ -23,7 +22,6 @@ const SellerApplication = () => {
           {/* <WebSocialMedia /> */}
           {/* <ContactInfo /> */}
           {/* <ConfirmAccount /> */}
-          <Payment />
 
 
         </div>
