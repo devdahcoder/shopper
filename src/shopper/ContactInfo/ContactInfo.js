@@ -1,5 +1,7 @@
 import React from 'react'
 import "./assets/style/index.css"
+import {Link} from "react-router-dom"
+
 const ContactInfo = () => {
     return (
       <div>
@@ -123,7 +125,9 @@ const ContactInfo = () => {
           </form>
 
           <div className="contact-btn-container">
-            <button className="btn back-btn">Go Back</button>
+            <Link to="/web-&-social-media">
+              <button className="btn back-btn">Go Back</button>
+            </Link>
 
             <div className="btn-link">
               <p>
@@ -133,7 +137,9 @@ const ContactInfo = () => {
                 </span>
               </p>
             </div>
-            <button className="btn next-btn">Submit Application</button>
+            <Link to="/confirm-account">
+              <button className="btn next-btn">Submit Application</button>
+            </Link>
           </div>
         </div>
       </div>

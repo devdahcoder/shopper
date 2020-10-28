@@ -1,5 +1,7 @@
 import React from 'react';
 import "./assets/style/index.css";
+import {useFormik} from "formik";
+import * as Yup from "yup";
 import cancelLogo from "./assets/images/cancel.svg";
 import Logo from "./assets/images/logo.svg";
 import FacebookLogo from "./assets/images/facebook.svg";
@@ -7,7 +9,36 @@ import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 
 
+const initialValues = {
+  usernameoremail: "",
+  password: "",
+  keep: false
+}
+
+
+const validationSchema = Yup.object({
+  usernameoremail: Yup.string().trim().required("Required") ||Yup.string().email("Invalid email formate").required("Required"),
+  password: Yup.string().trim().required("Required"),
+  keep: Yup.boolean()
+});
+
+
+const onSubmit = (values, {setSubmitting, resetForm}) => {
+  setTimeout(() => {
+    alert(JSON.stringify(values, null, 2));
+    setSubmitting(false)
+  }, 400)
+}
+
 const Login = ({ cancelLogin }) => {
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit
+  })
+
+
   return (
     <section>
       <div className="signup">
@@ -20,15 +51,21 @@ const Login = ({ cancelLogin }) => {
             <img src={Logo} alt="" />
           </div>
 
-          <form action="" className="form">
-            <label htmlFor="Username/Email Address">
+          <form action="" onSubmit={formik.handleSubmit} className="form">
+            <label htmlFor="usernameoremail">
               <input
                 type="text"
-                name="Username/Email Address"
-                id="Username/Email Address"
+                name="usernameoremail"
+                id="usernameoremail"
                 placeholder="Username/Email Address"
+                onChange={formik.handleChange}
+                value={formik.values.username}
+                onBlur={formik.handleBlur}
               />
             </label>
+            {formik.touched.username && formik.errors.username ? (
+              <div>{formik.errors.username}</div>
+            ) : null}
 
             <label htmlFor="password">
               <input
@@ -36,14 +73,20 @@ const Login = ({ cancelLogin }) => {
                 name="password"
                 id="password"
                 placeholder="Password"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                onBlur={formik.handleBlur}
               />
             </label>
+            {formik.touched.password && formik.errors.password ? (
+              <div>{formik.errors.password}</div>
+            ) : null}
 
             <div className="forget-password">
               <div>
                 <div className="logged">
-                  <input type="checkbox" name="" id="" />
-                  <p>Keep me Logged in</p>
+                  <input type="checkbox" name="keep" id="keep" />
+                  <label htmlFor="keep">Keep me Logged in</label>
                 </div>
               </div>
 
@@ -53,7 +96,7 @@ const Login = ({ cancelLogin }) => {
             </div>
 
             <div className="btns">
-              <input className="log-in btn" type="button" value="Log in" />
+              <input className="log-in btn" type="submit" value="Log in" />
               <input
                 className="log-in-guest btn"
                 type="button"
@@ -70,9 +113,28 @@ const Login = ({ cancelLogin }) => {
             <p>Sign-Up With</p>
 
             <div className="social-logo">
-              <img src={FacebookLogo} alt="" />
-              <img src={GoogleLogo} alt="" />
-              <img src={PinterestLogo} alt="" />
+              <a
+                href="http://www.facebook.com/hassan.adigun.73/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={FacebookLogo} alt="" />
+              </a>
+              <a
+                href="http://www.facebook.com/hassan.adigun.73/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={GoogleLogo} alt="" />
+              </a>
+
+              <a
+                href="http://www.pinterest.com/adigun0061/_saved/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={PinterestLogo} alt="" />
+              </a>
             </div>
           </div>
 

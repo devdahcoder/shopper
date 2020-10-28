@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Header from "../Header/Header"
 import "./assets/style/index.css"
 import Slider from "../Slider/Slider"
 import TopSeller from "../TopSeller/TopSeller"
@@ -7,7 +6,6 @@ import BecomeABuyer from "../BecomeABuyer/BecomeABuyer"
 import BecomeASeller from "../BecomeASeller/BecomeASeller"
 import HomeProduct from "../HomeProduct/HomeProduct"
 import Banner from "../Banner/Banner"
-import Footer from "../Footer/Footer"
 import SellerApplication from "../SellerApplication/SellerApplication"
 import ProfilePage from "../ProfilePage/ProfilePage"
 import ShippingApplication from "../ShippingApplication/ShippingApplication"
@@ -29,7 +27,6 @@ const Home = () => {
 
     return (
       <section className="shopper-home">
-        <Header showLogin={showLogin} />
         <Banner />
         <Slider />
         <TopSeller />
@@ -39,9 +36,8 @@ const Home = () => {
         {/* <SellerApplication /> */}
         {/* <ShippingApplication /> */}
         {/* <ProfilePage /> */}
-        {/* {login ? <Login cancelLogin={cancelLogin} /> : null} */}
-        {login ? <SignUp cancelLogin={cancelLogin} /> : null}
-        <Footer />
+        {/* {!login ? <Login cancelLogin={cancelLogin} /> : null} */}
+        {/* {!login ? <SignUp cancelLogin={cancelLogin} /> : null} */}
       </section>
     );
 }

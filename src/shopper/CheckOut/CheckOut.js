@@ -1,23 +1,21 @@
 import React from 'react'
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 import "./assets/style/index.css"
+import {Link} from "react-router-dom"
 
 const CheckOut = () => {
     return (
       <section className="checkout">
-        <Header />
-
         <div className="congrats">
           <div className="cong">
             <h1>Congratulations!</h1>
 
             <p>Order Placed Successfully!</p>
 
-            <button>BACK TO SHOPPING</button>
+            <Link to="/">
+              <button>BACK TO SHOPPING</button>
+            </Link>
           </div>
         </div>
-        <Footer />
       </section>
     );
 }

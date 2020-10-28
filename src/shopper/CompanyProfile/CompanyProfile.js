@@ -1,5 +1,8 @@
 import React from 'react'
 import "./assets/style/index.css"
+import {Link} from "react-router-dom"
+
+
 const CompanyProfile = () => {
     return (
       <div>
@@ -62,8 +65,12 @@ const CompanyProfile = () => {
             </div>
           </form>
           <div className="company-btn-container">
-            <button className="btn back-btn">Go Back</button>
-            <button className="btn next-btn">Next</button>
+            <Link to="/application-criteria">
+              <button className="btn back-btn">Go Back</button>
+            </Link>
+            <Link to="/web-&-social-media">
+              <button className="btn next-btn">Next</button>
+            </Link>
           </div>
         </div>
       </div>

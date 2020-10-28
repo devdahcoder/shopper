@@ -1,5 +1,6 @@
 import React from 'react'
 import "./assets/style/index.css"
+import {Link} from "react-router-dom"
 import Buyer from "./assets/images/buyer.svg"
 
 const BecomeABuyer = () => {
@@ -17,7 +18,9 @@ const BecomeABuyer = () => {
               Nulla consequat massa quis enim.
             </p>
 
-            <button>Apply To Buy</button>
+            <Link to="/shipping-address">
+              <button>Apply To Buy</button>
+            </Link>
           </div>
           <div>
             <img src={Buyer} alt="" />

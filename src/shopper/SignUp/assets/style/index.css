@@ -42,6 +42,10 @@
   padding: 12px 0;
 }
 
+.login .form-section .form label .errors {
+  color: red;
+}
+
 .login .form-section .form label input {
   width: 100%;
   padding: 0 10px;

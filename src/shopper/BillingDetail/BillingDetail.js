@@ -1,6 +1,6 @@
 import React from 'react'
 import "./assets/style/index.css"
-
+import {Link} from "react-router-dom"
 
 const BillingDetail = () => {
     return (
@@ -106,8 +106,12 @@ const BillingDetail = () => {
         </form>
 
         <div className="billing-btn-container">
-          <button className="btn back-btn">Go Back</button>
-          <button className="btn next-btn">Next</button>
+          <Link to="/shipping-address">
+            <button className="btn back-btn">Go Back</button>
+          </Link>
+          <Link to="/payment">
+            <button className="btn next-btn">Next</button>
+          </Link>
         </div>
       </div>
     );

@@ -1,8 +1,9 @@
 import React from 'react'
+import "./assets/style/index.css";
+import {Link} from "react-router-dom"
 import Logo from "./assets/images/logo.svg"
 import Love from "./assets/images/love.svg"
 import Cart from "./assets/images/cart.svg"
-import "./assets/style/index.css"
 import HeaderTag from "../HeaderTag/HeaderTag"
 
 
@@ -10,7 +11,9 @@ const Header = ({showLogin}) => {
     return (
       <section>
         <header className="container">
-          <img className="logo" src={Logo} alt="" />
+          <Link to="/">
+            <img className="logo" src={Logo} alt="" />
+          </Link>
 
           <form action="" className="form">
             <input

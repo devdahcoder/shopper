@@ -1,6 +1,7 @@
 import React from 'react'
 import "./asset/style/index.css"
 import Seller from "./asset/images/seller.svg"
+import {Link} from "react-router-dom"
 const BecomeASeller = () => {
     return (
       <section>
@@ -19,7 +20,9 @@ const BecomeASeller = () => {
               Nulla consequat massa quis enim.
             </p>
 
-            <button>Apply To Buy</button>
+            <Link to="/application-criteria">
+              <button>Apply To Sell</button>
+            </Link>
           </div>
         </div>
       </section>

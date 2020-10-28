@@ -1,6 +1,7 @@
 import React from 'react'
 import "./assets/style/index.css"
 import ProfileImage from "../ProfileImage/ProfileImage"
+import {Link} from "react-router-dom"
 
 
 
@@ -36,7 +37,9 @@ const ApplicationCritaria = () => {
                 </div>
 
                 <div className="email-container">
-                  <label className="email-label" htmlFor="">Email</label>
+                  <label className="email-label" htmlFor="">
+                    Email
+                  </label>
                   <input
                     className="email"
                     type="email"
@@ -44,7 +47,9 @@ const ApplicationCritaria = () => {
                     id=""
                     placeholder="xyz.abc@deb.com"
                   />
-                  <a className="seller-log-out" href="">Sign out and apply with another account</a>
+                  <a className="seller-log-out" href="">
+                    Sign out and apply with another account
+                  </a>
                 </div>
               </div>
               <div className="seller-form">
@@ -60,8 +65,13 @@ const ApplicationCritaria = () => {
           </form>
 
           <div className="seller-btn-container">
-            <button className="btn btn-back">Go Back</button>
-            <button className="btn btn-next">Next</button>
+            <Link to="/application-criteria">
+              <button className="btn btn-back">Go Back</button>
+            </Link>
+
+            <Link to="/company-profile">
+              <button className="btn btn-next">Next</button>
+            </Link>
           </div>
         </div>
       </div>

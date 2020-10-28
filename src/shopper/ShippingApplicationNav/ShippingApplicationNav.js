@@ -1,6 +1,6 @@
 import React from 'react'
 import "./assets/style/index.css"
-
+import {Link} from "react-router-dom"
 
 const ShippingApplicationNav = () => {
     return (
@@ -8,15 +8,21 @@ const ShippingApplicationNav = () => {
         <div className="shipping-application-header">
           <nav className="shipping-nav">
             <ul className="shipping-ul">
-              <li>
-                <a href="">Shipping Address</a>
-              </li>
-              <li>
-                <a href="">Billing Details</a>
-              </li>
-              <li>
-                <a href="">Payment</a>
-              </li>
+              <Link to="/shipping-address">
+                <li>
+                  <a href="">Shipping Address</a>
+                </li>
+              </Link>
+              <Link to="/billing-details">
+                <li>
+                  <a href="">Billing Details</a>
+                </li>
+              </Link>
+              <Link to="/payment">
+                <li>
+                  <a href="">Payment</a>
+                </li>
+              </Link>
             </ul>
           </nav>
         </div>

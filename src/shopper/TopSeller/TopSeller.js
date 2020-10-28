@@ -38,7 +38,7 @@ const TopSeller = () => {
       </div>
         <div className="topseller">
           {cloths.map((cloth) => (
-            <TopSellerItem cloth={cloth} />
+            <TopSellerItem key={uuid()} cloth={cloth} />
           ))}
         </div>
 

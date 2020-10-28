@@ -1,6 +1,6 @@
 import React from 'react'
 import "./assets/style/index.css";
-
+import {Link} from "react-router-dom"
 
 
 const ShippingAddress = () => {
@@ -107,8 +107,12 @@ const ShippingAddress = () => {
         </form>
 
         <div className="shipping-btn-container">
-          <button className="btn back-btn">Go Back</button>
-          <button className="btn next-btn">Next</button>
+          <Link to="/shipping-address">
+            <button className="btn back-btn">Go Back</button>
+          </Link>
+          <Link to="/billing-details">
+            <button className="btn next-btn">Next</button>
+          </Link>
         </div>
       </div>
     );
