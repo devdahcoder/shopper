@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="application-criteria-container"
+    >
+      <div
+        class="criteria-copyright"
+      >
+        <p>
+          Copyright will provide is wonderful serenity has taken possession of my entire as soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone standards.
+        </p>
+        <a
+          class="criteria-copyright guideline"
+          href="http://www.google.com"
+        >
+          Read our Buyer guideline
+        </a>
+      </div>
+      <form
+        action=""
+      >
+        <div
+          class="application-form-display"
+        >
+          <div
+            class="seller-form"
+          >
+            <div
+              class="label"
+            >
+              Your Account
+            </div>
+            <div
+              class="seller-form-image"
+            >
+              <span
+                class="profile-header-image"
+                style="width: 80px; height: 80px;"
+              >
+                <img
+                  alt=""
+                  class="profile-header"
+                  src="download.png"
+                />
+              </span>
+              <input
+                class="file"
+                id=""
+                name=""
+                type="file"
+              />
+            </div>
+            <div
+              class="email-container"
+            >
+              <label
+                class="email-label"
+                for=""
+              >
+                Email
+              </label>
+              <input
+                class="email"
+                id=""
+                name=""
+                placeholder="xyz.abc@deb.com"
+                type="email"
+              />
+              <a
+                class="seller-log-out"
+                href="http://www.google.com"
+              >
+                Sign out and apply with another account
+              </a>
+            </div>
+          </div>
+          <div
+            class="seller-form"
+          >
+            <div
+              class="label"
+            >
+              How did you hear about Shopper
+            </div>
+            <select
+              class="select"
+              id=""
+              name=""
+            >
+              <option
+                value="newspaper"
+              >
+                Newspaper
+              </option>
+              <option
+                value="advertisment"
+              >
+                Advertisment
+              </option>
+              <option
+                value="magazine"
+              >
+                Magazine
+              </option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <div
+        class="seller-btn-container"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

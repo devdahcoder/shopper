@@ -17,3 +17,19 @@ body {
   font-family: 'Roboto Mono', monospace;
   font-family: 'Source Sans Pro', sans-serif; */
 }
+
+body::-webkit-scrollbar {
+  width: .6em;
+}
+
+body::-webkit-scrollbar-track {
+  opacity: 0.2;
+  background-color: #c8c8c8;
+  border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: grey;
+  
+}

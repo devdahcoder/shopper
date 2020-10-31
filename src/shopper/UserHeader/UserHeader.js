@@ -27,12 +27,12 @@ const UserHeader = () => {
           <nav>
             <ul>
               <li>
-                <a href="#">
+                <a href="http://www.google.com">
                   <button>Request Quote</button>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="http://www.google.com">
                   <button>Dashboard</button>
                   <div className="tag">
                       9+
@@ -40,17 +40,17 @@ const UserHeader = () => {
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="http://www.google.com">
                   <img src={Love} alt="" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="http://www.google.com">
                   <img src={Cart} alt="" />
                 </a>
               </li>
               <li className="prof">
-                <a href="#">
+                <a href="http://www.google.com">
                   <img className="profile" src={Profile} alt="" />
                 </a>
                 <img class="arrow" src={Arrow} alt="" />

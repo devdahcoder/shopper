@@ -1,16 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Header from "./shopper/Header/Header"
 import Home from "./shopper/Home/Home";
 import SellerApplication from "./shopper/SellerApplication/SellerApplication"
 import ShippingApplication from "./shopper/ShippingApplication/ShippingApplication"
-import CheckOut from "./shopper/CheckOut/CheckOut"
 import Footer from "./shopper/Footer/Footer"
 
 
 
+
 function App() {
+
+  
 
   return (
     <Router>

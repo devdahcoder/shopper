@@ -15,19 +15,19 @@ const Footer = () => {
               <nav>
                 <ul>
                   <li>
-                    <a href="">Retailers</a>
+                    <a href="http://www.google.com">Retailers</a>
                   </li>
                   <li>
-                    <a href="">Interiors Designers</a>
+                    <a href="http://www.google.com">Interiors Designers</a>
                   </li>
                   <li>
-                    <a href="">Product Designers</a>
+                    <a href="http://www.google.com">Product Designers</a>
                   </li>
                   <li>
-                    <a href="">Wholesalers / Importers</a>
+                    <a href="http://www.google.com">Wholesalers / Importers</a>
                   </li>
                   <li>
-                    <a href="">Artisans</a>
+                    <a href="http://www.google.com">Artisans</a>
                   </li>
                 </ul>
               </nav>
@@ -38,16 +38,16 @@ const Footer = () => {
             <nav>
               <ul>
                 <li>
-                  <a href="">About</a>
+                  <a href="http://www.google.com">About</a>
                 </li>
                 <li>
-                  <a href="">Policies</a>
+                  <a href="http://www.google.com">Policies</a>
                 </li>
                 <li>
-                  <a href="">Careers</a>
+                  <a href="http://www.google.com">Careers</a>
                 </li>
                 <li>
-                  <a href="">Press</a>
+                  <a href="http://www.google.com">Press</a>
                 </li>
               </ul>
             </nav>
@@ -57,13 +57,13 @@ const Footer = () => {
             <nav>
               <ul>
                 <li>
-                  <a href="">Upcoming Events</a>
+                  <a href="http://www.google.com">Upcoming Events</a>
                 </li>
                 <li>
-                  <a href="">Become a Buyer</a>
+                  <a href="http://www.google.com">Become a Buyer</a>
                 </li>
                 <li>
-                  <a href="">Become a Seller</a>
+                  <a href="http://www.google.com">Become a Seller</a>
                 </li>
               </ul>
             </nav>
@@ -73,7 +73,7 @@ const Footer = () => {
             <nav>
               <ul>
                 <li>
-                  <a href="">
+                  <a href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Facebook} alt="" />
@@ -82,7 +82,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Pinterest} alt="" />
@@ -92,7 +92,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Twitter} alt="" />
@@ -102,7 +102,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Instagram} alt="" />

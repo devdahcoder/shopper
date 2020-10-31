@@ -11,16 +11,13 @@
   display: inline-block;
   padding: 0 20px;
   cursor: pointer;
-}
-
-.seller-application-header .seller-nav .seller-ul li a {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   text-decoration: none;
   color: #878786;
 }
 
-.seller-application-header .seller-nav .seller-ul li a:active {
+.seller-application-header .seller-nav .seller-ul li:active {
   color: #8bc34a;
 }
 /*# sourceMappingURL=index.css.map */

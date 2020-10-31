@@ -1,11 +1,11 @@
-.application-critaria-container {
+.application-criteria-container {
   border: solid 1px #c6c6c5;
   background: #ffffff;
   border-radius: 5px;
   padding: 2em 1em;
 }
 
-.application-critaria-container .critaria-copyright {
+.application-criteria-container .criteria-copyright {
   color: #1c1c1b;
   font-size: 14.083433px;
   font-weight: 400;
@@ -15,13 +15,13 @@
   margin-bottom: 1em;
 }
 
-.application-critaria-container .critaria-copyright .guideline {
+.application-criteria-container .criteria-copyright .guideline {
   color: #8bc34a;
   text-decoration: none;
   line-height: 50.113443px;
 }
 
-.application-critaria-container form .application-form-display {
+.application-criteria-container form .application-form-display {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -30,11 +30,11 @@
   width: 80%;
 }
 
-.application-critaria-container form .application-form-display .seller-form {
+.application-criteria-container form .application-form-display .seller-form {
   display: block;
 }
 
-.application-critaria-container form .application-form-display .seller-form .label {
+.application-criteria-container form .application-form-display .seller-form .label {
   width: 100%;
   border-bottom: 1px solid #c6c6c5;
   padding: 1em 0;
@@ -43,7 +43,7 @@
   margin-bottom: 1.5em;
 }
 
-.application-critaria-container form .application-form-display .seller-form .seller-form-image {
+.application-criteria-container form .application-form-display .seller-form .seller-form-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,25 +52,25 @@
           align-items: center;
 }
 
-.application-critaria-container form .application-form-display .seller-form .seller-form-image .file {
+.application-criteria-container form .application-form-display .seller-form .seller-form-image .file {
   margin-left: 1.5em;
 }
 
-.application-critaria-container form .application-form-display .seller-form .select, .application-critaria-container form .application-form-display .seller-form .email {
+.application-criteria-container form .application-form-display .seller-form .select, .application-criteria-container form .application-form-display .seller-form .email {
   width: 100%;
   padding: 10px 5px;
 }
 
-.application-critaria-container form .application-form-display .seller-form .email-container {
+.application-criteria-container form .application-form-display .seller-form .email-container {
   margin: 2em 0;
 }
 
-.application-critaria-container form .application-form-display .seller-form .email-container .email-label {
+.application-criteria-container form .application-form-display .seller-form .email-container .email-label {
   font-size: 14px;
   font-weight: 400;
 }
 
-.application-critaria-container form .application-form-display .seller-form .email-container .seller-log-out {
+.application-criteria-container form .application-form-display .seller-form .email-container .seller-log-out {
   color: red;
   padding: 1em 0;
   font-size: 14px;
@@ -78,7 +78,7 @@
   line-height: 4em;
 }
 
-.application-critaria-container .seller-btn-container {
+.application-criteria-container .criteria-btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,7 +91,7 @@
   width: 100%;
 }
 
-.application-critaria-container .seller-btn-container .btn {
+.application-criteria-container .criteria-btn-container .btn {
   width: 100px;
   height: 39.99px;
   outline: none;
@@ -101,13 +101,13 @@
   margin-top: 7em;
 }
 
-.application-critaria-container .seller-btn-container .btn-back {
+.application-criteria-container .criteria-btn-container .btn-back {
   border: solid 1px #757575;
   background-color: rgba(0, 0, 0, 0);
   color: #757575;
 }
 
-.application-critaria-container .seller-btn-container .btn-next {
+.application-criteria-container .criteria-btn-container .btn-next {
   background-color: #8bc34a;
   border: 1px solid #8bc34a;
   color: #ffffff;

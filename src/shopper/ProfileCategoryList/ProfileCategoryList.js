@@ -5,7 +5,7 @@ import "./assets/style/index.css"
 
 const ProfileCategoryList = ({category}) => {
     return (
-        <a href="" className="profile-category-list">
+        <a href="http://www.google.com" className="profile-category-list">
             <div>
                 <li>{category.category}</li>
             </div>

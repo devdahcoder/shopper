@@ -5,9 +5,15 @@ import Logo from "./assets/images/logo.svg"
 import Love from "./assets/images/love.svg"
 import Cart from "./assets/images/cart.svg"
 import HeaderTag from "../HeaderTag/HeaderTag"
+import {useDispatch} from "react-redux"
+import {displayLoginSection} from "../../actions/loginAction"
+import {displaySignupSection} from "../../actions/signupAction"
 
 
-const Header = ({showLogin}) => {
+const Header = () => {
+
+  const dispatch = useDispatch()
+
     return (
       <section>
         <header className="container">
@@ -29,24 +35,16 @@ const Header = ({showLogin}) => {
           <nav>
             <ul>
               <li>
-                <a href="#">
-                  <button onClick={showLogin}>Log in</button>
-                </a>
+                <button onClick={() => dispatch(displayLoginSection())}>Log in</button>
               </li>
               <li>
-                <a href="#">
-                  <button onClick={showLogin}>Sign up</button>
-                </a>
+                <button onClick={() => dispatch(displaySignupSection())}>Sign up</button>
               </li>
               <li>
-                <a href="#">
-                  <img src={Love} alt="" />
-                </a>
+                <img src={Love} alt="" />
               </li>
               <li>
-                <a href="#">
-                  <img src={Cart} alt="" />
-                </a>
+                <img src={Cart} alt="" />
               </li>
             </ul>
           </nav>

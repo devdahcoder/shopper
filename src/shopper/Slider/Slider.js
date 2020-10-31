@@ -18,23 +18,23 @@ const Slider = () => {
             <div className="figure">
                 <figure>
                     <img src={Ring} alt="" />
-                    <p><a href="">Jewelry</a></p>
+                    <p><a href="http://www.google.com">Jewelry</a></p>
                 </figure>
                 <figure>
                     <img src={Chair} alt="" />
-                    <p><a href="">Furniture</a></p>
+                    <p><a href="http://www.google.com">Furniture</a></p>
                 </figure>
                 <figure>
                     <img src={Brush} alt="" />
-                    <p><a href="">Makeup</a></p>
+                    <p><a href="http://www.google.com">Makeup</a></p>
                 </figure>
                 <figure>
                     <img src={Bicycle} alt="" />
-                    <p><a href="">Sports Equipment</a></p>
+                    <p><a href="http://www.google.com">Sports Equipment</a></p>
                 </figure>
             </div>
         
-            <a href="">
+            <a href="http://www.google.com">
             <img src={RightArrow} alt="" />
             </a>
         </div>

@@ -11,27 +11,27 @@ const SellerApplicationNav = () => {
             <ul className="seller-ul">
               <Link to="/application-criteria">
                 <li>
-                  <a href="">Application Criteria</a>
+                  Application Criteria
                 </li>
               </Link>
               <Link to="/company-profile">
                 <li>
-                  <a href="">Company Profile</a>
+                  Company Profile
                 </li>
               </Link>
               <Link to="/web-&-social-media">
                 <li>
-                  <a href="">Web & Social Media</a>
+                  Web & Social Media
                 </li>
               </Link>
               <Link to="/contact-info">
                 <li>
-                  <a href="">Contact Info</a>
+                  Contact Info
                 </li>
               </Link>
               <Link to="/confirm-account">
                 <li>
-                  <a href="">Confirm Account</a>
+                  Confirm Account
                 </li>
               </Link>
             </ul>

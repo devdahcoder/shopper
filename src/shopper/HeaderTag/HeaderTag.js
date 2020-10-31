@@ -8,31 +8,31 @@ const HeaderTag = () => {
           <nav>
             <ul>
               <li>
-                <a href="">Home Decor</a>
+                <a href="http://www.google.com">Home Decor</a>
               </li>
               <li>
-                <a href="">Furniture</a>
+                <a href="http://www.google.com">Furniture</a>
               </li>
               <li>
-                <a href="">Lighting</a>
+                <a href="http://www.google.com">Lighting</a>
               </li>
               <li>
-                <a href="">Home Accents</a>
+                <a href="http://www.google.com">Home Accents</a>
               </li>
               <li>
-                <a href="">Rugs</a>
+                <a href="http://www.google.com">Rugs</a>
               </li>
               <li>
-                <a href="">Outdoors</a>
+                <a href="http://www.google.com">Outdoors</a>
               </li>
               <li>
-                <a href="">Holidays</a>
+                <a href="http://www.google.com">Holidays</a>
               </li>
               <li>
-                <a href="">Gifts</a>
+                <a href="http://www.google.com">Gifts</a>
               </li>
               <li>
-                <a href="">Events</a>
+                <a href="http://www.google.com">Events</a>
               </li>
             </ul>
           </nav>

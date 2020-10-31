@@ -10,17 +10,17 @@ const ShippingApplicationNav = () => {
             <ul className="shipping-ul">
               <Link to="/shipping-address">
                 <li>
-                  <a href="">Shipping Address</a>
+                  Shipping Address
                 </li>
               </Link>
               <Link to="/billing-details">
                 <li>
-                  <a href="">Billing Details</a>
+                  Billing Details
                 </li>
               </Link>
               <Link to="/payment">
                 <li>
-                  <a href="">Payment</a>
+                  Payment
                 </li>
               </Link>
             </ul>

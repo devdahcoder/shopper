@@ -50,14 +50,7 @@ header nav ul li {
   padding: 0 12px;
 }
 
-header nav ul li a {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  color: #1e234b;
-  text-decoration: none;
-}
-
-header nav ul li a button {
+header nav ul li button {
   border: solid 1px #757575;
   width: 100px;
   height: 40px;
@@ -65,9 +58,11 @@ header nav ul li a button {
   border-radius: 3px;
   background-color: #ffffff;
   font-family: 'Fira Code', monospace;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
-header nav ul li a img {
+header nav ul li img {
   width: 100%;
 }
 /*# sourceMappingURL=index.css.map */

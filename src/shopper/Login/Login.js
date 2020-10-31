@@ -7,6 +7,8 @@ import Logo from "./assets/images/logo.svg";
 import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
+import {useDispatch} from "react-redux"
+import {closeLoginSection} from "../../actions/loginAction"
 
 
 const initialValues = {
@@ -30,7 +32,9 @@ const onSubmit = (values, {setSubmitting, resetForm}) => {
   }, 400)
 }
 
-const Login = ({ cancelLogin }) => {
+const Login = () => {
+
+  const dispatch = useDispatch()
 
   const formik = useFormik({
     initialValues,
@@ -43,7 +47,7 @@ const Login = ({ cancelLogin }) => {
     <section>
       <div className="signup">
         <div className="cancel-btn">
-          <img onClick={cancelLogin} src={cancelLogo} alt="" />
+          <img onClick={() => dispatch(closeLoginSection())} src={cancelLogo} alt="" />
         </div>
 
         <div className="form-section">

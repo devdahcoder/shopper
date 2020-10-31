@@ -1,0 +1,1288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="main"
+  >
+    <section>
+      <header
+        class="container"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt=""
+            class="logo"
+            src="logo.svg"
+          />
+        </a>
+        <form
+          action=""
+          class="form"
+        >
+          <input
+            class="text"
+            id=""
+            name=""
+            placeholder="Search for Products"
+            type="text"
+          />
+          <input
+            class="submit"
+            type="submit"
+            value="Search"
+          />
+        </form>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="http://www.google.com"
+              >
+                <button>
+                  Log in
+                </button>
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://www.google.com"
+              >
+                <button>
+                  Sign up
+                </button>
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://www.google.com"
+              >
+                <img
+                  alt=""
+                  src="love.svg"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://www.google.com"
+              >
+                <img
+                  alt=""
+                  src="cart.svg"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section
+        class="header-bg"
+      >
+        <div
+          class="container"
+        >
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Home Decor
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Furniture
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Lighting
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Home Accents
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Rugs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Outdoors
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Holidays
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Gifts
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Events
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </section>
+    <section
+      class="shopper-home"
+    >
+      <div
+        class="banner"
+      >
+        <div>
+          <h1>
+            We have dream to connect wholesalers to 
+            <br />
+             independent Customers
+          </h1>
+          <button>
+            Explore
+          </button>
+        </div>
+      </div>
+      <div
+        class="top-seller-display"
+      >
+        <div
+          class="top-seller-slider"
+        >
+          <a
+            href="google.com"
+          >
+            <img
+              alt=""
+              src="leftarrow.svg"
+            />
+          </a>
+          <div
+            class="figure"
+          >
+            <figure>
+              <img
+                alt=""
+                src="ring.svg"
+              />
+              <p>
+                <a
+                  href="http://www.google.com"
+                >
+                  Jewelry
+                </a>
+              </p>
+            </figure>
+            <figure>
+              <img
+                alt=""
+                src="chair.svg"
+              />
+              <p>
+                <a
+                  href="http://www.google.com"
+                >
+                  Furniture
+                </a>
+              </p>
+            </figure>
+            <figure>
+              <img
+                alt=""
+                src="brush.svg"
+              />
+              <p>
+                <a
+                  href="http://www.google.com"
+                >
+                  Makeup
+                </a>
+              </p>
+            </figure>
+            <figure>
+              <img
+                alt=""
+                src="bicycle.svg"
+              />
+              <p>
+                <a
+                  href="http://www.google.com"
+                >
+                  Sports Equipment
+                </a>
+              </p>
+            </figure>
+          </div>
+          <a
+            href="http://www.google.com"
+          >
+            <img
+              alt=""
+              src="rightarrow.svg"
+            />
+          </a>
+        </div>
+      </div>
+      <section
+        class="container top-seller-section"
+      >
+        <div
+          class="header"
+        >
+          <h1>
+            Top Seller
+          </h1>
+        </div>
+        <div
+          class="topseller"
+        >
+          <section>
+            <div
+              class="top-seller"
+            >
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div
+              class="top-seller"
+            >
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div
+              class="top-seller"
+            >
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          class="btn"
+        >
+          <button>
+            Explore More &gt;
+          </button>
+        </div>
+      </section>
+      <section>
+        <div
+          class="container become-buyer"
+        >
+          <div
+            class="buyer-text"
+          >
+            <h1>
+              Why Become a Buyer?
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            </p>
+            <a
+              href="/shipping-address"
+            >
+              <button>
+                Apply To Buy
+              </button>
+            </a>
+          </div>
+          <div>
+            <img
+              alt=""
+              src="buyer.svg"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          class="container become-seller"
+        >
+          <div>
+            <img
+              alt=""
+              src="seller.svg"
+            />
+          </div>
+          <div
+            class="seller-text"
+          >
+            <h1>
+              Why Become a Buyer?
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam feliultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+            </p>
+            <a
+              href="/application-criteria"
+            >
+              <button>
+                Apply To Sell
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="container"
+      >
+        <div
+          class="home-products"
+        >
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Dele
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Yeezy
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $123
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="home-product-item"
+          >
+            <div>
+              <div
+                class="product"
+              >
+                <figure>
+                  <img
+                    alt=""
+                    src="pix.svg"
+                    style="display: block;"
+                  />
+                </figure>
+                <div
+                  class="details"
+                >
+                  <div>
+                    <p
+                      style="color: rgb(135, 135, 134);"
+                    >
+                      Supplier’s Name Here
+                    </p>
+                    <p
+                      style="color: rgb(28, 28, 27); margin: 5px 0px;"
+                    >
+                      Product Name Here
+                    </p>
+                    <p
+                      style="color: rgb(139, 195, 74);"
+                    >
+                      $29,354.75
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      alt=""
+                      src="arrow.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+    <section
+      class="footer"
+    >
+      <div
+        class="footer-display"
+      >
+        <div>
+          <h1>
+            How We Help
+          </h1>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <a
+                    href="http://www.google.com"
+                  >
+                    Retailers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.google.com"
+                  >
+                    Interiors Designers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.google.com"
+                  >
+                    Product Designers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.google.com"
+                  >
+                    Wholesalers / Importers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.google.com"
+                  >
+                    Artisans
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div>
+          <h1>
+            Get To Know Us
+          </h1>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Policies
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Press
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <h1>
+            Join the Community
+          </h1>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Upcoming Events
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Become a Buyer
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                  Become a Seller
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <h1>
+            Follow Us
+          </h1>
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                   
+                  <span>
+                    <img
+                      alt=""
+                      src="facebook.svg"
+                    />
+                  </span>
+                   About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                   
+                  <span>
+                    <img
+                      alt=""
+                      src="pinterest.svg"
+                    />
+                  </span>
+                   Policies
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                   
+                  <span>
+                    <img
+                      alt=""
+                      src="twitter.svg"
+                    />
+                  </span>
+                   Careers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://www.google.com"
+                >
+                   
+                  <span>
+                    <img
+                      alt=""
+                      src="instagram.svg"
+                    />
+                  </span>
+                   Press
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div
+        class="container"
+      >
+        <hr />
+        <div
+          class="copyright"
+        >
+          <p>
+            © 2016 Uimint.com Terms & Conditions Privacy
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</DocumentFragment>
+`;

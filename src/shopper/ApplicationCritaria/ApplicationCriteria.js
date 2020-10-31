@@ -5,21 +5,21 @@ import {Link} from "react-router-dom"
 
 
 
-const ApplicationCritaria = () => {
+const ApplicationCriteria = () => {
 
     const pixSize = "80px"
     return (
       <div>
-        <div className="application-critaria-container">
-          <div className="critaria-copyright">
+        <div className="application-criteria-container">
+          <div className="criteria-copyright">
             <p>
-              Copywright will prowide is wonderful serenity has taken possession
+              Copyright will provide is wonderful serenity has taken possession
               of my entire as soul, like these sweet mornings of spring which I
               enjoy with my whole heart. I am alone standards.
             </p>
 
             <a
-              className="critaria-copyright guideline"
+              className="criteria-copyright guideline"
               href="http://www.google.com"
             >
               Read our Buyer guideline
@@ -47,7 +47,7 @@ const ApplicationCritaria = () => {
                     id=""
                     placeholder="xyz.abc@deb.com"
                   />
-                  <a className="seller-log-out" href="">
+                  <a className="seller-log-out" href="http://www.google.com">
                     Sign out and apply with another account
                   </a>
                 </div>
@@ -64,7 +64,7 @@ const ApplicationCritaria = () => {
             </div>
           </form>
 
-          <div className="seller-btn-container">
+          <div className="criteria-btn-container">
             <Link to="/application-criteria">
               <button className="btn btn-back">Go Back</button>
             </Link>
@@ -78,4 +78,4 @@ const ApplicationCritaria = () => {
     );
 }
 
-export default ApplicationCritaria
+export default ApplicationCriteria

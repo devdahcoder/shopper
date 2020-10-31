@@ -2,7 +2,7 @@ import React from 'react'
 import "./assets/style/index.css"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import SellerApplicationNav from "../SellerApplicationNav/SellerApplicationNav"
-import ApplicationCritaria from "../ApplicationCritaria/ApplicationCritaria"
+import ApplicationCriteria from "../ApplicationCritaria/ApplicationCriteria"
 import CompanyProfile from "../CompanyProfile/CompanyProfile"
 import WebSocialMedia from "../WebSocialMedia/WebSocialMedia"
 import ContactInfo from "../ContactInfo/ContactInfo"
@@ -23,7 +23,7 @@ const SellerApplication = () => {
               <Route
                 path="/application-criteria"
                 exact
-                component={ApplicationCritaria}
+                component={ApplicationCriteria}
               />
               <Route 
                 path="/company-profile" 

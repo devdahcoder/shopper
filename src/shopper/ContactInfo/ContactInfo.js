@@ -103,7 +103,7 @@ const ContactInfo = () => {
                   </label>
 
                   <select className="contact-input" name="" id="">
-                    <option value="selectcountry">SelectCountry</option>
+                    <option value="select country">Select Country</option>
                   </select>
                 </div>
                 <div>
@@ -133,7 +133,7 @@ const ContactInfo = () => {
               <p>
                 By Submitting this application, you agree to the{" "}
                 <span>
-                  <a href="">Buyer guidelines</a>
+                  <a href="http://www.google.com">Buyer guidelines</a>
                 </span>
               </p>
             </div>

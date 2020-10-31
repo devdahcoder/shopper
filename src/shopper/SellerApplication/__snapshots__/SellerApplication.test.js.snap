@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="seller-application-display"
+    >
+      <div
+        style="text-align: center; padding: 10px 0px;"
+      >
+        <h1>
+          Seller Application
+        </h1>
+      </div>
+      <section>
+        <div
+          class="seller-application-header"
+        >
+          <nav
+            class="seller-nav"
+          >
+            <ul
+              class="seller-ul"
+            >
+              <a
+                href="/application-criteria"
+              >
+                <li>
+                  Application Criteria
+                </li>
+              </a>
+              <a
+                href="/company-profile"
+              >
+                <li>
+                  Company Profile
+                </li>
+              </a>
+              <a
+                href="/web-&-social-media"
+              >
+                <li>
+                  Web & Social Media
+                </li>
+              </a>
+              <a
+                href="/contact-info"
+              >
+                <li>
+                  Contact Info
+                </li>
+              </a>
+              <a
+                href="/confirm-account"
+              >
+                <li>
+                  Confirm Account
+                </li>
+              </a>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </div>
+  </section>
+</DocumentFragment>
+`;

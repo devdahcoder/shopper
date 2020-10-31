@@ -7,6 +7,10 @@ import Payment from "../Payment/Payment"
 import CheckOut from "../CheckOut/CheckOut"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
+
+
+
+
 const ShippingApplication = () => {
     return (
         <Router>
