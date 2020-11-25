@@ -1,0 +1,48 @@
+.top-seller-display {
+  position: absolute;
+  width: 100%;
+  margin-top: -80px;
+}
+
+.top-seller-display .top-seller-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+  -webkit-box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
+          box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
+          box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
+  padding: 0 .5em;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.top-seller-display .top-seller-slider img {
+  vertical-align: middle;
+}
+
+.top-seller-display .top-seller-slider .figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  max-width: 95%;
+  overflow: hidden;
+}
+
+.top-seller-display .top-seller-slider .figure .slider-figure {
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955), -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,14 @@
+figure {
+  text-align: center;
+}
+
+figure p {
+  text-align: center;
+  padding: .5em;
+}
+
+figure p a {
+  color: #757575;
+  text-decoration: none;
+}
+/*# sourceMappingURL=index.css.map */

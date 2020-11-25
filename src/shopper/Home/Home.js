@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./assets/style/index.css"
 import Slider from "../Slider/Slider"
 import TopSeller from "../TopSeller/TopSeller"
@@ -13,7 +13,15 @@ import {useSelector} from "react-redux"
 import Login from "../Login/Login"
 import SignUp from "../SignUp/SignUp"
 
+
+
+
+
+
 const Home = () => {
+
+
+
 
     const login = useSelector((state) => state.login.showLogin);
     const signup = useSelector((state) => state.signup.showSignup);
