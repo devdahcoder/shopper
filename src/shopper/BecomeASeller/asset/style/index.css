@@ -8,25 +8,28 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
-  margin: 0 auto;
+  width: 95%;
   padding: 2em 0;
 }
 
 .become-seller .seller-text {
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .become-seller .seller-text h1 {
   color: #8bc34a;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 .become-seller .seller-text p {
   padding: 1em 0;
   color: #757575;
+  line-height: 25px;
 }
 
-.become-seller button {
+.become-seller .seller-text button {
   width: 150px;
   height: 40px;
   background: #8bc34a;

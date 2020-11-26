@@ -35,16 +35,24 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <button onClick={() => dispatch(displayLoginSection())}>Log in</button>
+                <button onClick={() => dispatch(displayLoginSection())}>
+                  Log in
+                </button>
               </li>
               <li>
-                <button onClick={() => dispatch(displaySignupSection())}>Sign up</button>
+                <button onClick={() => dispatch(displaySignupSection())}>
+                  Sign up
+                </button>
               </li>
               <li>
-                <img src={Love} alt="" />
+                <Link to="/wishlist">
+                  <img src={Love} alt="" />
+                </Link>
               </li>
               <li>
-                <img src={Cart} alt="" />
+                <Link to="/cart">
+                  <img src={Cart} alt="" />
+                </Link>
               </li>
             </ul>
           </nav>

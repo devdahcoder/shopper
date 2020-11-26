@@ -63,7 +63,7 @@ const SliderDisplay = () => {
 
         setProperty(properties[newIndex]);
 
-        if (property.index + 1 > properties.length - 1) {
+        if (property.index == properties.length - 1) {
             setProperty(properties[0]);
         }
 

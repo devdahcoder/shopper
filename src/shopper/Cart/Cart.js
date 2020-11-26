@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
-import UserHeader from "../UserHeader/UserHeader"
+// import UserHeader from "../UserHeader/UserHeader"
 import { v4 as uuid } from "uuid";
 import CartItem from "../CartItem/CartItem"
 import Footer from "../Footer/Footer"
 import "./assets/style/index.css"
+import ADS from "./assets/images/ads.svg"
 
 const initialValue = [
   {
@@ -38,85 +39,66 @@ const Cart = () => {
 
     return (
       <div>
-        <UserHeader />
+        {/* <UserHeader /> */}
 
-        <div>
-          {/* <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <p>ITEM DEAL</p>
-
-            <p>PRICE</p>
-
-            <p>OTP</p>
-          </div> */}
-          <hr />
-
-          {items.map((item) => (
-            <CartItem key={item.id} item={item} handleDelete={handleDelete} />
-          ))}
-        </div>
-
-        <div className="total">
-          <form action="">
-            <input
-              className="text"
-              type="text"
-              name=""
-              id=""
-              placeholder="Coupon code"
-            />
-            <input className="submit" type="submit" value="APPLY" />
-          </form>
-
-          <div>
+        <div className="container cart-display">
+          <div className="main-cart">
             <div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "15px",
-                }}
-              >
-                <p>Subtotal</p>
-
-                <p>${items.price}</p>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: "15px",
-                }}
-              >
-                <p>Shipping</p>
-
-                <p>$50</p>
-              </div>
+              {items.map((item) => (
+                <CartItem
+                  key={item.id}
+                  item={item}
+                  handleDelete={handleDelete}
+                />
+              ))}
             </div>
-            <div className="amount">
-              <div className="amount-text">
-                <p>Total Amount</p>
-                <h1>
-                  $
-                  {items.reduce((acc, curr) => {
-                    return (acc += parseFloat(curr.price));
-                  }, 0)}
-                </h1>
-              </div>
 
-              <button>PROCESS TO CHECK OUT</button>
+            <div className="total">
+              <form action="">
+                <input
+                  className="text"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Coupon code"
+                />
+                <input className="submit" type="submit" value="APPLY" />
+              </form>
+
+              <div>
+                <div className="sub-total">
+                  <div>
+                    <p>Subtotal</p>
+
+                    <p>${items.price}</p>
+                  </div>
+                  <div>
+                    <p>Shipping</p>
+
+                    <p>$50</p>
+                  </div>
+                </div>
+                <div className="amount">
+                  <div className="amount-text">
+                    <p>Total Amount</p>
+                    <h1>
+                      $
+                      {items.reduce((acc, curr) => {
+                        return (acc += parseFloat(curr.price));
+                      }, 0)}
+                    </h1>
+                  </div>
+
+                  <button>PROCESS TO CHECK OUT</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <Footer />
+          <div className="cart-ads">
+            <img src={ADS} alt=""/>
+          </div>
+        </div>
       </div>
     );
 }

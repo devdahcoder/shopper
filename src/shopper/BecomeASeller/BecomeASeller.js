@@ -4,8 +4,8 @@ import Seller from "./asset/images/seller.svg"
 import {Link} from "react-router-dom"
 const BecomeASeller = () => {
     return (
-      <section>
-        <div className="container become-seller">
+      <section className="container">
+        <div className="become-seller">
           <div>
             <img src={Seller} alt="" />
           </div>

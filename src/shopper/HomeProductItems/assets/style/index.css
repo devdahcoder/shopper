@@ -7,6 +7,9 @@
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .home-product-item .product .details {

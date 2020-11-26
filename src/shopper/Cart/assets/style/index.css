@@ -1,4 +1,29 @@
-.total {
+.cart-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-display .main-cart {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
+.cart-display .cart-ads {
+  width: 310px;
+  margin-left: 50px;
+}
+
+.cart-display .cart-ads img {
+  float: right;
+}
+
+.cart-display .total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,7 +33,7 @@
   font-family: 'Fira Code', monospace;
 }
 
-.total .text {
+.cart-display .total .text {
   width: 228px;
   height: 40px;
   border: solid 1px #e0e0e0;
@@ -18,7 +43,7 @@
   padding: 0 0 0 5px;
 }
 
-.total .submit {
+.cart-display .total .submit {
   width: 100px;
   height: 40px;
   background-color: #878786;
@@ -28,17 +53,25 @@
   margin-left: 10px;
 }
 
-.total .amount {
+.cart-display .total .sub-total {
+  width: 80%;
+  border: 1px solid red;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.cart-display .total .amount {
   -webkit-box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
           box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
           box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
   background-color: #ffffff;
-  padding: 1em 2em;
+  padding: 1.5em 2em;
   border-radius: 5px;
 }
 
-.total .amount .amount-text {
+.cart-display .total .amount .amount-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,12 +83,12 @@
           justify-content: space-between;
 }
 
-.total .amount button {
+.cart-display .total .amount button {
   color: #ffffff;
-  background-color: #8bc34a;
+  background: #8bc34a;
   width: 100%;
-  padding: 10px 0;
-  border: none;
-  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid #8bc34a;
+  padding: 10px 50px;
 }
 /*# sourceMappingURL=index.css.map */

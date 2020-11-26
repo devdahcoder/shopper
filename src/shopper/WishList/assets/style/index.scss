@@ -12,23 +12,16 @@
                 width: 100%;
                 height: auto;
                 border-radius: 5px 5px 0 0;
+                display: block;
+                object-fit: cover;
                 
             }
 
-            // .love {
-
-            //     position: absolute;
-            //     // transform: translate(-50%, -50%);
-            //     left: 70%;
-            //     bottom: 70%;
-
-            // }
         }
 
         .love {
 
             position: absolute;
-            // transform: translate(-50%, -50%);
             left: 85%;
             bottom: 90%;
 

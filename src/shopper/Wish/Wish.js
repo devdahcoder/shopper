@@ -51,7 +51,7 @@ const Wish = () => {
 
     return (
       <section>
-        <div className="wishlist-header">
+        <div className="wishlist-header container">
           <div className="wish">
             <div className="available header">
               <p>Available</p>
@@ -62,7 +62,7 @@ const Wish = () => {
             </div>
           </div>
         </div>
-        <div className="wish">
+        <div className="wish container">
           {wishlist.map((wish) => (
             <WishList key={wish.id} wish={wish} />
           ))}

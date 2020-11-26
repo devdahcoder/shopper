@@ -1,8 +1,7 @@
-.container {
-    .home-products {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: center;
-        grid-gap: 2em;
-    }
+
+.home-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: 2em;
 }
