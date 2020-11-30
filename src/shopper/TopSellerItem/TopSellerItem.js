@@ -1,6 +1,5 @@
 import React from 'react'
 import Arrow from "./assets/images/arrow.svg"
-import Pix from "./assets/images/pix.svg"
 import {
   Product,
   ProductFigure,
@@ -17,7 +16,7 @@ const TopSellerItem = ({cloth}) => {
     return (
       <Product>
         <ProductFigure>
-          <ProductImage src={Pix} alt="" />
+          <ProductImage src={cloth.image} alt="" />
         </ProductFigure>
 
         <ProductDetails>

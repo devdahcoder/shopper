@@ -1,5 +1,4 @@
 import React from 'react'
-// import "./assets/style/index.css"
 import Facebook from "./assets/images/facebook.svg"
 import Pinterest from "./assets/images/pinterest.svg"
 import Twitter from "./assets/images/twitter.svg"

@@ -5,23 +5,28 @@ import TopSellerItem from "../TopSellerItem/TopSellerItem"
 import {Link} from "react-router-dom"
 import Button from "../../components/Button"
 import HomeProductHeader from "../../components/ProductHeader";
-
+import Chair from "./assets/images/chair.svg"
+import Pix from "./assets/images/pix.svg"
+import Glass from "./assets/images/glass.svg"
 
 const initialValue = [
   {
     id: uuid(),
+    image: Glass,
     suppliers: "Supplier’s Name Here",
     product: "Product Name Here",
     price: "$29,354.75",
   },
   {
     id: uuid(),
+    image: Pix,
     suppliers: "Supplier’s Name Here",
     product: "Product Name Here",
     price: "$29,354.75",
   },
   {
     id: uuid(),
+    image: Chair,
     suppliers: "Supplier’s Name Here",
     product: "Product Name Here",
     price: "$29,354.75",
