@@ -99,7 +99,7 @@ const HomeProduct = () => {
       <section className="container">
         <div className="home-products">
           {cloths.map((cloth) => (
-            <HomeProductItems key={uuid()} cloth={cloth}/>
+            <HomeProductItems key={uuid()} cloth={cloth} />
           ))}
         </div>
       </section>

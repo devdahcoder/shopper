@@ -5,6 +5,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 30px 0;
 }
 
 .cart-display .main-cart {
@@ -31,6 +32,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-family: 'Fira Code', monospace;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .cart-display .total .text {
@@ -55,10 +60,25 @@
 
 .cart-display .total .sub-total {
   width: 80%;
-  border: 1px solid red;
+  margin: auto 0 auto auto;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+  margin-bottom: 10px;
+  padding: 0em 2em;
+}
+
+.cart-display .total .sub-total .calculate-sub-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 0;
 }
 
 .cart-display .total .amount {
@@ -81,6 +101,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 10px 0;
+}
+
+.cart-display .total .amount .amount-text .amount-price {
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .cart-display .total .amount button {

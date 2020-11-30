@@ -1,10 +1,13 @@
-.category {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    grid-gap: 2em;
+.category-section {
+    padding: 4em 0;
+    .category {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        grid-gap: 2em;
 
-    
+        
+    }
 }
 
 .view-more {

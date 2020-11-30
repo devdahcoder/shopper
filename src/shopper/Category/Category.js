@@ -135,8 +135,8 @@ const Category = () => {
     const [clothing, setClothing] = useState(initialValue);
 
     return (
-      <section>
-        <div className="category">
+      <section className="category-section">
+        <div className="container category">
           {clothing.map((cloth) => (
             <CategoryItem key={cloth.id} cloth={cloth} />
           ))}

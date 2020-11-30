@@ -15,12 +15,13 @@ import SignUp from "../SignUp/SignUp"
 
 
 
+
 const Home = () => {
 
 
     const login = useSelector((state) => state.login.showLogin);
     const signup = useSelector((state) => state.signup.showSignup);
-
+    
 
     return (
       <section className="shopper-home">

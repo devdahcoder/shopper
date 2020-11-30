@@ -2,24 +2,27 @@ import React from 'react'
 import "./assets/style/index.css"
 import {Link} from "react-router-dom"
 import Buyer from "./assets/images/buyer.svg"
+import Button from "../../components/Button"
+import HomeProductHeader from "../../components/ProductHeader"
+import UserApplicationInfo from "../../components/ProductIntro"
 
 const BecomeABuyer = () => {
     return (
       <section className="container">
         <div className="become-buyer">
           <div className="buyer-text">
-            <h1>Why Become a Buyer?</h1>
+            <HomeProductHeader>Why Become a Buyer?</HomeProductHeader>
 
-            <p>
+            <UserApplicationInfo>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
               penatibus et magnis dis parturient montes, nascetur ridiculus mus.
               Donec quam feliultricies nec, pellentesque eu, pretium quis, sem.
               Nulla consequat massa quis enim.
-            </p>
+            </UserApplicationInfo>
 
             <Link to="/shipping-address">
-              <button>Apply To Buy</button>
+              <Button>Apply To Buy</Button>
             </Link>
           </div>
           <div>

@@ -1,6 +1,7 @@
 .cart-display {
     display: flex;
     justify-content: space-between;
+    padding: 30px 0;
 
     .main-cart {
         flex-grow: 1;
@@ -20,6 +21,7 @@
         justify-content: space-between;
         font-family: 'Fira Code',
         monospace;
+        flex-direction: row;
 
         .text {
             width: 228px;
@@ -44,8 +46,18 @@
 
         .sub-total {
             width: 80%;
-            border: 1px solid red;
+            margin: auto 0 auto auto;
             justify-content: right;
+            margin-bottom: 10px;
+            padding: 0em 2em;
+            
+
+            .calculate-sub-total {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 5px 0;
+            }
             
         }
 
@@ -66,11 +78,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                padding: 10px 0;
+
+                .amount-price {
+                    font-size: 30px;
+                    font-weight: 400;
+                }
             }
             button {
                 color: #ffffff;
-                // width: 310px;
-                // height: 40px;
                 background: #8bc34a;
                 width: 100%;
                 border-radius: 3px;

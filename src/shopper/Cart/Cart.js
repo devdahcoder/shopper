@@ -1,55 +1,21 @@
-import React, {useState} from 'react'
-// import UserHeader from "../UserHeader/UserHeader"
-import { v4 as uuid } from "uuid";
+import React from 'react'
 import CartItem from "../CartItem/CartItem"
-import Footer from "../Footer/Footer"
 import "./assets/style/index.css"
 import ADS from "./assets/images/ads.svg"
+import {useSelector} from "react-redux"
 
-const initialValue = [
-  {
-    id: uuid(),
-    suppliers: "Supplier’s Name Here",
-    product: "Product Name Here",
-    price: "29,354.75",
-  },
-  {
-    id: uuid(),
-    suppliers: "Supplier’s Name Here",
-    product: "Product Name Here",
-    price: "29,354.75",
-  },
-  {
-    id: uuid(),
-    suppliers: "Supplier’s Name Here",
-    product: "Product Name Here",
-    price: "29,354.75",
-  },
-
-];
 
 const Cart = () => {
 
-    const [items, setItems] = useState(initialValue);
-
-    const handleDelete = (id) => {
-        const newItem = items.filter((item) => id !== item.id);
-        setItems(newItem)
-    }
+    const cartItems = useSelector((state) => state.cartItems.cartItems);
 
     return (
       <div>
-        {/* <UserHeader /> */}
-
         <div className="container cart-display">
           <div className="main-cart">
             <div>
-              {items.map((item) => (
-                <CartItem
-                  key={item.id}
-                  item={item}
-                  handleDelete={handleDelete}
-                />
+              {cartItems.map((cart, id) => (
+                <CartItem id={id} key={cart.id} cart={cart} />
               ))}
             </div>
 
@@ -67,26 +33,26 @@ const Cart = () => {
 
               <div>
                 <div className="sub-total">
-                  <div>
+                  <div className="calculate-sub-total">
                     <p>Subtotal</p>
 
-                    <p>${items.price}</p>
+                    <p>${cartItems.price}</p>
                   </div>
-                  <div>
+                  <div className="calculate-sub-total">
                     <p>Shipping</p>
 
-                    <p>$50</p>
+                    <p>$50.00</p>
                   </div>
                 </div>
                 <div className="amount">
                   <div className="amount-text">
                     <p>Total Amount</p>
-                    <h1>
+                    <p className="amount-price">
                       $
-                      {items.reduce((acc, curr) => {
-                        return (acc += parseFloat(curr.price));
-                      }, 0)}
-                    </h1>
+                      {/* {cartItems.reduce((acc, curr) => {
+                        return acc += parseFloat(curr.price).toFixed(2)
+                      }, 0)} */}
+                    </p>
                   </div>
 
                   <button>PROCESS TO CHECK OUT</button>
@@ -96,7 +62,7 @@ const Cart = () => {
           </div>
 
           <div className="cart-ads">
-            <img src={ADS} alt=""/>
+            <img src={ADS} alt="" />
           </div>
         </div>
       </div>

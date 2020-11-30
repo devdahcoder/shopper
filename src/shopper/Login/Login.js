@@ -44,10 +44,14 @@ const Login = () => {
 
 
   return (
-    <section>
+    <section style={{ position: "absolute" }}>
       <div className="signup">
         <div className="cancel-btn">
-          <img onClick={() => dispatch(closeLoginSection())} src={cancelLogo} alt="" />
+          <img
+            onClick={() => dispatch(closeLoginSection())}
+            src={cancelLogo}
+            alt=""
+          />
         </div>
 
         <div className="form-section">

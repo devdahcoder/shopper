@@ -3,48 +3,16 @@
 
     .header {
         padding: 20px 0;
-
-        h1 {
-            color: #8bc34a;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 21px;
-        }
     }
     .topseller {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         grid-gap: 2em;
-
-
     }
 
     .btn {
         text-align: center;
         padding: 3em 0;
-
-        button {
-            width: 150px;
-            height: 40px;
-            background-color: #8bc34a;
-            border: 1px solid #8bc34a;
-            border-radius: 5px;
-            color: #ffffff;
-        }
     }
-
-    // .view-more {
-    //     text-align: center;
-    //     padding: 20px 0;
-
-    //     .view-btn {
-    //         border: solid 1px #8bc34a;
-    //         background: #ffffff;
-    //         padding: 12px 25px;
-    //         color: #8bc34a;
-    //         border-radius: 3px;
-    //         outline: none;
-    //     }
-    // }
 }

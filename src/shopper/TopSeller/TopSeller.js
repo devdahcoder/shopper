@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import "./assets/style/index.css"
 import { v4 as uuid } from "uuid";
 import TopSellerItem from "../TopSellerItem/TopSellerItem"
+import {Link} from "react-router-dom"
+import Button from "../../components/Button"
+import HomeProductHeader from "../../components/ProductHeader";
 
 
 const initialValue = [
@@ -32,10 +35,9 @@ const TopSeller = () => {
 
     return (
       <section className="container top-seller-section">
-
-      <div className="header">
-          <h1>Top Seller</h1>
-      </div>
+        <div className="header">
+          <HomeProductHeader>Top Seller</HomeProductHeader>
+        </div>
         <div className="topseller">
           {cloths.map((cloth) => (
             <TopSellerItem key={uuid()} cloth={cloth} />
@@ -43,7 +45,9 @@ const TopSeller = () => {
         </div>
 
         <div className="btn">
-            <button>Explore More {'>'}</button>
+          <Link to="/category">
+            <Button>Explore More {">"}</Button>
+          </Link>
         </div>
       </section>
     );

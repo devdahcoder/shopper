@@ -6,13 +6,6 @@
   padding: 20px 0;
 }
 
-.top-seller-section .header h1 {
-  color: #8bc34a;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
 .top-seller-section .topseller {
   display: -ms-grid;
   display: grid;
@@ -27,14 +20,5 @@
 .top-seller-section .btn {
   text-align: center;
   padding: 3em 0;
-}
-
-.top-seller-section .btn button {
-  width: 150px;
-  height: 40px;
-  background-color: #8bc34a;
-  border: 1px solid #8bc34a;
-  border-radius: 5px;
-  color: #ffffff;
 }
 /*# sourceMappingURL=index.css.map */

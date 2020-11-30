@@ -1,34 +1,45 @@
 import React from 'react'
-import "./assets/style/index.css"
 import Arrow from "./assets/images/arrow.svg"
 import Pix from "./assets/images/pix.svg"
+import {
+  Product,
+  ProductFigure,
+  ProductImage,
+  ProductDetails,
+  ProductContentDiv,
+  SupplierDetailContent,
+  ProductNameContent,
+  ProductPrice,
+} from "../../components/Products";
+
+
 const TopSellerItem = ({cloth}) => {
     return (
-      <section>
-        <div className="top-seller">
-          <div className="product">
-            <figure>
-              <img src={Pix} alt="" />
-            </figure>
+      <Product>
+        <ProductFigure>
+          <ProductImage src={Pix} alt="" />
+        </ProductFigure>
 
-            <div className="details">
-              <div>
-                <p style={{ color: "#878786" }}>{cloth.suppliers}</p>
-
-                <p style={{ color: "#1c1c1b", margin: "5px 0" }}>
-                  {cloth.product}
-                </p>
-
-                <p style={{ color: "#8bc34a" }}>{cloth.price}</p>
-              </div>
-
-              <div>
-                <img src={Arrow} alt="" />
-              </div>
+        <ProductDetails>
+          <ProductContentDiv>
+            <div>
+              <SupplierDetailContent>{cloth.suppliers}</SupplierDetailContent>
             </div>
+
+            <div className="product-name">
+              <ProductNameContent>{cloth.product}</ProductNameContent>
+            </div>
+
+            <div>
+              <ProductPrice>{cloth.price}</ProductPrice>
+            </div>
+          </ProductContentDiv>
+
+          <div style={{ marginLeft: "10px" }}>
+            <img src={Arrow} alt="" />
           </div>
-        </div>
-      </section>
+        </ProductDetails>
+      </Product>
     );
 }
 

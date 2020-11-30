@@ -2,33 +2,14 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 95%;
+    width: 90%;
     padding: 2em 0;
+    margin: auto 0 auto auto;
 
 
 
     .seller-text {
         margin-left: 70px;
-        h1 {
-            color: #8bc34a;
-            font-size: 30px;
-            font-weight: 400;
-            line-height: 40px;
-        }
-
-        p {
-            padding: 1em 0;
-            color: #757575;
-            line-height: 25px;
-        }
-        button {
-            width: 150px;
-            height: 40px;
-            background: #8bc34a;
-            color: #ffffff;
-            border: none;
-            border-radius: 3px;
-        }
     }
     
 

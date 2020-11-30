@@ -83,7 +83,7 @@ const SignUp = ({ cancelLogin }) => {
 
 
   return (
-    <section>
+    <section style={{position: "absolute"}}>
       <div className="login">
         <div className="cancel-btn">
           <img onClick={() => dispatch(closeSignupSection())} src={cancelLogo} alt="" />

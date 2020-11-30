@@ -8,28 +8,55 @@ import ShippingApplication from "./shopper/ShippingApplication/ShippingApplicati
 import Cart from "./shopper/Cart/Cart"
 import Footer from "./shopper/Footer/Footer"
 import Wish from "./shopper/Wish/Wish"
+import Category from "./shopper/Category/Category"
+import {useSelector} from "react-redux"
+import Login from "./shopper/Login/Login"
+import SignUp from "./shopper/SignUp/SignUp"
+import styled from "styled-components"
 
 
+
+const MainWrapper = styled.section `
+  
+`;
+
+const Main = styled.div `
+  position: relative;
+`
 
 
 function App() {
 
-  
+  const login = useSelector((state) => state.login.showLogin);
+  const signup = useSelector((state) => state.signup.showSignup);
 
   return (
-    <Router>
-      <div className="main">
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/cart" component={Cart} />
-          <Route exact path="/wishlist" component={Wish} />
-          <Route exact path="/application-criteria" component={SellerApplication} />
-          <Route exact path="/shipping-address" component={ShippingApplication} />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <MainWrapper>
+      <Router>
+        <Main>
+          {login ? <Login /> : null}
+          {signup ? <SignUp /> : null}
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/wishlist" component={Wish} />
+            <Route exact path="/category" component={Category} />
+            <Route
+              exact
+              path="/application-criteria"
+              component={SellerApplication}
+            />
+            <Route
+              exact
+              path="/shipping-address"
+              component={ShippingApplication}
+            />
+          </Switch>
+          <Footer />
+        </Main>
+      </Router>
+    </MainWrapper>
   );
 };
 

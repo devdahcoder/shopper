@@ -12,25 +12,4 @@
 .become-buyer .buyer-text {
   margin-right: 70px;
 }
-
-.become-buyer .buyer-text h1 {
-  color: #8bc34a;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 40px;
-}
-
-.become-buyer .buyer-text p {
-  padding: 1em 0;
-  color: #757575;
-  line-height: 25px;
-}
-
-.become-buyer .buyer-text button {
-  padding: 12px 25px;
-  background: #8bc34a;
-  color: #ffffff;
-  border: none;
-  border-radius: 3px;
-}
 /*# sourceMappingURL=index.css.map */

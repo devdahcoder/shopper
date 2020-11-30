@@ -1,5 +1,6 @@
 .wishlist-header {
   padding: 1.5em 0;
+  position: relative;
 }
 
 .wishlist-header .wish {
@@ -12,6 +13,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .wishlist-header .wish .header {
