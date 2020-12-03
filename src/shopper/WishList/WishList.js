@@ -14,6 +14,8 @@ import {
   SupplierDetailContent,
   ProductNameContent,
   ProductPrice,
+  ProductLink,
+  ProductLinkBtn,
 } from "../../components/Products";
 
 
@@ -48,9 +50,14 @@ const WishList = ({ wishList, id }) => {
           </div>
         </ProductContentDiv>
 
-        <div style={{ marginLeft: "10px" }}>
-          <img src={Arrow} alt="" />
-        </div>
+        <ProductLink>
+          <ProductLinkBtn>
+            <img
+              src={Arrow}
+              alt=""
+            />
+          </ProductLinkBtn>
+        </ProductLink>
       </ProductDetails>
     </Product>
   );

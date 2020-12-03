@@ -1,42 +1,45 @@
 import React from 'react'
-import "./assets/style/index.css"
-import {Link} from "react-router-dom"
+import {Nav, Ul, Li} from "../../components/Nav"
+import {RouterLink} from "../../components/Button"
+import {SellerApplicationHeader} from "../../components/Header"
+
+
 
 
 const SellerApplicationNav = () => {
     return (
       <section>
-        <div className="seller-application-header">
-          <nav className="seller-nav">
-            <ul className="seller-ul">
-              <Link to="/application-criteria">
-                <li>
+        <SellerApplicationHeader>
+          <Nav>
+            <Ul>
+              <Li sellerApplicationLi>
+                <RouterLink sellerApplicationLink to="/application-criteria">
                   Application Criteria
-                </li>
-              </Link>
-              <Link to="/company-profile">
-                <li>
+                </RouterLink>
+              </Li>
+              <Li sellerApplicationLi>
+                <RouterLink sellerApplicationLink to="/company-profile">
                   Company Profile
-                </li>
-              </Link>
-              <Link to="/web-&-social-media">
-                <li>
+                </RouterLink>
+              </Li>
+              <Li sellerApplicationLi>
+                <RouterLink sellerApplicationLink to="/web-&-social-media">
                   Web & Social Media
-                </li>
-              </Link>
-              <Link to="/contact-info">
-                <li>
+                </RouterLink>
+              </Li>
+              <Li sellerApplicationLi>
+                <RouterLink sellerApplicationLink to="/contact-info">
                   Contact Info
-                </li>
-              </Link>
-              <Link to="/confirm-account">
-                <li>
+                </RouterLink>
+              </Li>
+              <Li sellerApplicationLi>
+                <RouterLink sellerApplicationLink to="/confirm-account">
                   Confirm Account
-                </li>
-              </Link>
-            </ul>
-          </nav>
-        </div>
+                </RouterLink>
+              </Li>
+            </Ul>
+          </Nav>
+        </SellerApplicationHeader>
       </section>
     );
 }

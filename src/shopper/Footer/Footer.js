@@ -4,6 +4,7 @@ import Pinterest from "./assets/images/pinterest.svg"
 import Twitter from "./assets/images/twitter.svg"
 import Instagram from "./assets/images/instagram.svg"
 import styled from "styled-components"
+import { Nav, Ul, Li, LinkTag } from "../../components/Nav";
 
 const StyledFooter = styled.section`
   margin-top: 5em;
@@ -29,30 +30,6 @@ const FooterHeader = styled.p`
 `;
 
 
-const FooterNav = styled.nav `
-`
-
-const FooterUl = styled.ul`
-  list-style: none;
-`;
-
-const FooterLi = styled.li`
-  display: block;
-  padding: 5px 0;
-`;
-
-const FooterLink = styled.a`
-  text-decoration: none;
-  color: #1c1c1b;
-  transition: all 0.3s ease 0s;
-  font-size: 14px;
-  font-weight: 400;
-
-  .span {
-    vertical-align: middle;
-  }
-`;
-
 const CopyRightContainer = styled.div`
   border-top: 1px solid #878786;
 `;
@@ -76,120 +53,128 @@ const Footer = () => {
             <FooterHeader>How We Help</FooterHeader>
 
             <div>
-              <FooterNav>
-                <FooterUl>
-                  <FooterLi>
-                    <FooterLink href="http://www.google.com">
+              <Nav>
+                <Ul>
+                  <Li footerLi>
+                    <LinkTag footerLink href="http://www.google.com">
                       Retailers
-                    </FooterLink>
-                  </FooterLi>
-                  <FooterLi>
-                    <FooterLink href="http://www.google.com">
+                    </LinkTag>
+                  </Li>
+                  <Li footerLi>
+                    <LinkTag footerLink href="http://www.google.com">
                       Interiors Designers
-                    </FooterLink>
-                  </FooterLi>
-                  <FooterLi>
-                    <FooterLink href="http://www.google.com">
+                    </LinkTag>
+                  </Li>
+                  <Li footerLi>
+                    <LinkTag footerLink href="http://www.google.com">
                       Product Designers
-                    </FooterLink>
-                  </FooterLi>
-                  <FooterLi>
-                    <FooterLink href="http://www.google.com">
+                    </LinkTag>
+                  </Li>
+                  <Li footerLi>
+                    <LinkTag footerLink href="http://www.google.com">
                       Wholesalers / Importers
-                    </FooterLink>
-                  </FooterLi>
-                  <FooterLi>
-                    <FooterLink href="http://www.google.com">
+                    </LinkTag>
+                  </Li>
+                  <Li footerLi>
+                    <LinkTag footerLink href="http://www.google.com">
                       Artisans
-                    </FooterLink>
-                  </FooterLi>
-                </FooterUl>
-              </FooterNav>
+                    </LinkTag>
+                  </Li>
+                </Ul>
+              </Nav>
             </div>
           </FooterContainer>
           <FooterContainer>
             <FooterHeader>Get To Know Us</FooterHeader>
-            <FooterNav>
-              <FooterUl>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">About</FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">Policies</FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">Careers</FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">Press</FooterLink>
-                </FooterLi>
-              </FooterUl>
-            </FooterNav>
+            <Nav>
+              <Ul>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
+                    About
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
+                    Policies
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
+                    Careers
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
+                    Press
+                  </LinkTag>
+                </Li>
+              </Ul>
+            </Nav>
           </FooterContainer>
           <FooterContainer>
             <FooterHeader>Join the Community</FooterHeader>
-            <FooterNav>
-              <FooterUl>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+            <Nav>
+              <Ul>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     Upcoming Events
-                  </FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     Become a Buyer
-                  </FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     Become a Seller
-                  </FooterLink>
-                </FooterLi>
-              </FooterUl>
-            </FooterNav>
+                  </LinkTag>
+                </Li>
+              </Ul>
+            </Nav>
           </FooterContainer>
           <FooterContainer>
             <FooterHeader>Follow Us</FooterHeader>
-            <FooterNav>
-              <FooterUl>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+            <Nav>
+              <Ul>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Facebook} alt="" />
                     </span>{" "}
                     About
-                  </FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Pinterest} alt="" />
                     </span>{" "}
                     Policies
-                  </FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Twitter} alt="" />
                     </span>{" "}
                     Careers
-                  </FooterLink>
-                </FooterLi>
-                <FooterLi>
-                  <FooterLink href="http://www.google.com">
+                  </LinkTag>
+                </Li>
+                <Li footerLi>
+                  <LinkTag footerLink href="http://www.google.com">
                     {" "}
                     <span>
                       <img src={Instagram} alt="" />
                     </span>{" "}
                     Press
-                  </FooterLink>
-                </FooterLi>
-              </FooterUl>
-            </FooterNav>
+                  </LinkTag>
+                </Li>
+              </Ul>
+            </Nav>
           </FooterContainer>
         </FooterLayout>
 

@@ -2,7 +2,7 @@ import React from 'react'
 import "./assets/style/index.css"
 import {Link} from "react-router-dom"
 import Buyer from "./assets/images/buyer.svg"
-import Button from "../../components/Button"
+import {Button} from "../../components/Button"
 import HomeProductHeader from "../../components/ProductHeader"
 import UserApplicationInfo from "../../components/ProductIntro"
 

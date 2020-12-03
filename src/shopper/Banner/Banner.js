@@ -1,6 +1,6 @@
 import React from 'react'
 import "./assets/style/index.css"
-import Button from "../../components/Button"
+import {Button} from "../../components/Button"
 import styled, {keyframes} from "styled-components"
 import Background from "./assets/images/background.svg"
 
@@ -26,7 +26,7 @@ const BannerSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: 5s ${fadeOut} ease-in;
+  animation: 2s ${fadeOut} ease-in;
 `;
 
 const BannerHeader = styled.p`

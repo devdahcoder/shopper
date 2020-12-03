@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
+import "./assets/style/index.css"
 import { v4 as uuid } from "uuid";
 import CategoryItem from "../CategoryItem/CategoryItem"
-import "./assets/style/index.css";
-import Footer from "../Footer/Footer"
+import { Container } from "../../components/Main";
+import { CategoryDisplay } from "../../components/ProductsDisplay";
 
 
 const initialValue = [
@@ -136,11 +137,13 @@ const Category = () => {
 
     return (
       <section className="category-section">
-        <div className="container category">
-          {clothing.map((cloth) => (
-            <CategoryItem key={cloth.id} cloth={cloth} />
-          ))}
-        </div>
+        <Container>
+          <CategoryDisplay>
+            {clothing.map((cloth) => (
+              <CategoryItem key={cloth.id} cloth={cloth} />
+            ))}
+          </CategoryDisplay>
+        </Container>
 
         {/* view button is displayed when the clothing length is === 20 and hide if you want to view more */}
         <div className="view-more">
@@ -148,8 +151,6 @@ const Category = () => {
             <button className="view-btn">See More</button>
           ) : null}
         </div>
-
-        <Footer />
       </section>
     );
 }

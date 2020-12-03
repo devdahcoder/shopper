@@ -12,43 +12,47 @@ import {
   SupplierDetailContent,
   ProductNameContent,
   ProductPrice,
+  ProductLink,
+  ProductLinkBtn,
 } from "../../components/Products";
 
 
-const HomeProductItems = ({cloth}) => {
-    const dispatch = useDispatch();
-    return (
-      <Product>
-        <ProductFigure>
-          <ProductImage src={Pix} alt="" />
-        </ProductFigure>
+const HomeProductItems = ({ cloth, first, eight }) => {
+  const dispatch = useDispatch();
+  return (
+    <Product first={first} eight={eight}>
+      <ProductFigure>
+        <ProductImage src={cloth.image} alt="" />
+      </ProductFigure>
 
-        <ProductDetails>
-          <ProductContentDiv>
-            <div>
-              <SupplierDetailContent>{cloth.suppliers}</SupplierDetailContent>
-            </div>
+      <ProductDetails>
+        <ProductContentDiv>
+          <div>
+            <SupplierDetailContent>{cloth.suppliers}</SupplierDetailContent>
+          </div>
 
-            <div className="product-name">
-              <ProductNameContent>{cloth.product}</ProductNameContent>
-            </div>
+          <div className="product-name">
+            <ProductNameContent>{cloth.product}</ProductNameContent>
+          </div>
 
-            <div>
-              <ProductPrice>{cloth.price}</ProductPrice>
-            </div>
-          </ProductContentDiv>
+          <div>
+            <ProductPrice>{cloth.price}</ProductPrice>
+          </div>
+        </ProductContentDiv>
 
-          <div style={{ marginLeft: "10px" }}>
+        <ProductLink>
+          <ProductLinkBtn>
             <img
               onClick={() => dispatch(addToCart(cloth))}
               src={Arrow}
               alt=""
             />
-          </div>
-        </ProductDetails>
-      </Product>
-    );
-}
+          </ProductLinkBtn>
+        </ProductLink>
+      </ProductDetails>
+    </Product>
+  );
+};
 
 export default HomeProductItems
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./assets/style/index.css"
-import Slider from "../Slider/Slider"
+// import Slider from "../Slider/Slider"
+import SliderDisplay from "../SliderDisplay/SliderDisplay"
 import TopSeller from "../TopSeller/TopSeller"
 import BecomeABuyer from "../BecomeABuyer/BecomeABuyer"
 import BecomeASeller from "../BecomeASeller/BecomeASeller"
@@ -26,7 +27,7 @@ const Home = () => {
     return (
       <section className="shopper-home">
         <Banner />
-        <Slider />
+        <SliderDisplay />
         <TopSeller />
         <BecomeABuyer />
         <BecomeASeller />

@@ -8,13 +8,13 @@ import "./assets/style/index.css";
 // import RightArrow from "./assets/images/rightarrow.svg";
 
 
-const SliderList = ({ property }) => {
+const SliderList = ({ image }) => {
   return (
     <div>
-      <figure id={property.index}>
-        <img src={property.pix} alt="" />
+      <figure id={image.index}>
+        <img src={image.pix} alt="" />
         <p>
-          <a href="http://www.google.com">{property.name}</a>
+          <a href="http://www.google.com">{image.name}</a>
         </p>
       </figure>
     </div>

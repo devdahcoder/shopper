@@ -1,75 +1,63 @@
 import React from 'react'
-import { v4 as uuid } from "uuid";
 import WishList from "../WishList/WishList";
-import "./assets/style/index.css"
 import {useSelector} from "react-redux"
+import { ProductDisplay } from "../../components/ProductsDisplay";
+import { Container } from "../../components/Main";
+import styled from "styled-components"
 
-// const initialValue = [
-//   {
-//     id: uuid(),
-//     suppliers: "Supplier’s Name Here",
-//     product: "Product Name Here",
-//     price: "$29,354.75",
-//   },
-//   {
-//     id: uuid(),
-//     suppliers: "Supplier’s Name Here",
-//     product: "Product Name Here",
-//     price: "$29,354.75",
-//   },
-//   {
-//     id: uuid(),
-//     suppliers: "Supplier’s Name Here",
-//     product: "Product Name Here",
-//     price: "$29,354.75",
-//   },
-//   {
-//     id: uuid(),
-//     suppliers: "Supplier’s Name Here",
-//     product: "Product Name Here",
-//     price: "$29,354.75",
-//   },
-//   {
-//     id: uuid(),
-//     suppliers: "Supplier’s Name Here",
-//     product: "Product Name Here",
-//     price: "$29,354.75",
-//   },
-//   {
-//     id: uuid(),
-//     suppliers: "Supplier’s Name Here",
-//     product: "Product Name Here",
-//     price: "$29,354.75",
-//   },
-// ];
+const WisListHeader = styled.div `
+padding: 1.5em 0;
+position: relative;
+`
+
+const WishHeaderDisplay = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`;
 
 
-
+const WishBtn = styled.button`
+  padding: 10px 15px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-color: #ffffff;
+  margin: 0 4px;
+  cursor: pointer;
+  &:active {
+    background-color: #8bc34a;
+  }
+`;
 
 const Wish = () => {
-
-    // const [wishlist, setWishList] = useState(initialValue);
 
     const wishLists = useSelector(state => state.wishLists.wishLists)
 
     return (
       <section>
-        <div className="wishlist-header container">
-          <div className="wish">
-            <div className="available header">
-              <p>Available</p>
-            </div>
+        <WisListHeader>
+          <Container>
+            <WishHeaderDisplay>
+              <WishBtn>
+                Available
+              </WishBtn>
 
-            <div className="stock header">
-              <p>Out of Stock</p>
-            </div>
-          </div>
-        </div>
-        <div className="wish container">
-          {wishLists.map((wishList, id) => (
-            <WishList key={wishList.id} id={id} wishList={wishList} />
-          ))}
-        </div>
+              <WishBtn>
+                Out of Stock
+              </WishBtn>
+            </WishHeaderDisplay>
+          </Container>
+        </WisListHeader>
+
+        <Container>
+          <ProductDisplay>
+            {wishLists.map((wishList, id) => (
+              <WishList key={wishList.id} id={id} wishList={wishList} />
+            ))}
+          </ProductDisplay>
+        </Container>
       </section>
     );
 }

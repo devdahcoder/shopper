@@ -1,14 +1,34 @@
 import React, {useState} from 'react'
-import "./assets/style/index.css"
 import { v4 as uuid } from "uuid";
 import TopSellerItem from "../TopSellerItem/TopSellerItem"
 import {Link} from "react-router-dom"
-import Button from "../../components/Button"
+import {Button} from "../../components/Button"
 import HomeProductHeader from "../../components/ProductHeader";
 import Chair from "./assets/images/chair.svg"
 import Pix from "./assets/images/pix.svg"
 import Glass from "./assets/images/glass.svg"
+import styled from "styled-components"
 
+const TopSellerSection = styled.section`
+  margin-top: 15em;
+
+  .header {
+    padding: 20px 0;
+  }
+`;
+
+const TopSellerDisplay = styled.div `
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-gap: 2em;
+
+`
+
+const TopSellerBtn = styled.div`
+  text-align: center;
+  padding: 3em 0;
+`;
 const initialValue = [
   {
     id: uuid(),
@@ -39,22 +59,22 @@ const TopSeller = () => {
 
 
     return (
-      <section className="container top-seller-section">
+      <TopSellerSection className="container">
         <div className="header">
           <HomeProductHeader>Top Seller</HomeProductHeader>
         </div>
-        <div className="topseller">
+        <TopSellerDisplay>
           {cloths.map((cloth) => (
             <TopSellerItem key={uuid()} cloth={cloth} />
           ))}
-        </div>
+        </TopSellerDisplay>
 
-        <div className="btn">
+        <TopSellerBtn>
           <Link to="/category">
             <Button>Explore More {">"}</Button>
           </Link>
-        </div>
-      </section>
+        </TopSellerBtn>
+      </TopSellerSection>
     );
 }
 

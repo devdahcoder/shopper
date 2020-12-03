@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import "./assets/style/index.css";
 import SliderList from "../SliderList/SliderList"
 import Bicycle from "./assets/images/bicycle.svg";
 import Brush from "./assets/images/brush.svg";
@@ -8,6 +7,15 @@ import Ring from "./assets/images/ring.svg";
 import LeftArrow from "./assets/images/leftarrow.svg"
 import RightArrow from "./assets/images/rightarrow.svg"
 import { v4 as uuid } from "uuid";
+import {
+  TopSliderDisplay,
+  TopSellerSlider,
+  SliderBtnContainer,
+  SliderBtn,
+  SliderBtnImg,
+  SliderContent,
+  SliderFigure,
+} from "../../components/Slider";
 
 const initialState = [
   {
@@ -54,18 +62,14 @@ const initialState = [
 
 const SliderDisplay = () => {
 
-    const [properties, setProperties] = useState(initialState);
-    const [property, setProperty] = useState(properties[0]);
+    const [images, setImages] = useState(initialState);
+    const [currentImage, setCurrentImage] = useState(images[0]);
 
     // next slider button
     const next = () => {
-        const newIndex = property.index + 1;
+        const newIndex = currentImage.index + 1;
 
-        setProperty(properties[newIndex]);
-
-        if (property.index == properties.length - 1) {
-            setProperty(properties[0]);
-        }
+        setCurrentImage(images[newIndex]);
 
     };
 
@@ -73,46 +77,47 @@ const SliderDisplay = () => {
 
     // previous slider button
     const prev = () => {
-        const newIndex = property.index - 1;
+        const newIndex = currentImage.index - 1;
 
-        setProperty(properties[newIndex]);
-
-
-        console.log(properties[newIndex]);
-        console.log(property.index - 1);
-
-        // if (property.index - 1 < properties.length + 1) {
-        //     setProperty(properties[properties.length]);
-        // }
+        setCurrentImage(images[newIndex]);
 
     };
 
 
     return (
-      <div className="top-seller-display">
-        <div className="top-seller-slider">
-          <img onClick={prev} src={LeftArrow} alt="" />
+      <TopSliderDisplay>
+        <TopSellerSlider>
+          <SliderBtnContainer>
+            <SliderBtn
+              onClick={prev}
+              disabled={currentImage.index === 0}
+            >
+              <SliderBtnImg src={LeftArrow} alt="" />
+            </SliderBtn>
+          </SliderBtnContainer>
 
-          <div className="figure">
-            <div
-            className="slider-figure"
-              style={{ display: "flex",
+          <SliderContent>
+            <SliderFigure
+              style={{
+                display: "flex",
                 transform: `translateX(-${
-                  property.index * (100 / properties.length)
+                  currentImage.index * (100 / images.length)
                 }%)`,
               }}
             >
-              {properties.map((property) => (
-                <SliderList key={uuid()} property={property} />
+              {images.map((image) => (
+                <SliderList key={uuid()} image={image} />
               ))}
-            </div>
+            </SliderFigure>
+          </SliderContent>
 
-            {/* <SliderList property={property} /> */}
-          </div>
-
-          <img onClick={next} src={RightArrow} alt="" />
-        </div>
-      </div>
+          <SliderBtnContainer>
+            <SliderBtn onClick={next} disabled={currentImage.index === images.length - 1}>
+              <SliderBtnImg src={RightArrow} alt="" />
+            </SliderBtn>
+          </SliderBtnContainer>
+        </TopSellerSlider>
+      </TopSliderDisplay>
     );
 }
 
