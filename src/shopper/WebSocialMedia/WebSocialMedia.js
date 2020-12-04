@@ -7,6 +7,16 @@ import Facebook from "./assets/images/facebook.svg"
 import Pinterest from "./assets/images/pinterest.svg"
 import Twitter from "./assets/images/twitter.svg"
 import Instagram from "./assets/images/instagram.svg"
+import {
+  ApplicationContainer,
+  Form,
+  Label,
+  Input,
+  InputDiv,
+} from "../../components/Form";
+import { ButtonContainer, Button } from "../../components/Button";
+import { RouterLink } from "../../components/Button";
+
 
 const initialValues = {
   facebook: "",
@@ -40,17 +50,17 @@ const WebSocialMedia = () => {
 
 
     return (
-      <div className="social-account-form">
-        <form action="" onSubmit={formik.handleSubmit}>
-          <div>
-            <label className="web-label" htmlFor="facebook">
+      <ApplicationContainer>
+        <Form action="" onSubmit={formik.handleSubmit}>
+          <InputDiv>
+            <Label webLabel className="web-label" htmlFor="facebook">
               <span>
                 <img src={Facebook} alt="" />
               </span>{" "}
               Facebook
-            </label>
+            </Label>
 
-            <input
+            <Input
               className="web-"
               type="url"
               name="facebook"
@@ -58,80 +68,75 @@ const WebSocialMedia = () => {
               placeholder="paste url here"
               {...formik.getFieldProps("facebook")}
             />
-          </div>
-          <div>
-            <label className="web-label" htmlFor="pinterest">
+          </InputDiv>
+          <InputDiv>
+            <Label webLabel className="web-label" htmlFor="pinterest">
               <span>
                 <img src={Pinterest} alt="" />
               </span>{" "}
               Pinterest
-            </label>
+            </Label>
 
-            <input
+            <Input
               type="url"
               name="pinterest"
               id="pinterest"
               placeholder="paste url here"
               {...formik.getFieldProps("pinterest")}
             />
-          </div>
-          <div>
-            <label className="web-label" htmlFor="twitter">
+          </InputDiv>
+          <InputDiv>
+            <Label webLabel className="web-label" htmlFor="twitter">
               <span>
                 <img src={Twitter} alt="" />
               </span>{" "}
               Twitter
-            </label>
+            </Label>
 
-            <input
+            <Input
               type="url"
               name="twitter"
               id="twitter"
               placeholder="paste url here"
               {...formik.getFieldProps("twitter")}
             />
-          </div>
-          <div>
-            <label className="web-label" htmlFor="instagram">
+          </InputDiv>
+          <InputDiv>
+            <Label webLabel className="web-label" htmlFor="instagram">
               <span>
                 <img src={Instagram} alt="" />
               </span>{" "}
               Instagram
-            </label>
+            </Label>
 
-            <input
+            <Input
               type="url"
               name="instagram"
               id="instagram"
               placeholder="paste url here"
               {...formik.getFieldProps("instagram")}
             />
-          </div>
+          </InputDiv>
 
-          <div className="web-btn-container">
-            <Link to="/company-profile">
-              <button className="btn back-btn">Go Back</button>
-            </Link>
+          <InputDiv>
+            <Label webLabel>Note: Provide at least one social account</Label>
+          </InputDiv>
 
-            <Link to="/contact-info">
-              <button type="submit" className="btn next-btn">
+          <ButtonContainer>
+            <Button formBtn goBack>
+              <RouterLink goBack to="/company-profile">
+                Go Back
+              </RouterLink>
+            </Button>
+
+            <Button formBtn next>
+              <RouterLink next to="/contact-info">
                 Next
-              </button>
-            </Link>
-          </div>
-        </form>
-
-        <div className="web-notification">
-          <p>Note: Provide at least one social account</p>
-        </div>
-
-        {/* <div className="web-btn-container">
-          <button className="btn back-btn">Go Back</button>
-          <button type="submit" className="btn next-btn">
-            Next
-          </button>
-        </div> */}
-      </div>
+              </RouterLink>
+            </Button>
+          </ButtonContainer>
+        </Form>
+      </ApplicationContainer>
     );
 }
 

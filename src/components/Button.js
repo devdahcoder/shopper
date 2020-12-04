@@ -33,11 +33,33 @@ export const Button = styled.button`
       background-color: #ffffff;
       margin-top: initial;
     `}
+  
+  ${({ formBtn }) =>
+    formBtn &&
+    css`
+      outline: none;
+      border-radius: 3px;
+    `}
+  
+  ${({ goBack }) =>
+    goBack &&
+    css`
+      border: solid 1px #757575;
+      background-color: rgba(0, 0, 0, 0);
+      
+    `}
+  ${({ next }) =>
+    next &&
+    css`
+      background-color: #8bc34a;
+      border: 1px solid #8bc34a;
+    `}
 `;
 
 
 export const RouterLink = styled(Link)`
   cursor: pointer;
+  text-decoration: none;
 
   ${({ sellerApplicationLink }) =>
     sellerApplicationLink &&
@@ -46,4 +68,55 @@ export const RouterLink = styled(Link)`
       text-decoration: none;
       color: #878786;
     `}
+
+  ${({ copyRight }) =>
+    copyRight &&
+    css`
+      color: #8bc34a;
+      text-decoration: none;
+      line-height: 50.113443px;
+    `}
+  ${({ signOut }) =>
+    signOut &&
+    css`
+      color: red;
+      padding: 1em 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 4em;
+    `}
+  
+  ${({ goBack }) =>
+    goBack &&
+    css`
+      color: #757575;
+    `}
+  
+  ${({ next }) =>
+    next &&
+    css`
+      color: #ffffff;
+    `}
+
+  ${({ contactLink }) =>
+    contactLink &&
+    css`
+      color: #8bc34a;
+      text-decoration: underline;
+    `}
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5em;
+
+  ${({ companyProfile }) =>
+    companyProfile &&
+    css`
+      margin-top: 16em;
+    `}
+`;
+
