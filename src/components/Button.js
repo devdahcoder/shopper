@@ -46,7 +46,6 @@ export const Button = styled.button`
     css`
       border: solid 1px #757575;
       background-color: rgba(0, 0, 0, 0);
-      
     `}
   ${({ next }) =>
     next &&
@@ -54,6 +53,13 @@ export const Button = styled.button`
       background-color: #8bc34a;
       border: 1px solid #8bc34a;
     `}
+
+  ${({pay}) => pay && css `
+  width: 100%;
+  background-color: #8bc34a;
+      border: 1px solid #8bc34a;
+  `}
+  
 `;
 
 
@@ -122,6 +128,12 @@ export const ButtonContainer = styled.div`
     companyProfile &&
     css`
       margin-top: 16em;
+    `}
+
+  ${({ payment }) =>
+    payment &&
+    css`
+      margin: 6em 0 0.5em 0;
     `}
 `;
 

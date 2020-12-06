@@ -1,35 +1,70 @@
 import React from 'react'
-import "./assets/style/index.css"
-import {Link} from "react-router-dom"
+import { RouterLink } from "../../components/Button";
+import {
+  ApplicationContainer,
+  Form,
+  FormDisplay,
+  Label,
+  Input,
+  FormDisplayRows,
+} from "../../components/Form";
+import { ButtonContainer, Button } from "../../components/Button";
+import styled, {css} from "styled-components";
 
+const PaymentDisplay = styled.div `
+display: flex;
+        flex-wrap: nowrap;
+
+`
+
+const PaymentItems = styled.div`
+  flex-grow: 1;
+  border-right: 1px solid green;
+
+  ${({btn}) => btn && css ` 
+  border: none;
+  `}
+`;
+
+
+const Card = styled.div`
+  width: 450px;
+  padding-left: 2em;
+`;
+
+const CheckBoxContainer = styled.div `
+margin: 5px 0;
+display: flex;
+align-items: center;
+`
 const Payment = () => {
     return (
-      <div className="payment">
-        <div className="payment-container">
-          <div className="payment-item">hello world</div>
+      <ApplicationContainer>
+        <PaymentDisplay>
+          <PaymentItems>hello world</PaymentItems>
 
-          <div className="card">
+          <Card>
             <div>
               <p>payment</p>
             </div>
 
-            <form className="payment-form" action="">
-              <div className="payment-card">
+            <Form action="">
+              <FormDisplayRows paymentCard>
                 <div>
-                  <label htmlFor="">Name on Card</label>
+                  <Label htmlFor="">Name on Card</Label>
 
-                  <input className="payment-input" type="text" name="" id="" />
+                  <Input className="payment-input" type="text" name="" id="" />
                 </div>
                 <div>
-                  <label htmlFor="">Name on Card</label>
+                  <Label htmlFor="">Name on Card</Label>
 
-                  <input className="payment-input" type="text" name="" id="" />
+                  <Input className="payment-input" type="text" name="" id="" />
                 </div>
-                <div className="payment-code">
+                <FormDisplay paymentCode>
                   <div>
-                    <label htmlFor="">Valid Trough</label>
+                    <Label htmlFor="">Valid Trough</Label>
 
-                    <input
+                    <Input
                       className="payment-input"
                       type="text"
                       name=""
@@ -38,9 +73,9 @@ const Payment = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="">CCV</label>
+                    <Label htmlFor="">CCV</Label>
 
-                    <input
+                    <Input
                       className="payment-input"
                       type="text"
                       name=""
@@ -48,10 +83,10 @@ const Payment = () => {
                       placeholder="eg.201"
                     />
                   </div>
-                </div>
-              </div>
-              <div className="payment-email">
-                <div style={{ marginBottom: "10px" }}>
+                </FormDisplay>
+              </FormDisplayRows>
+              <div>
+                <CheckBoxContainer>
                   <input
                     className="rounded-checkbox"
                     type="checkbox"
@@ -59,12 +94,12 @@ const Payment = () => {
                     id=""
                   />{" "}
                   <span>Paypal</span>
-                </div>
+                </CheckBoxContainer>
 
                 <div>
-                  <label htmlFor="">Email Address</label>
+                  <Label htmlFor="">Email Address</Label>
 
-                  <input
+                  <Input
                     className="payment-input"
                     type="email"
                     name=""
@@ -73,24 +108,27 @@ const Payment = () => {
                   />
                 </div>
               </div>
-            </form>
-          </div>
-        </div>
+            </Form>
+          </Card>
+        </PaymentDisplay>
 
-        <div className="payment-btn">
-          <div className="back-btn-container">
-            <Link to="/billing-details">
-              <button className="btn back-btn">Go Back</button>
-            </Link>
-          </div>
-          <div className="pay-btn-container">
-            <Link to="/checkout">
-              <button className="btn pay-btn">Pay $128.89</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+        <ButtonContainer payment>
+          <PaymentItems btn>
+            <Button formBtn goBack>
+              <RouterLink goBack to="/billing-details">Go Back</RouterLink>
+            </Button>
+          </PaymentItems>
+
+          <Card>
+          <Button pay formBtn>
+            <RouterLink next to="/checkout">Pay $128.89</RouterLink>
+          </Button>
+          </Card>
+        </ButtonContainer>
+      </ApplicationContainer>
     );
 }
 
 export default Payment
+
+

@@ -143,17 +143,32 @@ export const FormDisplay = styled.div`
       grid-gap: 1em;
       width: initial;
     `}
+  
+  ${({ paymentCode }) =>
+    paymentCode &&
+    css`
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 1em;
+      width: initial;
+    `}
 `;
 
 export const FormDisplayRows = styled.div`
+  display: grid;
   ${({ shippingEmail }) =>
     shippingEmail &&
     css`
-      display: grid;
       grid-template-rows: repeat(2, 1fr);
       grid-gap: 1em;
       margin: 2em 0;
-      width: initial;
+    `}
+
+  ${({ paymentCard }) =>
+    paymentCard &&
+    css`
+      grid-template-rows: repeat(3, 1fr);
+      grid-row-gap: 1em;
+      margin-bottom: 2em;
     `}
 `;
 
