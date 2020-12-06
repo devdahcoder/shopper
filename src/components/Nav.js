@@ -21,6 +21,7 @@ export const Li = styled.li`
   display: inline-block;
   padding: 0px 30px 0 0;
   align-items: center;
+  ${'' /* cursor: pointer; */}
 
   ${({ headerLi }) =>
     headerLi &&
@@ -35,6 +36,10 @@ export const Li = styled.li`
       padding: 0 20px;
       cursor: pointer;
     `}
+  
+  ${({ shippingLi }) => shippingLi && css `
+  padding: 0 30px;
+  `}
 
   ${({ footerLi }) =>
     footerLi &&

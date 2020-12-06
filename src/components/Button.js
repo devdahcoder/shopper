@@ -60,12 +60,17 @@ export const Button = styled.button`
 export const RouterLink = styled(Link)`
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.3s ease 0s;
 
   ${({ sellerApplicationLink }) =>
     sellerApplicationLink &&
     css`
-      transition: all 0.3s ease 0s;
-      text-decoration: none;
+      color: #878786;
+    `}
+
+  ${({ shippingLink }) =>
+    shippingLink &&
+    css`
       color: #878786;
     `}
 

@@ -1,16 +1,41 @@
 import React from 'react'
-import "./assets/style/index.css";
-import {Link} from "react-router-dom"
+import { RouterLink } from "../../components/Button";
+import {
+  ApplicationContainer,
+  Form,
+  FormDisplay,
+  Label,
+  Input,
+  Select,
+  FormDisplayRows,
+} from "../../components/Form";
+import { ButtonContainer, Button } from "../../components/Button";
+import styled, {css} from "styled-components";
+
+const ShippingDisplay = styled.div`
+  display: flex;
+  align-items: center;
+
+  .checkbox {
+    margin-right: 10px;
+  }
+  ${({ shippingEmail }) =>
+    shippingEmail &&
+    css`
+      justify-content: space-between;
+      width: 90%;
+    `}
+`;
 
 
 const ShippingAddress = () => {
     return (
-      <div className="shipping-address-form">
-        <form action="" className="shipping-form">
-          <div className="shipping-form-name">
+      <ApplicationContainer>
+        <Form action="">
+          <FormDisplay shippingAddress>
             <div>
-              <label htmlFor="">First Name</label>
-              <input
+              <Label htmlFor="">First Name</Label>
+              <Input
                 className="shipping-input"
                 type="text"
                 name=""
@@ -19,8 +44,8 @@ const ShippingAddress = () => {
               />
             </div>
             <div>
-              <label htmlFor="">Last Name</label>
-              <input
+              <Label htmlFor="">Last Name</Label>
+              <Input
                 className="shipping-input"
                 type="text"
                 name=""
@@ -29,8 +54,8 @@ const ShippingAddress = () => {
               />
             </div>
             <div>
-              <label htmlFor="">Company Name</label>
-              <input
+              <Label htmlFor="">Company Name</Label>
+              <Input
                 className="shipping-input"
                 type="text"
                 name=""
@@ -39,14 +64,14 @@ const ShippingAddress = () => {
               />
             </div>
             <div>
-              <label htmlFor="">Country</label>
-              <select className="shipping-input" name="" id="">
+              <Label htmlFor="">Country</Label>
+              <Select className="shipping-input" name="" id="">
                 <option value="united kingdom">United Kingdom(UK)</option>
-              </select>
+              </Select>
             </div>
             <div>
-              <label htmlFor="">Town / City</label>
-              <input
+              <Label htmlFor="">Town / City</Label>
+              <Input
                 className="shipping-input"
                 type="text"
                 name=""
@@ -55,8 +80,8 @@ const ShippingAddress = () => {
               />
             </div>
             <div>
-              <label htmlFor="">Postcode</label>
-              <input
+              <Label htmlFor="">Postcode</Label>
+              <Input
                 className="shipping-input"
                 type="text"
                 name=""
@@ -64,12 +89,12 @@ const ShippingAddress = () => {
                 placeholder="eg.358745"
               />
             </div>
-          </div>
+          </FormDisplay>
 
-          <div className="shipping-email-form">
+          <FormDisplayRows shippingEmail>
             <div>
-              <label htmlFor="">Address</label>
-              <input
+              <Label htmlFor="">Address</Label>
+              <Input
                 className="shipping-input"
                 type="text"
                 name=""
@@ -77,10 +102,10 @@ const ShippingAddress = () => {
                 placeholder="eg.2nd steer, Costrica, Uk354548"
               />
             </div>
-            <div className="shipping-number-form">
+            <ShippingDisplay shippingEmail>
               <div>
-                <label htmlFor="">Email Address</label>
-                <input
+                <Label htmlFor="">Email Address</Label>
+                <Input
                   className="shipping-input"
                   type="email"
                   name=""
@@ -89,8 +114,8 @@ const ShippingAddress = () => {
                 />
               </div>
               <div>
-                <label htmlFor="">Email Address</label>
-                <input
+                <Label htmlFor="">Email Address</Label>
+                <Input
                   className="shipping-input"
                   type="text"
                   name=""
@@ -98,23 +123,26 @@ const ShippingAddress = () => {
                   placeholder="eg.94 788 1221"
                 />
               </div>
-              <div className="shipping-checkbox-display">
-                <input type="checkbox" name="" id="" />
+              <ShippingDisplay>
+                <input className="checkbox" type="checkbox" name="" id="" />
                 <label htmlFor="">Create an Account?</label>
-              </div>
-            </div>
-          </div>
-        </form>
-
-        <div className="shipping-btn-container">
-          <Link to="/shipping-address">
-            <button className="btn back-btn">Go Back</button>
-          </Link>
-          <Link to="/billing-details">
-            <button className="btn next-btn">Next</button>
-          </Link>
-        </div>
-      </div>
+              </ShippingDisplay>
+            </ShippingDisplay>
+          </FormDisplayRows>
+          <ButtonContainer>
+            <Button formBtn goBack>
+              <RouterLink goBack to="/shipping-address">
+                Go Back
+              </RouterLink>
+            </Button>
+            <Button formBtn next>
+              <RouterLink next to="/billing-details">
+                Next
+              </RouterLink>
+            </Button>
+          </ButtonContainer>
+        </Form>
+      </ApplicationContainer>
     );
 }
 

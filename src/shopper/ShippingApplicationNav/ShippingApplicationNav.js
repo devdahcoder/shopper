@@ -1,31 +1,32 @@
 import React from 'react'
-import "./assets/style/index.css"
-import {Link} from "react-router-dom"
+import {Nav, Ul, Li} from "../../components/Nav"
+import {RouterLink} from "../../components/Button"
+import {SellerApplicationHeader} from "../../components/Header"
 
 const ShippingApplicationNav = () => {
     return (
       <section>
-        <div className="shipping-application-header">
-          <nav className="shipping-nav">
-            <ul className="shipping-ul">
-              <Link to="/shipping-address">
-                <li>
+        <SellerApplicationHeader>
+          <Nav>
+            <Ul>
+              <Li shippingLi>
+                <RouterLink shippingLink to="/shipping-address">
                   Shipping Address
-                </li>
-              </Link>
-              <Link to="/billing-details">
-                <li>
+                </RouterLink>
+              </Li>
+              <Li shippingLi>
+                <RouterLink shippingLink to="/billing-details">
                   Billing Details
-                </li>
-              </Link>
-              <Link to="/payment">
-                <li>
+                </RouterLink>
+              </Li>
+              <Li shippingLi>
+                <RouterLink shippingLink to="/payment">
                   Payment
-                </li>
-              </Link>
-            </ul>
-          </nav>
-        </div>
+                </RouterLink>
+              </Li>
+            </Ul>
+          </Nav>
+        </SellerApplicationHeader>
       </section>
     );
 }

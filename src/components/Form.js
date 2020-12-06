@@ -134,6 +134,27 @@ export const FormDisplay = styled.div`
       margin: 1.5em 0;
       width: initial;
     `}
+  
+  ${({ shippingAddress }) =>
+    shippingAddress &&
+    css`
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1em;
+      width: initial;
+    `}
+`;
+
+export const FormDisplayRows = styled.div`
+  ${({ shippingEmail }) =>
+    shippingEmail &&
+    css`
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 1em;
+      margin: 2em 0;
+      width: initial;
+    `}
 `;
 
 export const InputDiv = styled.div `
