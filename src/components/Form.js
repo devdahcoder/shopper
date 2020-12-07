@@ -57,6 +57,29 @@ export const TextInput = styled.input`
   outline: none;
 `;
 
+export const CheckBoxDisplay = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+`;
+
+export const CheckBox = styled.input`
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+
+  &:checked {
+    background-color: grey;
+  }
+  margin-right: 10px;
+`;
+
 export const SubmitBtn = styled.input`
   width: 80px;
   height: 40px;

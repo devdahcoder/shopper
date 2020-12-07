@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 
 
-const UserApplicationInfo = styled.p`
+export const UserApplicationInfo = styled.p`
   padding: 10px 0;
   color: #757575;
   font-size: 16px;
@@ -10,8 +9,35 @@ const UserApplicationInfo = styled.p`
   line-height: 21px;
 `;
 
-const ProductIntro = ({children}) => {
-    return <UserApplicationInfo>{children}</UserApplicationInfo>;
-}
+export const ApplyTextContainer = styled.div`
+  ${({ seller }) =>
+    seller &&
+    css`
+      margin-left: 70px;
+    `}
 
-export default ProductIntro
+  ${({ buyer }) =>
+    buyer &&
+    css`
+      margin-right: 70px;
+    `}
+`;
+
+export const ApplyDisplay = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 2em 0;
+
+  ${({ seller }) =>
+    seller &&
+    css`
+      width: 90%;
+      margin: auto 0 auto auto;
+    `}
+
+  ${({ buyer }) =>
+    buyer &&
+    css`
+      width: 95%;
+    `}
+`;

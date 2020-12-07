@@ -68,6 +68,11 @@ export const RouterLink = styled(Link)`
   text-decoration: none;
   transition: all 0.3s ease 0s;
 
+
+  ${({apply}) => apply && css `
+  color: #ffffff;
+  `}
+
   ${({ sellerApplicationLink }) =>
     sellerApplicationLink &&
     css`

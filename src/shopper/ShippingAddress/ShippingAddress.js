@@ -8,6 +8,8 @@ import {
   Input,
   Select,
   FormDisplayRows,
+  CheckBoxDisplay,
+  CheckBox,
 } from "../../components/Form";
 import { ButtonContainer, Button } from "../../components/Button";
 import styled, {css} from "styled-components";
@@ -123,10 +125,10 @@ const ShippingAddress = () => {
                   placeholder="eg.94 788 1221"
                 />
               </div>
-              <ShippingDisplay>
-                <input className="checkbox" type="checkbox" name="" id="" />
+              <CheckBoxDisplay>
+                <CheckBox className="checkbox" type="checkbox" name="" id="" />
                 <label htmlFor="">Create an Account?</label>
-              </ShippingDisplay>
+              </CheckBoxDisplay>
             </ShippingDisplay>
           </FormDisplayRows>
           <ButtonContainer>

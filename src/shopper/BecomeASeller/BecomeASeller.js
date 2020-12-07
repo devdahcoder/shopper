@@ -1,21 +1,23 @@
 import React from 'react'
-import "./asset/style/index.css"
 import Seller from "./asset/images/seller.svg"
-import {Link} from "react-router-dom"
-import {Button} from "../../components/Button"
+import {Button, RouterLink} from "../../components/Button"
 import HomeProductHeader from "../../components/ProductHeader";
-import UserApplicationInfo from "../../components/ProductIntro";
-
+import {
+  UserApplicationInfo,
+  ApplyDisplay,
+  ApplyTextContainer,
+} from "../../components/ProductIntro";
+import {Container} from "../../components/Main"
 
 const BecomeASeller = () => {
     return (
-      <section className="container">
-        <div className="become-seller">
+      <Container apply>
+        <ApplyDisplay seller>
           <div>
             <img src={Seller} alt="" />
           </div>
-          <div className="seller-text">
-            <HomeProductHeader>Why Become a Buyer?</HomeProductHeader>
+          <ApplyTextContainer seller>
+            <HomeProductHeader>Why Become a Seller?</HomeProductHeader>
 
             <UserApplicationInfo>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -25,12 +27,14 @@ const BecomeASeller = () => {
               Nulla consequat massa quis enim.
             </UserApplicationInfo>
 
-            <Link to="/application-criteria">
-              <Button>Apply To Sell</Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+            <Button>
+              <RouterLink apply to="/application-criteria">
+                Apply To Sell
+              </RouterLink>
+            </Button>
+          </ApplyTextContainer>
+        </ApplyDisplay>
+      </Container>
     );
 }
 

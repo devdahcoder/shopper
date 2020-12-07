@@ -1,16 +1,20 @@
 import React from 'react'
-import "./assets/style/index.css"
-import {Link} from "react-router-dom"
 import Buyer from "./assets/images/buyer.svg"
-import {Button} from "../../components/Button"
+import { Button, RouterLink } from "../../components/Button";
 import HomeProductHeader from "../../components/ProductHeader"
-import UserApplicationInfo from "../../components/ProductIntro"
+import {
+  UserApplicationInfo,
+  ApplyDisplay,
+  ApplyTextContainer,
+} from "../../components/ProductIntro";
+import { Container } from "../../components/Main";
+
 
 const BecomeABuyer = () => {
     return (
-      <section className="container">
-        <div className="become-buyer">
-          <div className="buyer-text">
+      <Container apply>
+        <ApplyDisplay buyer>
+          <ApplyTextContainer buyer>
             <HomeProductHeader>Why Become a Buyer?</HomeProductHeader>
 
             <UserApplicationInfo>
@@ -21,15 +25,17 @@ const BecomeABuyer = () => {
               Nulla consequat massa quis enim.
             </UserApplicationInfo>
 
-            <Link to="/shipping-address">
-              <Button>Apply To Buy</Button>
-            </Link>
-          </div>
+            <Button>
+              <RouterLink apply to="/shipping-address">
+                Apply To Sell
+              </RouterLink>
+            </Button>
+          </ApplyTextContainer>
           <div>
             <img src={Buyer} alt="" />
           </div>
-        </div>
-      </section>
+        </ApplyDisplay>
+      </Container>
     );
 }
 

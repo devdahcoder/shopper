@@ -7,6 +7,8 @@ import {
   Label,
   Input,
   FormDisplayRows,
+  CheckBoxDisplay,
+  CheckBox,
 } from "../../components/Form";
 import { ButtonContainer, Button } from "../../components/Button";
 import styled, {css} from "styled-components";
@@ -33,7 +35,6 @@ const Card = styled.div`
 `;
 
 const CheckBoxContainer = styled.div `
-margin: 5px 0;
 display: flex;
 align-items: center;
 `
@@ -86,15 +87,15 @@ const Payment = () => {
                 </FormDisplay>
               </FormDisplayRows>
               <div>
-                <CheckBoxContainer>
-                  <input
+                <CheckBoxDisplay>
+                  <CheckBox
                     className="rounded-checkbox"
                     type="checkbox"
                     name=""
                     id=""
                   />{" "}
                   <span>Paypal</span>
-                </CheckBoxContainer>
+                </CheckBoxDisplay>
 
                 <div>
                   <Label htmlFor="">Email Address</Label>
@@ -115,14 +116,18 @@ const Payment = () => {
         <ButtonContainer payment>
           <PaymentItems btn>
             <Button formBtn goBack>
-              <RouterLink goBack to="/billing-details">Go Back</RouterLink>
+              <RouterLink goBack to="/billing-details">
+                Go Back
+              </RouterLink>
             </Button>
           </PaymentItems>
 
           <Card>
-          <Button pay formBtn>
-            <RouterLink next to="/checkout">Pay $128.89</RouterLink>
-          </Button>
+            <Button pay formBtn>
+              <RouterLink next to="/checkout">
+                Pay $128.89
+              </RouterLink>
+            </Button>
           </Card>
         </ButtonContainer>
       </ApplicationContainer>
