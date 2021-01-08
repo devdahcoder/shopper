@@ -9,38 +9,50 @@ import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux"
 import {closeLoginSection} from "../../actions/loginAction"
+import firebase from "../../firebase"
 
 
 const initialValues = {
-  usernameoremail: "",
+  email: "",
   password: "",
-  keep: false
 }
 
 
 const validationSchema = Yup.object({
-  usernameoremail: Yup.string().trim().required("Required") ||Yup.string().email("Invalid email formate").required("Required"),
+  email: Yup.string().email("Invalid email formate").required("Required"),
   password: Yup.string().trim().required("Required"),
-  keep: Yup.boolean()
 });
 
 
-const onSubmit = (values, {setSubmitting, resetForm}) => {
-  setTimeout(() => {
-    alert(JSON.stringify(values, null, 2));
-    setSubmitting(false)
-  }, 400)
-}
+
 
 const Login = () => {
 
   const dispatch = useDispatch()
+
+
+  const onSubmit = (values, {setSubmitting, resetForm}) => {
+    console.log(values)
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(formik.values.email, formik.values.password)
+      .then(signedUserIn => {
+        console.log(signedUserIn)
+        console.log("user logged in")
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+
 
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit
   })
+
 
 
   return (
@@ -60,12 +72,12 @@ const Login = () => {
           </div>
 
           <form action="" onSubmit={formik.handleSubmit} className="form">
-            <label htmlFor="usernameoremail">
+            <label htmlFor="email">
               <input
-                type="text"
-                name="usernameoremail"
-                id="usernameoremail"
-                placeholder="Username/Email Address"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
                 onChange={formik.handleChange}
                 value={formik.values.username}
                 onBlur={formik.handleBlur}

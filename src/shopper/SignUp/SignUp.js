@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./assets/style/index.css";
 import { useFormik } from "formik";
 import * as Yup from "yup"
@@ -9,6 +9,7 @@ import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux"
 import {closeSignupSection} from "../../actions/signupAction"
+import firebase from "../../firebase"
 
 
 const initialValues = {
@@ -17,40 +18,6 @@ const initialValues = {
   email: "",
   password: "",
 }
-
-
-const onSubmit = (values) => {
-  alert(JSON.stringify(values, null, 2));
-}
-
-// const validate = (values) => {
-//   const errors = {};
-//   if (!values.username) {
-//     errors.username = 'Required';
-//   } else if (values.username.length > 15) {
-//     errors.username = 'Must be 15 characters or less';
-//   }
-
-//   if (!values.fullname) {
-//     errors.fullname = 'Required';
-//   } else if (values.fullname.length > 20) {
-//     errors.fullname = 'Must be 20 characters or less';
-//   }
-
-//   if (!values.email) {
-//     errors.email = 'Required';
-//   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-//     errors.email = 'Invalid email address';
-//   }
-
-//   if (!values.password) {
-//     errors.password = 'Required';
-//   } else if (values.password.length > 20) {
-//     errors.password = 'Must be 20 characters or less';
-//   }
-
-//   return errors;
-// }
 
 
 const validationSchema = Yup.object({
@@ -67,21 +34,55 @@ const validationSchema = Yup.object({
 });
 
 
-const SignUp = ({ cancelLogin }) => {
 
+const SignUp = () => {
+
+  // const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
 
   const dispatch = useDispatch()
+
+  const onSubmit = (values) => {
+    console.log(values)
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(formik.values.email, formik.values.password)
+      .then(createdUser => {
+        console.log(createdUser)
+        createdUser.user.updateProfile({
+          displayName: formik.values.username,
+          photoURL: FacebookLogo,
+
+        })
+        .then(() => {
+          // saveUser(createdUser).then(() => {
+          //   console.log("User saved")
+          // }) 
+          console.log("done");
+        })
+        .catch(error => {
+          console.log(error)
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  // const saveUser = (createdUser) => {
+  //   return setUsersRef.child(createdUser.user.uid).set({
+  //     name: createdUser.user.displayName,
+  //     avatar: createdUser.user.photoURL
+  //   });
+  // }
 
   const formik = useFormik({
     initialValues,
     onSubmit,
-    validationSchema
-    // validate
+    validationSchema,
   });
 
-  console.log(formik.errors)
 
-
+  
   return (
     <section style={{position: "absolute"}}>
       <div className="login">
@@ -102,9 +103,6 @@ const SignUp = ({ cancelLogin }) => {
                 id="username"
                 placeholder="Username"
                 {...formik.getFieldProps("username")}
-                // onChange={formik.handleChange}
-                // value={formik.values.username}
-                // onBlur={formik.handleBlur}
               />
             </label>
             {formik.touched.username && formik.errors.username ? (
@@ -117,9 +115,6 @@ const SignUp = ({ cancelLogin }) => {
                 id="fullname"
                 placeholder="Full Name"
                 {...formik.getFieldProps("fullname")}
-                // onChange={formik.handleChange}
-                // value={formik.values.fullname}
-                // onBlur={formik.handleBlur}
               />
             </label>
             {formik.touched.fullname && formik.errors.fullname ? (
@@ -132,9 +127,6 @@ const SignUp = ({ cancelLogin }) => {
                 id="email"
                 placeholder="Email Address"
                 {...formik.getFieldProps("email")}
-                // onChange={formik.handleChange}
-                // value={formik.values.email}
-                // onBlur={formik.handleBlur}
               />
             </label>
             {formik.touched.email && formik.errors.email ? (
@@ -147,9 +139,6 @@ const SignUp = ({ cancelLogin }) => {
                 id="password"
                 placeholder="Password"
                 {...formik.getFieldProps("password")}
-                // onChange={formik.handleChange}
-                // value={formik.values.password}
-                // onBlur={formik.handleBlur}
               />
             </label>
             {formik.touched.password && formik.errors.password ? (
@@ -206,3 +195,34 @@ const SignUp = ({ cancelLogin }) => {
 };
 
 export default SignUp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
