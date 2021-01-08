@@ -24,8 +24,6 @@ const validationSchema = Yup.object({
 });
 
 
-
-
 const Login = () => {
 
   const dispatch = useDispatch()
@@ -39,6 +37,7 @@ const Login = () => {
       .then(signedUserIn => {
         console.log(signedUserIn)
         console.log("user logged in")
+        resetForm({values: ""})
       })
       .catch(error => {
         console.log(error)
@@ -163,7 +162,7 @@ const Login = () => {
           <div className="sign-up-footer">
             <p>Already have an Account?</p>
 
-            <button>Login in</button>
+            <button>Sign up</button>
           </div>
         </div>
       </div>

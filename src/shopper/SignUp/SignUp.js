@@ -10,6 +10,7 @@ import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux"
 import {closeSignupSection} from "../../actions/signupAction"
 import firebase from "../../firebase"
+import md5 from "md5"
 
 
 const initialValues = {
@@ -37,27 +38,28 @@ const validationSchema = Yup.object({
 
 const SignUp = () => {
 
-  // const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
+  const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
 
   const dispatch = useDispatch()
 
-  const onSubmit = (values) => {
+
+  const onSubmit = (values, {resetForm}) => {
     console.log(values)
     firebase
       .auth()
       .createUserWithEmailAndPassword(formik.values.email, formik.values.password)
       .then(createdUser => {
         console.log(createdUser)
+        resetForm({values: ""})
         createdUser.user.updateProfile({
           displayName: formik.values.username,
-          photoURL: FacebookLogo,
+          photoURL: `https://gravatar.com/avatar/${md5(createdUser.user.email)}?d=identicon`,
 
         })
         .then(() => {
-          // saveUser(createdUser).then(() => {
-          //   console.log("User saved")
-          // }) 
-          console.log("done");
+          saveUser(createdUser).then(() => {
+            console.log("User saved")
+          }) 
         })
         .catch(error => {
           console.log(error)
@@ -68,18 +70,93 @@ const SignUp = () => {
       })
   }
 
-  // const saveUser = (createdUser) => {
-  //   return setUsersRef.child(createdUser.user.uid).set({
-  //     name: createdUser.user.displayName,
-  //     avatar: createdUser.user.photoURL
-  //   });
-  // }
+  const saveUser = (createdUser) => {
+    return usersRef.child(createdUser.user.uid).set({
+      name: createdUser.user.displayName,
+      avatar: createdUser.user.photoURL
+    });
+  }
 
   const formik = useFormik({
     initialValues,
     onSubmit,
     validationSchema,
   });
+
+
+  const facebookAuth = () => {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+    
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user)
+    
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var accessToken = credential.accessToken;
+        console.log(accessToken)
+    
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(errorCode)
+        console.log(errorMessage)
+        console.log(email)
+        console.log(credential)
+    
+        // ...
+      });
+  }
+
+  const googleAuth = () => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+
+        console.log(token);
+        console.log(user);
+    
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(errorCode)
+        console.log(errorMessage)
+        console.log(email)
+        console.log(credential)
+    
+        // ...
+      });
+
+
+  }
 
 
   
@@ -156,20 +233,22 @@ const SignUp = () => {
             <p>Sign-Up With</p>
 
             <div className="social-logo">
-              <a
-                href="http://www.facebook.com/hassan.adigun.73/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
+                // href="http://www.facebook.com/hassan.adigun.73/"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={facebookAuth}
               >
                 <img src={FacebookLogo} alt="" />
-              </a>
-              <a
-                href="http://www.facebook.com/hassan.adigun.73/"
-                target="_blank"
-                rel="noopener noreferrer"
+              </div>
+              <div
+                // href="http://www.facebook.com/hassan.adigun.73/"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={googleAuth}
               >
                 <img src={GoogleLogo} alt="" />
-              </a>
+              </div>
 
               <a
                 href="http://www.pinterest.com/adigun0061/_saved/"

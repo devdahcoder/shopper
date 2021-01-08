@@ -177,6 +177,13 @@
   padding: 15px 0;
 }
 
+.signup .form-section .sign-up-footer p {
+  color: #878786;
+  font-size: 14.004px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
 .signup .form-section .sign-up-footer button {
   width: 100.12px;
   height: 40px;
