@@ -7,9 +7,13 @@ import Logo from "./assets/images/logo.svg";
 import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
-import {useDispatch} from "react-redux"
-import {closeLoginSection} from "../../actions/loginAction"
-import firebase from "../../firebase"
+import {useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
+import {closeLoginSection, displaySignupSection} from "../../actions/loginAction";
+import firebase from "../../firebase";
+import { withRouter } from "react-router-dom";
+
+
 
 
 const initialValues = {
@@ -24,9 +28,12 @@ const validationSchema = Yup.object({
 });
 
 
-const Login = () => {
+const Login = ({history}) => {
 
   const dispatch = useDispatch()
+
+  const login = useSelector((state) => state.login.showLogin);
+  const signup = useSelector((state) => state.login.showSignup);
 
 
   const onSubmit = (values, {setSubmitting, resetForm}) => {
@@ -36,6 +43,7 @@ const Login = () => {
       .signInWithEmailAndPassword(formik.values.email, formik.values.password)
       .then(signedUserIn => {
         console.log(signedUserIn)
+        history.push('/')
         console.log("user logged in")
         resetForm({values: ""})
       })
@@ -45,7 +53,6 @@ const Login = () => {
   }
 
 
-
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -53,16 +60,102 @@ const Login = () => {
   })
 
 
+  const facebookAuth = () => {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        if (result.user) {
+          history.push('/cart')
+        }
+    
+        // The signed-in user info.
+        var user = result.user;
+        console.log(user)
+    
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var accessToken = credential.accessToken;
+        console.log(accessToken)
+    
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(errorCode)
+        console.log(errorMessage)
+        console.log(email)
+        console.log(credential)
+    
+        // ...
+      });
+  }
+
+  const googleAuth = () => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+
+        if (result.user) {
+          history.push('/cart')
+        }
+
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+
+        console.log(token);
+        console.log(user);
+    
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        console.log(errorCode)
+        console.log(errorMessage)
+        console.log(email)
+        console.log(credential)
+    
+        // ...
+      });
+
+
+  }
+
+
+
 
   return (
     <section style={{ position: "absolute" }}>
       <div className="signup">
         <div className="cancel-btn">
-          <img
-            onClick={() => dispatch(closeLoginSection())}
-            src={cancelLogo}
-            alt=""
-          />
+          <button>
+            <img
+              onClick={() => dispatch(closeLoginSection())}
+              src={cancelLogo}
+              alt=""
+            />
+          </button>
         </div>
 
         <div className="form-section">
@@ -132,20 +225,22 @@ const Login = () => {
             <p>Sign-Up With</p>
 
             <div className="social-logo">
-              <a
-                href="http://www.facebook.com/hassan.adigun.73/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
+                // href="http://www.facebook.com/hassan.adigun.73/"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={facebookAuth}
               >
                 <img src={FacebookLogo} alt="" />
-              </a>
-              <a
-                href="http://www.facebook.com/hassan.adigun.73/"
-                target="_blank"
-                rel="noopener noreferrer"
+              </div>
+              <div
+                // href="http://www.facebook.com/hassan.adigun.73/"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={googleAuth}
               >
                 <img src={GoogleLogo} alt="" />
-              </a>
+              </div>
 
               <a
                 href="http://www.pinterest.com/adigun0061/_saved/"
@@ -162,7 +257,7 @@ const Login = () => {
           <div className="sign-up-footer">
             <p>Already have an Account?</p>
 
-            <button>Sign up</button>
+            <button onClick={() => dispatch(displaySignupSection())}>Sign up</button>
           </div>
         </div>
       </div>
@@ -170,4 +265,4 @@ const Login = () => {
   );
 };
 
-export default Login
+export default withRouter(Login);

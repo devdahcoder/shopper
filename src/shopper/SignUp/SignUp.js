@@ -7,10 +7,15 @@ import Logo from "./assets/images/logo.svg";
 import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
-import {useDispatch} from "react-redux"
-import {closeSignupSection} from "../../actions/signupAction"
-import firebase from "../../firebase"
-import md5 from "md5"
+import {useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
+import {displayLoginSection} from "../../actions/loginAction";
+import {closeSignupSection} from "../../actions/loginAction";
+import firebase from "../../firebase";
+import md5 from "md5";
+import { withRouter } from "react-router-dom";
+import { setUser } from "../../actions/setUser";
+
 
 
 const initialValues = {
@@ -35,13 +40,14 @@ const validationSchema = Yup.object({
 });
 
 
-
-const SignUp = () => {
+const SignUp = ({history}) => {
 
   const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
 
   const dispatch = useDispatch()
 
+  const login = useSelector((state) => state.login.showLogin);
+  const signup = useSelector((state) => state.login.showSignup);
 
   const onSubmit = (values, {resetForm}) => {
     console.log(values)
@@ -50,6 +56,7 @@ const SignUp = () => {
       .createUserWithEmailAndPassword(formik.values.email, formik.values.password)
       .then(createdUser => {
         console.log(createdUser)
+        history.push('/')
         resetForm({values: ""})
         createdUser.user.updateProfile({
           displayName: formik.values.username,
@@ -93,6 +100,10 @@ const SignUp = () => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
     
+        if (result.user) {
+          history.push('/cart')
+          dispatch(setUser(result.user));
+        }
         // The signed-in user info.
         var user = result.user;
         console.log(user)
@@ -129,6 +140,11 @@ const SignUp = () => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
 
+
+        if (result.user) {
+          history.push('/cart')
+        }
+
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = credential.accessToken;
         // The signed-in user info.
@@ -158,13 +174,54 @@ const SignUp = () => {
 
   }
 
+  const twitterAuth = () => {
+    var provider = new firebase.auth.TwitterAuthProvider();
+
+
+    firebase
+    .auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      /** @type {firebase.auth.OAuthCredential} */
+      var credential = result.credential;
+
+      // This gives you a the Twitter OAuth 1.0 Access Token and Secret.
+      // You can use these server side with your app's credentials to access the Twitter API.
+      var token = credential.accessToken;
+      var secret = credential.secret;
+
+      // The signed-in user info.
+      var user = result.user;
+
+      console.log(token);
+      console.log(user)
+      // ...
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+
+      console.log(errorCode);
+      console.log(errorMessage);
+      console.log(email);
+      // ...
+    });
+  }
+
 
   
   return (
     <section style={{position: "absolute"}}>
       <div className="login">
         <div className="cancel-btn">
-          <img onClick={() => dispatch(closeSignupSection())} src={cancelLogo} alt="" />
+          <button>
+            <img onClick={() => dispatch(closeSignupSection())} src={cancelLogo} alt="" />
+          </button>
         </div>
 
         <div className="form-section">
@@ -250,13 +307,14 @@ const SignUp = () => {
                 <img src={GoogleLogo} alt="" />
               </div>
 
-              <a
-                href="http://www.pinterest.com/adigun0061/_saved/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
+                // href="http://www.pinterest.com/adigun0061/_saved/"
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={twitterAuth}
               >
                 <img src={PinterestLogo} alt="" />
-              </a>
+              </div>
             </div>
           </div>
 
@@ -265,7 +323,7 @@ const SignUp = () => {
           <div className="sign-up-footer">
             <p>Already have an Account?</p>
 
-            <button>Login in</button>
+            <button onClick={() => dispatch(displayLoginSection())}>Login in</button>
           </div>
         </div>
       </div>
@@ -273,7 +331,7 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default withRouter(SignUp);
 
 
 

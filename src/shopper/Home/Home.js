@@ -21,7 +21,7 @@ const Home = () => {
 
 
     const login = useSelector((state) => state.login.showLogin);
-    const signup = useSelector((state) => state.signup.showSignup);
+    const signup = useSelector((state) => state.login.showSignup);
     
 
     return (

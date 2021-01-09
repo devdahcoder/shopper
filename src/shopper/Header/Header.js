@@ -1,15 +1,16 @@
-import React from 'react'
-import Logo from "./assets/images/logo.svg"
-import Love from "./assets/images/love.svg"
-import Cart from "./assets/images/cart.svg"
-import HeaderTag from "../HeaderTag/HeaderTag"
-import {useDispatch} from "react-redux"
-import {displayLoginSection} from "../../actions/loginAction"
-import {displaySignupSection} from "../../actions/signupAction"
-import {Container} from "../../components/Main"
-import {HeaderDisplay} from "../../components/Header"
+import React from 'react';
+import Logo from "./assets/images/logo.svg";
+import Love from "./assets/images/love.svg";
+import Cart from "./assets/images/cart.svg";
+import HeaderTag from "../HeaderTag/HeaderTag";
+import {useDispatch} from "react-redux";
+import {useSelector} from "react-redux";
+import {displayLoginSection} from "../../actions/loginAction";
+import {displaySignupSection} from "../../actions/loginAction";
+import {Container} from "../../components/Main";
+import {HeaderDisplay} from "../../components/Header";
 import { Button, RouterLink } from "../../components/Button";
-import {Nav, Ul, Li} from "../../components/Nav"
+import {Nav, Ul, Li} from "../../components/Nav";
 import { Form, TextInput, SubmitBtn } from "../../components/Form";
 
 
@@ -17,6 +18,8 @@ import { Form, TextInput, SubmitBtn } from "../../components/Form";
 const Header = () => {
 
   const dispatch = useDispatch()
+  const login = useSelector((state) => state.login.showLogin);
+  const signup = useSelector((state) => state.login.showSignup);
 
     return (
       <section>
@@ -42,6 +45,7 @@ const Header = () => {
                   <Button
                     headerBtn
                     onClick={() => dispatch(displayLoginSection())}
+                    disabled={signup ? "true": ""}
                   >
                     Log in
                   </Button>
@@ -50,6 +54,7 @@ const Header = () => {
                   <Button
                     headerBtn
                     onClick={() => dispatch(displaySignupSection())}
+                    disabled={login ? "true": ""}
                   >
                     Sign up
                   </Button>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route, withRouter} from "react-router-dom"
 import Header from "./shopper/Header/Header"
 import Home from "./shopper/Home/Home";
 import SellerApplication from "./shopper/SellerApplication/SellerApplication"
@@ -25,10 +25,17 @@ const Main = styled.div `
 `
 
 
+
+
+
+
+
+
+
 function App() {
 
   const login = useSelector((state) => state.login.showLogin);
-  const signup = useSelector((state) => state.signup.showSignup);
+  const signup = useSelector((state) => state.login.showSignup);
 
   return (
     <MainWrapper>
