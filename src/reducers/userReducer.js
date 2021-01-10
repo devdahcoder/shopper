@@ -1,4 +1,4 @@
-import {SET_USER} from "../actions/setUser"
+import {SET_USER, CLEAR_USER} from "../actions/setUser"
 
 
 
@@ -13,6 +13,11 @@ const userReducer = (state = initialState, action) => {
         case SET_USER:
             return {
                 currentUser: action.payload.currentUser,
+                isLoading: false,
+            }
+        case CLEAR_USER:
+            return {
+                ...initialState,
                 isLoading: false,
             }
 

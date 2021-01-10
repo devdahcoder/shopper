@@ -11,7 +11,7 @@ import {useSelector} from "react-redux"
 import Login from "../Login/Login"
 import SignUp from "../SignUp/SignUp"
 import {withRouter} from "react-router-dom"
-import {setUser} from "../../actions/setUser"
+import {setUser, clearUser} from "../../actions/setUser"
 import {useDispatch} from "react-redux"
 
 
@@ -40,6 +40,10 @@ const Home = ({history}) => {
             history.push("/");
             dispatch(setUser(user))
   
+          }
+          else {
+            history.push("/")
+            dispatch(clearUser());
           }
         })
       return () => {

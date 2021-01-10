@@ -14,6 +14,7 @@ import { Button, RouterLink } from "../../components/Button";
 import {Nav, Ul, Li} from "../../components/Nav";
 import { Form, TextInput, SubmitBtn } from "../../components/Form";
 import styled, {css} from "styled-components"
+import firebase from "firebase"
 
 const OutterImageDiv = styled.div `
   width: 100%;
@@ -45,7 +46,18 @@ const Header = () => {
   const signup = useSelector((state) => state.login.showSignup);
   const user = useSelector((state) => state.user.currentUser)
 
-  console.log(user, "header")
+  const handleSignOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        console.log("User signed out")
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
 
     return (
       <section>
@@ -96,15 +108,13 @@ const Header = () => {
                 <Li headerLi>
                   <InnerImageDisplay>
                     <RouterLink to="/cart">
-                      <OutterImageDiv>
+                      <OutterImageDiv >
                         <InnerImageDisplay inner>
                           <Image className="profile" src={user.photoURL} alt="" />
                         </InnerImageDisplay>
                       </OutterImageDiv>
-
-                      {/* <img className="profile" src={user.photoURL} alt="" /> */}
                     </RouterLink>
-                    <img className="arrow" src={Arrow} alt="" />
+                    <img className="arrow" onClick={handleSignOut} src={Arrow} alt="" />
                   </InnerImageDisplay>
                 </Li>
               </Ul>
