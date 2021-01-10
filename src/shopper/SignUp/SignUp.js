@@ -13,7 +13,6 @@ import {displayLoginSection} from "../../actions/loginAction";
 import {closeSignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
 import md5 from "md5";
-import { withRouter } from "react-router-dom";
 import { setUser } from "../../actions/setUser";
 
 
@@ -40,7 +39,7 @@ const validationSchema = Yup.object({
 });
 
 
-const SignUp = ({history}) => {
+const SignUp = () => {
 
   const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
 
@@ -56,7 +55,7 @@ const SignUp = ({history}) => {
       .createUserWithEmailAndPassword(formik.values.email, formik.values.password)
       .then(createdUser => {
         console.log(createdUser)
-        history.push('/')
+        dispatch(closeSignupSection())
         resetForm({values: ""})
         createdUser.user.updateProfile({
           displayName: formik.values.username,
@@ -99,11 +98,6 @@ const SignUp = ({history}) => {
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
-    
-        if (result.user) {
-          history.push('/cart')
-          dispatch(setUser(result.user));
-        }
         // The signed-in user info.
         var user = result.user;
         console.log(user)
@@ -139,12 +133,6 @@ const SignUp = ({history}) => {
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
-
-
-        if (result.user) {
-          history.push('/cart')
-        }
-
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = credential.accessToken;
         // The signed-in user info.
@@ -331,7 +319,7 @@ const SignUp = ({history}) => {
   );
 };
 
-export default withRouter(SignUp);
+export default SignUp;
 
 
 

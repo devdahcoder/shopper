@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./App.css";
-import {BrowserRouter as Router, Switch, Route, withRouter} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Header from "./shopper/Header/Header"
 import Home from "./shopper/Home/Home";
 import SellerApplication from "./shopper/SellerApplication/SellerApplication"
@@ -9,7 +9,7 @@ import Cart from "./shopper/Cart/Cart"
 import Footer from "./shopper/Footer/Footer"
 import Wish from "./shopper/Wish/Wish"
 import Category from "./shopper/Category/Category"
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import Login from "./shopper/Login/Login"
 import SignUp from "./shopper/SignUp/SignUp"
 import styled from "styled-components"
@@ -27,15 +27,13 @@ const Main = styled.div `
 
 
 
-
-
-
-
-
 function App() {
 
   const login = useSelector((state) => state.login.showLogin);
   const signup = useSelector((state) => state.login.showSignup);
+
+
+
 
   return (
     <MainWrapper>

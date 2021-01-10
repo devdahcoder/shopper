@@ -1,4 +1,3 @@
-import { useReducer } from "react"
 import {SET_USER} from "../actions/setUser"
 
 

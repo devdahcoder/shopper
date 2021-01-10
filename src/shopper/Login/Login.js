@@ -7,11 +7,9 @@ import Logo from "./assets/images/logo.svg";
 import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
-import {useDispatch} from "react-redux";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {closeLoginSection, displaySignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
-import { withRouter } from "react-router-dom";
 
 
 
@@ -28,7 +26,7 @@ const validationSchema = Yup.object({
 });
 
 
-const Login = ({history}) => {
+const Login = () => {
 
   const dispatch = useDispatch()
 
@@ -43,7 +41,7 @@ const Login = ({history}) => {
       .signInWithEmailAndPassword(formik.values.email, formik.values.password)
       .then(signedUserIn => {
         console.log(signedUserIn)
-        history.push('/')
+        dispatch(closeLoginSection())
         console.log("user logged in")
         resetForm({values: ""})
       })
@@ -69,10 +67,6 @@ const Login = ({history}) => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
 
-        if (result.user) {
-          history.push('/cart')
-        }
-    
         // The signed-in user info.
         var user = result.user;
         console.log(user)
@@ -108,11 +102,6 @@ const Login = ({history}) => {
       .then((result) => {
         /** @type {firebase.auth.OAuthCredential} */
         var credential = result.credential;
-
-        if (result.user) {
-          history.push('/cart')
-        }
-
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = credential.accessToken;
         // The signed-in user info.
@@ -265,4 +254,4 @@ const Login = ({history}) => {
   );
 };
 
-export default withRouter(Login);
+export default Login;
