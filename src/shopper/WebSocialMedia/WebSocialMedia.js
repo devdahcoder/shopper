@@ -2,7 +2,6 @@ import React from 'react'
 import "./assets/style/index.css"
 import {useFormik} from "formik"
 import * as Yup from "yup"
-import {Link} from "react-router-dom"
 import Facebook from "./assets/images/facebook.svg"
 import Pinterest from "./assets/images/pinterest.svg"
 import Twitter from "./assets/images/twitter.svg"
@@ -123,17 +122,18 @@ const WebSocialMedia = () => {
           </InputDiv>
 
           <ButtonContainer>
-            <Button formBtn goBack>
-              <RouterLink goBack to="/company-profile">
-                Go Back
-              </RouterLink>
-            </Button>
+            <RouterLink goBack to="/company-profile">
+              <Button formBtn goBack>
+                  Go Back
+              </Button>
+            </RouterLink>
+            
 
-            <Button formBtn next>
-              <RouterLink next to="/contact-info">
-                Next
-              </RouterLink>
-            </Button>
+            <RouterLink next to="/contact-info">
+              <Button formBtn next>
+                  Next
+              </Button>
+            </RouterLink>
           </ButtonContainer>
         </Form>
       </ApplicationContainer>

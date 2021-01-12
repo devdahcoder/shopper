@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useRef} from 'react'
 import "./assets/style/index.css";
 import { useFormik } from "formik";
 import * as Yup from "yup"
@@ -8,12 +8,11 @@ import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux";
-import {useSelector} from "react-redux";
+// import {useSelector} from "react-redux";
 import {displayLoginSection} from "../../actions/loginAction";
 import {closeSignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
 import md5 from "md5";
-import { setUser } from "../../actions/setUser";
 
 
 
@@ -41,12 +40,13 @@ const validationSchema = Yup.object({
 
 const SignUp = () => {
 
-  const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
+  // const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
+  const usersRef = useRef(firebase.database().ref("users"));
 
   const dispatch = useDispatch()
 
-  const login = useSelector((state) => state.login.showLogin);
-  const signup = useSelector((state) => state.login.showSignup);
+  // const login = useSelector((state) => state.login.showLogin);
+  // const signup = useSelector((state) => state.login.showSignup);
 
   const onSubmit = (values, {resetForm}) => {
     console.log(values)
@@ -177,6 +177,7 @@ const SignUp = () => {
       // You can use these server side with your app's credentials to access the Twitter API.
       var token = credential.accessToken;
       var secret = credential.secret;
+      console.log(secret)
 
       // The signed-in user info.
       var user = result.user;
@@ -197,6 +198,7 @@ const SignUp = () => {
       console.log(errorCode);
       console.log(errorMessage);
       console.log(email);
+      console.log(credential)
       // ...
     });
   }

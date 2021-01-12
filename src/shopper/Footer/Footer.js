@@ -43,7 +43,7 @@ const CopyRight = styled.div`
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  width: 30%;
+  width: 50%;
 `;
 const Footer = () => {
     return (

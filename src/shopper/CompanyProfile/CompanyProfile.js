@@ -69,17 +69,18 @@ const CompanyProfile = () => {
 
             <ButtonContainer companyProfile>
 
-              <Button formBtn goBack>
-                <RouterLink goBack to="/application-criteria">
-                  Go Back
-                </RouterLink>
-              </Button>
 
-              <Button formBtn next>
-                <RouterLink next to="/web-&-social-media">
-                  Next
-                </RouterLink>
-              </Button>
+              <RouterLink goBack to="/application-criteria">
+                <Button formBtn goBack>                
+                    Go Back
+                </Button>
+              </RouterLink>
+
+              <RouterLink next to="/web-social-media">
+                <Button formBtn next>
+                    Next
+                </Button>
+              </RouterLink>
             </ButtonContainer>
           </Form>
         </ApplicationContainer>

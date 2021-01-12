@@ -166,11 +166,13 @@ const ContactInfo = () => {
             </InputDiv>
 
             <ButtonContainer>
-              <Button formBtn goBack>
-                <RouterLink goBack to="/web-&-social-media">
+              
+              <RouterLink goBack to="/web-social-media">
+                <Button formBtn goBack>
                   Go Back
-                </RouterLink>
-              </Button>
+                </Button>
+              </RouterLink>
+              
 
               <ContactBtnLink>
                   By Submitting this application, you agree to the{" "}
@@ -179,11 +181,11 @@ const ContactInfo = () => {
                   </span>
               </ContactBtnLink>
 
-              <Button formBtn next>
-                <RouterLink next to="/confirm-account">
+              <RouterLink next to="/confirm-account">
+                <Button formBtn next>
                   Submit Application
-                </RouterLink>
-              </Button>
+                </Button>
+              </RouterLink>
             </ButtonContainer>
           </Form>
         </ApplicationContainer>

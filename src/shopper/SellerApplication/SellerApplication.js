@@ -33,7 +33,7 @@ const SellerApplication = () => {
                 
               />
               <Route
-                path="/web-&-social-media"
+                path="/web-social-media"
                 exact
                 component={WebSocialMedia}
               />

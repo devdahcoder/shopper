@@ -132,16 +132,17 @@ const ShippingAddress = () => {
             </ShippingDisplay>
           </FormDisplayRows>
           <ButtonContainer>
-            <Button formBtn goBack>
-              <RouterLink goBack to="/shipping-address">
-                Go Back
-              </RouterLink>
-            </Button>
-            <Button formBtn next>
-              <RouterLink next to="/billing-details">
-                Next
-              </RouterLink>
-            </Button>
+            <RouterLink goBack to="/shipping-address">
+              <Button formBtn goBack>
+                  Go Back
+              </Button>
+            </RouterLink>
+
+            <RouterLink next to="/billing-details">
+              <Button formBtn next>
+                  Next
+              </Button>
+            </RouterLink>
           </ButtonContainer>
         </Form>
       </ApplicationContainer>

@@ -8,6 +8,7 @@ import ShippingApplication from "./shopper/ShippingApplication/ShippingApplicati
 import Cart from "./shopper/Cart/Cart"
 import Footer from "./shopper/Footer/Footer"
 import Wish from "./shopper/Wish/Wish"
+import ProfilePage from "./shopper/ProfilePage/ProfilePage"
 import Category from "./shopper/Category/Category"
 import {useSelector, useDispatch} from "react-redux"
 import Login from "./shopper/Login/Login"
@@ -56,6 +57,11 @@ function App() {
               exact
               path="/shipping-address"
               component={ShippingApplication}
+            />
+            <Route
+              exact
+              path="/profile-page"
+              component={ProfilePage}
             />
           </Switch>
           <Footer />

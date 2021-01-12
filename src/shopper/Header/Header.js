@@ -30,10 +30,10 @@ const InnerImageDisplay = styled.div `
 `
 
 const Image = styled.img `
-  vertical-align: middle;
+  /* vertical-align: middle; */
   display: block;
-  height: 32px;
-  width: 32px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
 `
 
@@ -85,7 +85,7 @@ const Header = () => {
                   <Button
                     headerBtn
                   >
-                    Request Quote
+                    Request {/* Request Quote */}
                   </Button>
                 </Li>
                 <Li headerLi>
@@ -107,7 +107,7 @@ const Header = () => {
                 </Li>
                 <Li headerLi>
                   <InnerImageDisplay>
-                    <RouterLink to="/cart">
+                    <RouterLink to="/profile-page">
                       <OutterImageDiv >
                         <InnerImageDisplay inner>
                           <Image className="profile" src={user.photoURL} alt="" />

@@ -7,7 +7,8 @@ import Logo from "./assets/images/logo.svg";
 import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+// import {useSelector} from "react-redux";
 import {closeLoginSection, displaySignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
 
@@ -30,8 +31,8 @@ const Login = () => {
 
   const dispatch = useDispatch()
 
-  const login = useSelector((state) => state.login.showLogin);
-  const signup = useSelector((state) => state.login.showSignup);
+  // const login = useSelector((state) => state.login.showLogin);
+  // const signup = useSelector((state) => state.login.showSignup);
 
 
   const onSubmit = (values, {setSubmitting, resetForm}) => {
@@ -211,7 +212,7 @@ const Login = () => {
           </div>
 
           <div className="sign-up">
-            <p>Sign-Up With</p>
+            <p>Login with</p>
 
             <div className="social-logo">
               <div
@@ -244,7 +245,7 @@ const Login = () => {
           <hr />
 
           <div className="sign-up-footer">
-            <p>Already have an Account?</p>
+            <p>Don't have an Account?</p>
 
             <button onClick={() => dispatch(displaySignupSection())}>Sign up</button>
           </div>

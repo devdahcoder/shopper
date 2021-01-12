@@ -98,17 +98,19 @@ const ApplicationCriteria = () => {
               </SellerForm>
             </FormDisplay>
             <ButtonContainer>
+            <RouterLink goBack to="/application-criteria">
               <Button formBtn goBack>
-                <RouterLink goBack to="/application-criteria">
                   Go Back
-                </RouterLink>
               </Button>
+            </RouterLink>
 
-              <Button formBtn next>
-                <RouterLink next to="/company-profile">
+              
+              <RouterLink next to="/company-profile">
+                <Button formBtn next>
                   Next
-                </RouterLink>
-              </Button>
+                </Button>
+              </RouterLink>
+              
             </ButtonContainer>
           </Form>
         </ApplicationContainer>

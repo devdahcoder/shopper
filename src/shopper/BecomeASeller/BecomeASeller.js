@@ -27,11 +27,9 @@ const BecomeASeller = () => {
               Nulla consequat massa quis enim.
             </UserApplicationInfo>
 
-            <Button>
-              <RouterLink apply to="/application-criteria">
-                Apply To Sell
-              </RouterLink>
-            </Button>
+            <RouterLink apply="true" to="/application-criteria">
+              <Button>Apply To Sell</Button>
+            </RouterLink>
           </ApplyTextContainer>
         </ApplyDisplay>
       </Container>

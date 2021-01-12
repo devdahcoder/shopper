@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import "./assets/style/index.css"
 import firebase from "firebase"
 import SliderDisplay from "../SliderDisplay/SliderDisplay"
@@ -27,6 +27,7 @@ const Home = ({history}) => {
     const signup = useSelector((state) => state.login.showSignup);
     const dispatch = useDispatch()
     const isMountedRef = useRef(null);
+    const [users, setUsers] = useState(null)
 
 
     useEffect(() => {
@@ -39,6 +40,7 @@ const Home = ({history}) => {
             console.log(user);
             history.push("/");
             dispatch(setUser(user))
+            setUsers(user);
   
           }
           else {
@@ -50,7 +52,7 @@ const Home = ({history}) => {
         console.log("user unmount")
         isMountedRef.current = false;
       }
-    }, [])
+    }, [users])
     
 
 

@@ -23,7 +23,7 @@ const SellerApplicationNav = () => {
                 </RouterLink>
               </Li>
               <Li sellerApplicationLi>
-                <RouterLink sellerApplicationLink to="/web-&-social-media">
+                <RouterLink sellerApplicationLink to="/web-social-media">
                   Web & Social Media
                 </RouterLink>
               </Li>

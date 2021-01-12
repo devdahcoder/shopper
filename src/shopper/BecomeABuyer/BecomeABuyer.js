@@ -25,11 +25,9 @@ const BecomeABuyer = () => {
               Nulla consequat massa quis enim.
             </UserApplicationInfo>
 
-            <Button>
-              <RouterLink apply to="/shipping-address">
-                Apply To Sell
-              </RouterLink>
-            </Button>
+            <RouterLink apply="true" to="/shipping-address">
+              <Button>Apply To Sell</Button>  
+            </RouterLink>
           </ApplyTextContainer>
           <div>
             <img src={Buyer} alt="" />

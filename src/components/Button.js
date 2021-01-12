@@ -46,6 +46,7 @@ export const Button = styled.button`
     css`
       border: solid 1px #757575;
       background-color: rgba(0, 0, 0, 0);
+      color: #757575;;
     `}
   ${({ next }) =>
     next &&
@@ -70,7 +71,7 @@ export const RouterLink = styled(Link)`
 
 
   ${({apply}) => apply && css `
-  color: #ffffff;
+    color: #ffffff;
   `}
 
   ${({ sellerApplicationLink }) =>
