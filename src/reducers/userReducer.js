@@ -1,10 +1,11 @@
-import {SET_USER, CLEAR_USER} from "../actions/setUser"
+import {SET_USER, SET_USER_SUCCESS, SET_USER_FAILURE, CLEAR_USER} from "../actions/setUser"
 
 
 
 const initialState = {
     currentUser: null,
-    isLoading: true
+    isLoading: false,
+    error: ""
 }
 
 
@@ -12,8 +13,22 @@ const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USER:
             return {
-                currentUser: action.payload.currentUser,
+                ...state,
+                isLoading: true,
+                error: ""
+            }
+        
+        case SET_USER_SUCCESS:
+            return {
                 isLoading: false,
+                currentUser: action.payload,
+                error: ""
+            }
+        case SET_USER_FAILURE:
+            return {
+                isLoading: false,
+                currentUser: null,
+                error: action.payload
             }
         case CLEAR_USER:
             return {

@@ -8,12 +8,10 @@ import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux";
-// import {useSelector} from "react-redux";
 import {displayLoginSection} from "../../actions/loginAction";
 import {closeSignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
-import md5 from "md5";
-
+import {getUser} from "../../actions/setUser"
 
 
 const initialValues = {
@@ -40,47 +38,13 @@ const validationSchema = Yup.object({
 
 const SignUp = () => {
 
-  // const [usersRef, setUsersRef] = useState(firebase.database().ref("users"));
-  const usersRef = useRef(firebase.database().ref("users"));
+  // const usersRef = useRef(firebase.database().ref("users")); //we might uncomment this later
 
   const dispatch = useDispatch()
 
-  // const login = useSelector((state) => state.login.showLogin);
-  // const signup = useSelector((state) => state.login.showSignup);
 
   const onSubmit = (values, {resetForm}) => {
-    console.log(values)
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(formik.values.email, formik.values.password)
-      .then(createdUser => {
-        console.log(createdUser)
-        dispatch(closeSignupSection())
-        resetForm({values: ""})
-        createdUser.user.updateProfile({
-          displayName: formik.values.username,
-          photoURL: `https://gravatar.com/avatar/${md5(createdUser.user.email)}?d=identicon`,
-
-        })
-        .then(() => {
-          saveUser(createdUser).then(() => {
-            console.log("User saved")
-          }) 
-        })
-        .catch(error => {
-          console.log(error)
-        })
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
-
-  const saveUser = (createdUser) => {
-    return usersRef.child(createdUser.user.uid).set({
-      name: createdUser.user.displayName,
-      avatar: createdUser.user.photoURL
-    });
+    dispatch(getUser(values))
   }
 
   const formik = useFormik({
@@ -101,10 +65,12 @@ const SignUp = () => {
         // The signed-in user info.
         var user = result.user;
         console.log(user)
+        dispatch(closeSignupSection())
     
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var accessToken = credential.accessToken;
         console.log(accessToken)
+        
     
         // ...
       })
@@ -140,6 +106,7 @@ const SignUp = () => {
 
         console.log(token);
         console.log(user);
+        dispatch(closeSignupSection())
     
         // ...
       })
@@ -184,6 +151,7 @@ const SignUp = () => {
 
       console.log(token);
       console.log(user)
+      dispatch(closeSignupSection())
       // ...
     })
     .catch((error) => {

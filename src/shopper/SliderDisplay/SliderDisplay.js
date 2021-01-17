@@ -101,7 +101,7 @@ const SliderDisplay = () => {
               style={{
                 display: "flex",
                 transform: `translateX(-${
-                  currentImage.index * (100 / images.length)
+                  currentImage.index * (100 / images.length) /* please if you run into any issues change 55 to 100 or any digits that works for you*/
                 }%)`,
               }}
             >

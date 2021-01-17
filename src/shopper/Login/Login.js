@@ -8,7 +8,6 @@ import FacebookLogo from "./assets/images/facebook.svg";
 import GoogleLogo from "./assets/images/google.svg";
 import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux";
-// import {useSelector} from "react-redux";
 import {closeLoginSection, displaySignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
 
@@ -30,9 +29,6 @@ const validationSchema = Yup.object({
 const Login = () => {
 
   const dispatch = useDispatch()
-
-  // const login = useSelector((state) => state.login.showLogin);
-  // const signup = useSelector((state) => state.login.showSignup);
 
 
   const onSubmit = (values, {setSubmitting, resetForm}) => {
@@ -75,6 +71,7 @@ const Login = () => {
         // This gives you a Facebook Access Token. You can use it to access the Facebook API.
         var accessToken = credential.accessToken;
         console.log(accessToken)
+        dispatch(closeLoginSection())
     
         // ...
       })
@@ -110,6 +107,7 @@ const Login = () => {
 
         console.log(token);
         console.log(user);
+        dispatch(closeLoginSection())
     
         // ...
       })
@@ -131,8 +129,6 @@ const Login = () => {
 
 
   }
-
-
 
 
   return (
@@ -216,29 +212,20 @@ const Login = () => {
 
             <div className="social-logo">
               <div
-                // href="http://www.facebook.com/hassan.adigun.73/"
-                // target="_blank"
-                // rel="noopener noreferrer"
                 onClick={facebookAuth}
               >
                 <img src={FacebookLogo} alt="" />
               </div>
               <div
-                // href="http://www.facebook.com/hassan.adigun.73/"
-                // target="_blank"
-                // rel="noopener noreferrer"
                 onClick={googleAuth}
               >
                 <img src={GoogleLogo} alt="" />
               </div>
 
-              <a
-                href="http://www.pinterest.com/adigun0061/_saved/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
               >
                 <img src={PinterestLogo} alt="" />
-              </a>
+              </div>
             </div>
           </div>
 

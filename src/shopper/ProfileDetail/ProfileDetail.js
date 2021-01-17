@@ -1,16 +1,18 @@
 import React from 'react'
 import "./assets/style/index.css"
 import ProfileImage from "../ProfileImage/ProfileImage";
+import {useSelector} from "react-redux";
 
 const ProfileDetail = () => {
 
     const pixSize = "100px";
+    const user = useSelector((state) => state.user.currentUser)
     
     return (
       <div className="profile-details">
         <ProfileImage className="profile-details-child" pixSize={pixSize} />
         <div className="profile-name">
-          <p>Jane & Jone</p>
+          <p>{user.displayName}</p>
         </div>
         <div className="profile-address">
           <p>NEWYORK, NY . USA</p>
