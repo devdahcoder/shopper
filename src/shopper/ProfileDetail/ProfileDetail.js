@@ -12,7 +12,7 @@ const ProfileDetail = () => {
       <div className="profile-details">
         <ProfileImage className="profile-details-child" pixSize={pixSize} />
         <div className="profile-name">
-          <p>{user.displayName}</p>
+          <p>{user && user.displayName}</p>
         </div>
         <div className="profile-address">
           <p>NEWYORK, NY . USA</p>

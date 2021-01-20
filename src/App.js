@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "./App.css";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Header from "./shopper/Header/Header"
@@ -14,7 +14,9 @@ import {useSelector, useDispatch} from "react-redux"
 import Login from "./shopper/Login/Login"
 import SignUp from "./shopper/SignUp/SignUp"
 import styled from "styled-components"
-
+import firebase from "firebase"
+import {withRouter} from "react-router-dom"
+import {setUserSuccess, logOut, logUser, logUserSuccess, clearUserSuccess} from "./actions/setUser"
 
 
 const MainWrapper = styled.section `
@@ -28,17 +30,39 @@ const Main = styled.div `
 
 
 
-function App() {
+function App({history}) {
 
   const login = useSelector((state) => state.login.showLogin);
   const signup = useSelector((state) => state.login.showSignup);
+  const dispatch = useDispatch()
+  const isMountedRef = useRef(null);
+
+  useEffect(() => {
+
+    isMountedRef.current = true;
+    firebase
+      .auth()
+      .onAuthStateChanged(user => {
+        if (user) {
+          history.push("/");
+          dispatch(logUserSuccess(user))
+        }
+        else {
+          history.push("/")
+          dispatch(clearUserSuccess());
+        }
+      })
+    return () => {
+      console.log("user unmount")
+      isMountedRef.current = false;
+    }
+  }, [])
 
 
 
 
   return (
     <MainWrapper>
-      <Router>
         <Main>
           {login ? <Login /> : null}
           {signup ? <SignUp /> : null}
@@ -66,10 +90,9 @@ function App() {
           </Switch>
           <Footer />
         </Main>
-      </Router>
     </MainWrapper>
   );
 };
 
 
-export default App;
+export default withRouter(App);

@@ -6,8 +6,7 @@ import HeaderTag from "../HeaderTag/HeaderTag";
 import Arrow from "./assets/images/arrow.svg";
 import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
-import {displayLoginSection} from "../../actions/loginAction";
-import {displaySignupSection} from "../../actions/loginAction";
+import {displayLoginSection, displaySignupSection} from "../../actions/loginAction";
 import {Container} from "../../components/Main";
 import {HeaderDisplay} from "../../components/Header";
 import { Button, RouterLink } from "../../components/Button";
@@ -15,6 +14,7 @@ import {Nav, Ul, Li} from "../../components/Nav";
 import { Form, TextInput, SubmitBtn } from "../../components/Form";
 import styled, {css} from "styled-components"
 import firebase from "firebase"
+import {logOut} from "../../actions/setUser"
 
 const OutterImageDiv = styled.div `
   width: 100%;
@@ -47,15 +47,7 @@ const Header = () => {
   const user = useSelector((state) => state.user.currentUser)
 
   const handleSignOut = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        console.log("User signed out")
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+    dispatch(logOut())
   }
 
 

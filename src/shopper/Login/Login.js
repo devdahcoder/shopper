@@ -10,6 +10,7 @@ import PinterestLogo from "./assets/images/pinterest.svg";
 import {useDispatch} from "react-redux";
 import {closeLoginSection, displaySignupSection} from "../../actions/loginAction";
 import firebase from "../../firebase";
+import {logUser} from "../../actions/setUser"
 
 
 
@@ -32,19 +33,8 @@ const Login = () => {
 
 
   const onSubmit = (values, {setSubmitting, resetForm}) => {
-    console.log(values)
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(formik.values.email, formik.values.password)
-      .then(signedUserIn => {
-        console.log(signedUserIn)
-        dispatch(closeLoginSection())
-        console.log("user logged in")
-        resetForm({values: ""})
-      })
-      .catch(error => {
-        console.log(error)
-      })
+    dispatch(logUser(values, resetForm))
+    resetForm()
   }
 
 
