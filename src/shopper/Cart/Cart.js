@@ -1,20 +1,33 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import CartItem from "../CartItem/CartItem"
 import "./assets/style/index.css"
 import ADS from "./assets/images/ads.svg"
-import {useSelector} from "react-redux"
+import {getCart} from "../../actions/productAction"
+import {connect} from "react-redux"
+import Loader from "../Loader/Loader"
 
 
-const Cart = () => {
+const Cart = ({carts, isLoading, error, getUserCart}) => {
 
-    const cartItems = useSelector((state) => state.cartItems.cartItems);
+    useEffect(() => {
+      getUserCart()
+      console.log(carts)
+      // dispatch(getCart())
+      // return () => {
+      //   cleanup
+      // }
+    }, [])
+
+    if (isLoading) return <Loader />
+
+    if(error) return <h1>error</h1>
 
     return (
       <div>
         <div className="container cart-display">
           <div className="main-cart">
             <div>
-              {cartItems.map((cart, id) => (
+              {carts.map((cart, id) => (
                 <CartItem id={id} key={cart.id} cart={cart} />
               ))}
             </div>
@@ -36,7 +49,7 @@ const Cart = () => {
                   <div className="calculate-sub-total">
                     <p>Subtotal</p>
 
-                    <p>${cartItems.price}</p>
+                    {/* <p>${cartItems.price}</p> */}
                   </div>
                   <div className="calculate-sub-total">
                     <p>Shipping</p>
@@ -69,4 +82,18 @@ const Cart = () => {
     );
 }
 
-export default Cart
+const mapStateToProps = state => {
+  return {
+    carts: state.cartList.cart,
+    isLoading: state.cartList.loading,
+    error: state.cartList.error
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getUserCart: () => dispatch(getCart())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

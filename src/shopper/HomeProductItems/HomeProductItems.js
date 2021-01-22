@@ -1,7 +1,7 @@
 import React from 'react'
 import Pix from "./assets/images/pix.svg"
 import Arrow from "./assets/images/arrow.svg"
-import { addToCart } from "../../actions/cartAction";
+// import { addToCart } from "../../actions/cartAction";
 import { useDispatch } from "react-redux";
 import {
   Product,
@@ -15,6 +15,7 @@ import {
   ProductLink,
   ProductLinkBtn,
 } from "../../components/Products";
+import {addToCart} from "../../actions/productAction"
 
 
 const HomeProductItems = ({ cloth, first, eight }) => {

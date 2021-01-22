@@ -16,7 +16,7 @@ import SignUp from "./shopper/SignUp/SignUp"
 import styled from "styled-components"
 import firebase from "firebase"
 import {withRouter} from "react-router-dom"
-import {setUserSuccess, logOut, logUser, logUserSuccess, clearUserSuccess} from "./actions/setUser"
+import {setUserSuccess, logOut, logUser, getUser, logUserSuccess, clearUserSuccess} from "./actions/setUser"
 
 
 const MainWrapper = styled.section `
@@ -35,27 +35,27 @@ function App({history}) {
   const login = useSelector((state) => state.login.showLogin);
   const signup = useSelector((state) => state.login.showSignup);
   const dispatch = useDispatch()
-  const isMountedRef = useRef(null);
+  // const isMountedRef = useRef(null);
 
   useEffect(() => {
 
-    isMountedRef.current = true;
+    // isMountedRef.current = true;
     firebase
       .auth()
       .onAuthStateChanged(user => {
         if (user) {
           history.push("/");
-          dispatch(logUserSuccess(user))
+          dispatch(setUserSuccess(user))
         }
         else {
           history.push("/")
-          dispatch(clearUserSuccess());
+          dispatch(logOut());
         }
       })
-    return () => {
-      console.log("user unmount")
-      isMountedRef.current = false;
-    }
+    // return () => {
+    //   console.log("user unmount")
+    //   isMountedRef.current = false;
+    // }
   }, [])
 
 
