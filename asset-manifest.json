@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/shopper/static/css/main.3d3ddec5.chunk.css",
-    "main.js": "/shopper/static/js/main.f4686dac.chunk.js",
-    "main.js.map": "/shopper/static/js/main.f4686dac.chunk.js.map",
+    "main.css": "/shopper/static/css/main.91f7ccb0.chunk.css",
+    "main.js": "/shopper/static/js/main.6c5e4ace.chunk.js",
+    "main.js.map": "/shopper/static/js/main.6c5e4ace.chunk.js.map",
     "runtime-main.js": "/shopper/static/js/runtime-main.f0f28b72.js",
     "runtime-main.js.map": "/shopper/static/js/runtime-main.f0f28b72.js.map",
-    "static/js/2.34645df8.chunk.js": "/shopper/static/js/2.34645df8.chunk.js",
-    "static/js/2.34645df8.chunk.js.map": "/shopper/static/js/2.34645df8.chunk.js.map",
+    "static/js/2.75192834.chunk.js": "/shopper/static/js/2.75192834.chunk.js",
+    "static/js/2.75192834.chunk.js.map": "/shopper/static/js/2.75192834.chunk.js.map",
     "index.html": "/shopper/index.html",
-    "static/css/main.3d3ddec5.chunk.css.map": "/shopper/static/css/main.3d3ddec5.chunk.css.map",
-    "static/js/2.34645df8.chunk.js.LICENSE.txt": "/shopper/static/js/2.34645df8.chunk.js.LICENSE.txt",
+    "static/css/main.91f7ccb0.chunk.css.map": "/shopper/static/css/main.91f7ccb0.chunk.css.map",
+    "static/js/2.75192834.chunk.js.LICENSE.txt": "/shopper/static/js/2.75192834.chunk.js.LICENSE.txt",
     "static/media/ads.a831946e.svg": "/shopper/static/media/ads.a831946e.svg",
     "static/media/arrow.136812c1.svg": "/shopper/static/media/arrow.136812c1.svg",
     "static/media/arrow.1da6569a.svg": "/shopper/static/media/arrow.1da6569a.svg",
@@ -26,7 +26,6 @@
     "static/media/cart.3b74c28b.svg": "/shopper/static/media/cart.3b74c28b.svg",
     "static/media/chair.3bfdf43f.svg": "/shopper/static/media/chair.3bfdf43f.svg",
     "static/media/chair.6ffddc17.svg": "/shopper/static/media/chair.6ffddc17.svg",
-    "static/media/download.291cb328.png": "/shopper/static/media/download.291cb328.png",
     "static/media/dropdown.00ced7c8.svg": "/shopper/static/media/dropdown.00ced7c8.svg",
     "static/media/facebook.38f000b1.svg": "/shopper/static/media/facebook.38f000b1.svg",
     "static/media/facebook.8d1979b0.svg": "/shopper/static/media/facebook.8d1979b0.svg",
@@ -58,8 +57,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f0f28b72.js",
-    "static/js/2.34645df8.chunk.js",
-    "static/css/main.3d3ddec5.chunk.css",
-    "static/js/main.f4686dac.chunk.js"
+    "static/js/2.75192834.chunk.js",
+    "static/css/main.91f7ccb0.chunk.css",
+    "static/js/main.6c5e4ace.chunk.js"
   ]
 }
