@@ -1,10 +1,6 @@
 .header-bg {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 20px 0;
   background-color: #f4f4f4;
 }
@@ -16,13 +12,10 @@
 .header-bg nav ul li {
   display: inline-block;
   padding: 0px 30px 0 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .header-bg nav ul li a {
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   color: #1e234b;
   text-decoration: none;

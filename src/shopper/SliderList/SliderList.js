@@ -1,22 +1,24 @@
 import React from "react";
 import "./assets/style/index.css";
-// import Bicycle from "./assets/images/bicycle.svg";
-// import Brush from "./assets/images/brush.svg";
-// import Chair from "./assets/images/chair.svg";
-// import Ring from "./assets/images/ring.svg";
-// import LeftArrow from "./assets/images/leftarrow.svg";
-// import RightArrow from "./assets/images/rightarrow.svg";
-
 
 const SliderList = ({ image }) => {
+
   return (
-    <div>
+
+    <div className="slider-main-container">
+
       <figure id={image.index}>
+
         <img src={image.pix} alt="" />
-        <p>
-          <a href="http://www.google.com">{image.name}</a>
-        </p>
+
+        <div className="slider-text-container">
+
+          <a className="slider-text-link" href="http://www.google.com">{image.name}</a>
+
+        </div>
+
       </figure>
+
     </div>
     //   <div className="top-seller-display">
     //     <div className="top-seller-slider">

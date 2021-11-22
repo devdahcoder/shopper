@@ -21,10 +21,8 @@
 }
 
 .contact-info form .contact-name-form {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1em;
 }
 
@@ -42,10 +40,8 @@
 }
 
 .contact-info form .contact-address {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;
   margin: 1.5em 0;
 }
@@ -60,15 +56,9 @@
 }
 
 .contact-info .contact-btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 2em;
 }
 

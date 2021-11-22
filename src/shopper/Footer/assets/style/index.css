@@ -3,12 +3,8 @@
 }
 
 .footer .footer-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
 }
@@ -25,7 +21,6 @@
 .footer .footer-display nav ul li a {
   text-decoration: none;
   color: #1c1c1b;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 

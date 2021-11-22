@@ -1,17 +1,11 @@
 .cart-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 30px 0;
 }
 
 .cart-display .main-cart {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   width: 100%;
 }
 
@@ -25,17 +19,10 @@
 }
 
 .cart-display .total {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   font-family: 'Fira Code', monospace;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .cart-display .total .text {
@@ -61,46 +48,30 @@
 .cart-display .total .sub-total {
   width: 80%;
   margin: auto 0 auto auto;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  justify-content: right;
   margin-bottom: 10px;
   padding: 0em 2em;
 }
 
 .cart-display .total .sub-total .calculate-sub-total {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 5px 0;
 }
 
 .cart-display .total .amount {
-  -webkit-box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
-          box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
-          box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
+  box-shadow: 1.4px 20px 221px rgba(255, 255, 255, 0.5);
+  box-shadow: 0.8px 12px 68px rgba(9, 9, 9, 0.3);
   background-color: #ffffff;
   padding: 1.5em 2em;
   border-radius: 5px;
 }
 
 .cart-display .total .amount .amount-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 0;
 }
 

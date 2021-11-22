@@ -1,9 +1,7 @@
 .login {
   background-color: #ffffff;
-  -webkit-box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
-          box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
-          box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
+  box-shadow: 0.8px 12px 68px rgba(0, 0, 0, 0.3);
+  box-shadow: 1.4px 20px 221px rgba(0, 0, 0, 0.5);
   width: 35%;
   margin: 0 auto;
   border-radius: 5px;
@@ -15,15 +13,9 @@
 }
 
 .login .cancel-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .login .logo {
@@ -62,18 +54,6 @@
   border: none;
 }
 
-.login .form-section .form label input::-webkit-input-placeholder {
-  font-family: 'Fira Code', monospace;
-}
-
-.login .form-section .form label input:-ms-input-placeholder {
-  font-family: 'Fira Code', monospace;
-}
-
-.login .form-section .form label input::-ms-input-placeholder {
-  font-family: 'Fira Code', monospace;
-}
-
 .login .form-section .form label input::placeholder {
   font-family: 'Fira Code', monospace;
 }
@@ -103,31 +83,19 @@
 }
 
 .login .form-section .sign-up .social-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   text-align: center;
   width: 50%;
   margin: 0 auto;
 }
 
 .login .form-section .sign-up-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
   padding: 15px 0;

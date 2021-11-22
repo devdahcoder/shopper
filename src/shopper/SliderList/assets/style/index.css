@@ -1,13 +1,18 @@
-figure {
-  text-align: center;
+.slider-main-container {
+  width: 100%;
 }
 
-figure p {
+.slider-main-container figure {
+  text-align: center;
+  width: 100%;
+}
+
+.slider-main-container figure .slider-text-container {
   text-align: center;
   padding: .5em;
 }
 
-figure p a {
+.slider-main-container figure .slider-text-container .slider-text-link {
   color: #757575;
   text-decoration: none;
 }

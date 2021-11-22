@@ -22,41 +22,27 @@
 }
 
 .shipping-address-form .shipping-form .shipping-form-name {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
 }
 
 .shipping-address-form .shipping-form .shipping-email-form {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 1em;
   margin: 2em 0;
 }
 
 .shipping-address-form .shipping-form .shipping-number-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .shipping-address-form .shipping-form .shipping-checkbox-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .shipping-address-form .shipping-form .shipping-checkbox-display input {
@@ -64,15 +50,9 @@
 }
 
 .shipping-address-form .shipping-btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin-top: 9em;
 }

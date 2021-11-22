@@ -62,7 +62,7 @@ const initialState = [
 
 const SliderDisplay = () => {
 
-    const [images, setImages] = useState(initialState);
+    const [images] = useState(initialState);
     const [currentImage, setCurrentImage] = useState(images[0]);
 
     // next slider button
@@ -86,17 +86,24 @@ const SliderDisplay = () => {
 
     return (
       <TopSliderDisplay>
+
         <TopSellerSlider>
+
           <SliderBtnContainer>
+
             <SliderBtn
               onClick={prev}
               disabled={currentImage.index === 0}
             >
+
               <SliderBtnImg src={LeftArrow} alt="" />
+
             </SliderBtn>
+
           </SliderBtnContainer>
 
           <SliderContent>
+
             <SliderFigure
               style={{
                 display: "flex",
@@ -105,20 +112,29 @@ const SliderDisplay = () => {
                 }%)`,
               }}
             >
-              {images.map((image) => (
-                <SliderList key={uuid()} image={image} />
-              ))}
+
+              {images.map((image) => (<SliderList key={uuid()} image={image} />))}
+
             </SliderFigure>
+
           </SliderContent>
 
           <SliderBtnContainer>
-            <SliderBtn onClick={next} disabled={currentImage.index === images.length - 1}>
+
+            <SliderBtn onClick={next} disabled={currentImage.index === images.length - 4}>
+
               <SliderBtnImg src={RightArrow} alt="" />
+
             </SliderBtn>
+
           </SliderBtnContainer>
+
         </TopSellerSlider>
+
       </TopSliderDisplay>
+
     );
+
 }
 
 export default SliderDisplay

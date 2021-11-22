@@ -4,14 +4,43 @@ import Pix from "./assets/images/pix.svg";
 import "./assets/style/index.css"
 import {useDispatch} from "react-redux"
 import {deleteCart} from "../../actions/productAction"
+import styled, {css} from "styled-components"
+
+
+
+const OutterImageDiv = styled.div `
+  width: 100%;
+  display: inline-block;
+  margin-right: 10px;
+`
+const InnerImageDisplay = styled.div `
+  display: flex;
+  
+
+  ${({inner}) => inner && css `
+    align-items: center;
+  `}
+`
+
+const Image = styled.img `
+  /* vertical-align: middle; */
+  display: block;
+  height: 70px;
+  width: 70px;
+  border: 1px solid #c6c6c5;
+  border-radius: 5px;
+  
+`
+
+
 
 const CartItem = ({cart, id}) => {
   const dispatch = useDispatch()
     return (
       <div>
-        <div className="main-display" key={cart.product.id}>
+        <div className="main-display" key={cart.id}>
           <div className="content">
-            <figure>
+            <figure className="cancel-btn">
               <img
                 onClick={() => dispatch(deleteCart(cart.id))}
                 src={Cancel}
@@ -19,20 +48,27 @@ const CartItem = ({cart, id}) => {
               />
             </figure>
 
-            <figure className="main-img">
+            {/* <figure className="main-img">
               <img src={cart.product.image} alt="" />
-            </figure>
+            </figure> */}
+            <InnerImageDisplay>
+              <OutterImageDiv >
+                <InnerImageDisplay inner>
+                  <Image className="profile" src={cart.image} alt="" />
+                </InnerImageDisplay>
+              </OutterImageDiv>
+              </InnerImageDisplay>
 
             <div className="prof">
-              <p className="p">{cart.product.product}</p>
+              <p className="p">{cart.product}</p>
 
-              <p>{cart.product.suppliers}</p>
+              <p>{cart.suppliers}</p>
             </div>
           </div>
 
           <div>
             <div>
-              <p>${cart.product.price}</p>
+              <p>${cart.price}</p>
             </div>
           </div>
 
@@ -45,13 +81,13 @@ const CartItem = ({cart, id}) => {
                 textAlign: "center",
               }}
             >
-              <p>{cart.product.qty}</p>
+              <p>{cart.count}</p>
             </div>
           </div>
 
           <div>
             <div>
-              <p>{cart.product.price}</p>
+              <p>{cart.price}</p>
             </div>
           </div>
         </div>

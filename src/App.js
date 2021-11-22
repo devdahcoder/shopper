@@ -45,10 +45,10 @@ function App({history}) {
       .onAuthStateChanged(user => {
         if (user) {
           history.push("/");
-          dispatch(setUserSuccess(user))
+          dispatch(setUserSuccess(user));
         }
         else {
-          history.push("/")
+          history.push("/");
           dispatch(logOut());
         }
       })

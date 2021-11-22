@@ -6,17 +6,12 @@
 }
 
 .payment .payment-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .payment .payment-container .payment-item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   border-right: 1px solid green;
 }
 
@@ -42,19 +37,15 @@
 }
 
 .payment .payment-container .payment-form .payment-card {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 1em;
   margin-bottom: 2em;
 }
 
 .payment .payment-container .payment-form .payment-card .payment-code {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1em;
 }
 
@@ -75,22 +66,14 @@
 }
 
 .payment .payment-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin: 6em 0 .5em 0;
 }
 
 .payment .payment-btn .back-btn-container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 
 .payment .payment-btn .back-btn-container .back-btn {

@@ -4,15 +4,9 @@
   border-radius: 5px;
   padding: 2em 1em;
   height: 620.82px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .confirm-account .confirm-code {
@@ -34,12 +28,8 @@
 }
 
 .confirm-account .confirm-code .get-code {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .confirm-account .confirm-code .get-code button {
